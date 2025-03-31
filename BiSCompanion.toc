@@ -1,0 +1,8 @@
+## Interface: 110105
+## Title: BiSCompanion
+## Notes: Displays Best-in-Slot gear & Talents for class/specialization. Licensed under GNU GPL v3. 
+
+BisData.lua
+TalentData.lua
+ClassSpecMapping.lua
+BiSCompanion.lua
