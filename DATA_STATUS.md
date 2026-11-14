@@ -32,3 +32,10 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 - `tools/validate_packages.py` contrôle que les deux manifests sont présents, que les chemins existent et que chaque client charge uniquement son jeu de données.
 - Les changements de la 2.3.1 désactivent uniquement l'édition et les données d'équipement Forever ; l'interface Retail n'est pas modifiée.
 - La compatibilité est confirmée par des contrôles **statiques**, pas par une exécution en jeu sur les deux clients.
+
+## Forever : recommandations et planificateur (14 novembre 2026)
+
+- Version 2.4.0 : 45 recommandations Icy Veins (44 builds niveau 60 et un build de progression niveau 30), couvrant 27 spécialisations parmi neuf classes. Les répartitions sont stockées séparément des sauvegardes personnelles et chargées seulement sur Forever.
+- Source de correspondance : Zael98/Zbuilds (`Data.lua`, génération 2026-11-14 13:44), contenant des choix de talents et des liens vers les guides Icy Veins ; métadonnées d'arbre de TalentsForever.com (CC BY 4.0). Les guides restent accessibles par leurs URL, sans recopie des articles.
+- Prérequis `C_Traits` : rangées débloquées par groupes de 5 points antérieurs dans le même arbre ; `visibleEdges` pour les connexions conditionnelles ; jamais d'achat automatique.
+- Les builds sont soumis à validation des rangs, positions, liens et 51 points lors de leur sélection. Une mise à jour du client peut imposer une révision des données. Test en jeu toujours nécessaire.

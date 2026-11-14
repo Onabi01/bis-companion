@@ -5,13 +5,13 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | Client | Version du jeu testée dans les données | Interface | Fonctionnalités |
 | --- | --- | --- | --- |
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
-| **WoW Forever** | 1.60.1 | `16001` | **BiS en préparation : équipement et édition désactivés temporairement** ; planificateur de talents disponible |
+| **WoW Forever** | 1.60.1 | `16001` | **BiS en préparation** ; planificateur de talents avec liens/prérequis, 51 points, 45 builds Icy Veins et sauvegardes personnelles |
 
-Version commune de l'addon : **2.3.1** (base 2.3.0, correction Forever sans modification de l'affichage Retail).
+Version commune de l'addon : **2.4.0** (nouveau planificateur Forever ; Retail inchangé hors numéro de version).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Téléchargez [BiSCompanion-Universal-2.3.1.zip](releases/BiSCompanion-Universal-2.3.1.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
+1. Téléchargez [BiSCompanion-Universal-2.4.0.zip](releases/BiSCompanion-Universal-2.4.0.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -41,13 +41,13 @@ python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.3.1.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.4.0.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
 - `BiSCompanion.lua`, `Core/Data.lua`, `Core/Character.lua`, `Core/Tooltip.lua` : logique commune aux deux éditions.
 - `Core/UI.lua`, `Core/EncounterJournal.lua`, `Core/Talents.lua` : modules Retail.
-- `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua` : adaptations et talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
+- `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua`, `ForeverIcyVeinsBuilds.lua` : adaptations, planification et recommandations de talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
 - `BisData.lua`, `ClassSpecMapping.lua`, `TalentData.lua`, `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
 - `ForeverMapping.lua`, `ForeverData.lua` : correspondances de classe et 27 listes vides Forever. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
 - `tools/` : validations et générateur du ZIP unique.
@@ -66,3 +66,11 @@ Les vérifications ci-dessus valident la présence des fichiers, les interfaces,
 ## Licence
 
 Voir [LICENCE.txt](LICENCE.txt) (GNU GPL v3 ou version ultérieure, selon la déclaration du projet).
+
+## Talents sur Forever (2.4.0)
+
+- Les recommandations **Icy Veins** sont proposées dans le menu du planificateur, par spécialisation. Elles contiennent les répartitions de points des 45 modèles répertoriés (dont un modèle de progression niveau 30). Une recommandation n'est pas un personnage pré-équipé : ce sont des **points projetés**, jamais achetés dans le jeu.
+- Le planificateur utilise le dessin des trois arbres et les connexions renvoyées par **C_Traits** : prérequis des flèches, limite de **51 points** et cinq points requis par palier dans le même arbre. Il refuse les builds dont les positions/rangs ne correspondent plus aux données du client.
+- Le bouton **Enregistrer / Save** copie le plan sous un nom dans `BiSCompanionCustomData.foreverNamedTalentBuilds`. **Nouveau / New** repart de zéro. La sélection d'un modèle ne modifie jamais le modèle Icy Veins. Les anciens brouillons `foreverTalentPlans` restent stockés.
+- Les modèles proviennent de [guides Icy Veins WoW Forever](https://www.icy-veins.com/wow-forever/). Les correspondances de talents et les codes ont été recoupés avec les données de [Zbuilds (Zael98)](https://github.com/Zael98/Zbuilds) générées le 14 novembre 2026. Les noms et positions proviennent de données WoW Forever et de [Talents Forever](https://talentsforever.com/) (CC BY 4.0). Aucun texte de guide n'est recopié ; les liens des guides sont conservés.
+- **À tester en jeu :** la disposition du talent tree, le chargement des recommandations et les flèches. Une différence de version de Forever peut rendre un build incompatible ; dans ce cas, le programme ne le charge pas plutôt que de placer de mauvais points.
