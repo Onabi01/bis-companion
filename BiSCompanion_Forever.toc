@@ -2,7 +2,7 @@
 ## Title: BiSCompanion
 ## Notes: Gear lists for World of Warcraft: Forever
 ## Author: Onabi
-## Version: 2.2.6
+## Version: 2.3.0
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
 
 Libs\LibDeflate\LibDeflate.lua
@@ -12,8 +12,8 @@ ForeverBiS60.lua
 CommonItems.lua
 Core\Data.lua
 Core\Character.lua
-Core\UI.lua
+compat\forever\Core\UI.lua
 ForeverTalentPlanner.lua
-Core\EncounterJournal.lua
+compat\forever\Core\EncounterJournal.lua
 Core\Tooltip.lua
 BiSCompanion.lua
