@@ -40,6 +40,26 @@ addon.Core.UI.frame.title:SetFontObject("GameFontHighlight")
 addon.Core.UI.frame.title:SetPoint("TOP", addon.Core.UI.frame, "TOP", 0, -5)
 addon.Core.UI.frame.title:SetText("BiS Equipment")
 
+-- On Forever, no gear data is yet trustworthy. The talent planner stays enabled.
+local foreverGearEnabled = BiSCompanionForeverGearReady == true
+local gearNoticeTitle = addon.Core.UI.frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+gearNoticeTitle:SetPoint("TOP", addon.Core.UI.frame, "TOP", 0, -144)
+gearNoticeTitle:SetWidth(225)
+gearNoticeTitle:SetJustifyH("CENTER")
+local gearNoticeBody = addon.Core.UI.frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+gearNoticeBody:SetPoint("TOP", gearNoticeTitle, "BOTTOM", 0, -14)
+gearNoticeBody:SetWidth(225)
+gearNoticeBody:SetJustifyH("CENTER")
+if GetLocale and GetLocale() == "frFR" then
+    gearNoticeTitle:SetText("BiS en préparation")
+    gearNoticeBody:SetText("Les listes BiS et l'édition de l'équipement sont temporairement désactivées sur Forever.\n\nLe planificateur de talents reste disponible.")
+else
+    gearNoticeTitle:SetText("Forever BiS coming soon")
+    gearNoticeBody:SetText("Gear lists and equipment editing are temporarily disabled on Forever.\n\nThe talent planner is still available.")
+end
+gearNoticeTitle:Hide()
+gearNoticeBody:Hide()
+
 -- Ajouter une texture de fond
 addon.Core.UI.frame.background = addon.Core.UI.frame:CreateTexture(nil, "BACKGROUND")
 addon.Core.UI.frame.background:SetAllPoints(addon.Core.UI.frame)
@@ -161,7 +181,7 @@ end
 
 -- Helper: appliquer la sélection correcte dans listDropdown et afficher
 local function SelectPreferredListForSpec(specKey)
-    if not specKey then return end
+    if not foreverGearEnabled or not specKey then return end
     local toSelect = GetPreferredListNameForSpec(specKey)
 
     UIDropDownMenu_SetSelectedValue(listDropdown, toSelect)
@@ -672,6 +692,7 @@ end
 
 -- Fonction pour afficher les icônes et mettre à jour le fond
 local function RenderItems(specKey, listName)
+    if not foreverGearEnabled then return end
     if scrollChild.itemButtons then
         for _, button in ipairs(scrollChild.itemButtons) do
             button:Hide()
@@ -822,6 +843,7 @@ local function RenderItems(specKey, listName)
 end
 
 function addon.Core.UI.DisplayItems(specKey, listName)
+    if not foreverGearEnabled then return end
     local ok, err = pcall(RenderItems, specKey, listName)
     if ok then return end
 
@@ -1135,6 +1157,20 @@ if not _G["BiSCompanionTalentsVerticalButton"] then
     end)
 end
 -- === /Talents toggle button (vertical) ===
+
+-- Retirer toutes les commandes d'équipement sur Forever en attendant des données fiables.
+-- Ne pas toucher à SavedVariables : les listes personnelles restent stockées.
+if not foreverGearEnabled then
+    scrollFrame:Hide()
+    listDropdown:Hide()
+    duplicateButton:Hide()
+    createButton:Hide()
+    deleteButton:Hide()
+    setAsDefaultCheckbox:Hide()
+    nameFrame:Hide()
+    gearNoticeTitle:Show()
+    gearNoticeBody:Show()
+end
 
 -- Quand la frame principale s'ouvre, appliquer la sélection préférée pour la spé courante
 addon.Core.UI.frame:HookScript("OnShow", function()

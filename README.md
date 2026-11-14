@@ -5,13 +5,13 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | Client | Version du jeu testée dans les données | Interface | Fonctionnalités |
 | --- | --- | --- | --- |
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
-| **WoW Forever** | 1.60.1 | `16001` | Listes BiS niveau 60 et planificateur de talents visuel non intrusif |
+| **WoW Forever** | 1.60.1 | `16001` | **BiS en préparation : équipement et édition désactivés temporairement** ; planificateur de talents disponible |
 
-Version commune de l'addon : **2.3.0** (construit à partir de Retail 2.2.5 et Forever 2.2.6).
+Version commune de l'addon : **2.3.1** (base 2.3.0, correction Forever sans modification de l'affichage Retail).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Téléchargez [BiSCompanion-Universal-2.3.0.zip](releases/BiSCompanion-Universal-2.3.0.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
+1. Téléchargez [BiSCompanion-Universal-2.3.1.zip](releases/BiSCompanion-Universal-2.3.1.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -41,7 +41,7 @@ python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.3.0.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.3.1.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
@@ -49,9 +49,15 @@ Le résultat est `dist/BiSCompanion-Universal-2.3.0.zip`. Le script ne produit *
 - `Core/UI.lua`, `Core/EncounterJournal.lua`, `Core/Talents.lua` : modules Retail.
 - `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua` : adaptations et talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
 - `BisData.lua`, `ClassSpecMapping.lua`, `TalentData.lua`, `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
-- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverBiS60.lua`, `CommonItems.lua` : données Forever.
+- `ForeverMapping.lua`, `ForeverData.lua` : correspondances de classe et 27 listes vides Forever. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
 - `tools/` : validations et générateur du ZIP unique.
 - `DATA_STATUS.md` : provenance et limites connues des données. À consulter avant distribution.
+
+## Équipement sur Forever : fonctionnalité suspendue
+
+Les anciens classements Forever contenaient des objets incorrects pour ce client. Tant que les équipements, les sets et leurs sources ne sont pas vérifiés, **aucune liste BiS par défaut n'est chargée et l'édition d'équipement est désactivée**. Un message explicatif apparaît à la place des icônes BiS, du sélecteur d'objets et des boutons Créer/Dupliquer/Supprimer. Les classes et spécialisations restent reconnues et **le planificateur de talents fonctionne toujours**.
+
+Les listes personnalisées enregistrées dans `WTF/SavedVariables` **ne sont ni supprimées ni écrasées**. Elles sont simplement masquées et ignorées pour la détection BiS/les infobulles pendant cette suspension. Les anciennes données Forever restent dans les sources GitHub, hors du ZIP.
 
 ## Tests et limites
 
