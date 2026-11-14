@@ -27,7 +27,7 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 
 ## Archive universelle (14 novembre 2026)
 
-- La version commune 2.3.1 est distribuée en **un seul ZIP**. Les manifests `_Standard.toc` et `_Forever.toc` sélectionnent des listes de fichiers distinctes ; un manifeste `.toc` sans suffixe sert de repli Retail.
+- La version commune 2.4.1 est distribuée en **un seul ZIP**. Les manifests `_Standard.toc` et `_Forever.toc` sélectionnent des listes de fichiers distinctes ; un manifeste `.toc` sans suffixe sert de repli Retail.
 - Les fichiers `compat/forever/Core/` sont désormais directement référencés dans le manifeste Forever, sans remplacement de fichiers lors du packaging.
 - `tools/validate_packages.py` contrôle que les deux manifests sont présents, que les chemins existent et que chaque client charge uniquement son jeu de données.
 - Les changements de la 2.3.1 désactivent uniquement l'édition et les données d'équipement Forever ; l'interface Retail n'est pas modifiée.
@@ -39,3 +39,10 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 - Source de correspondance : Zael98/Zbuilds (`Data.lua`, génération 2026-11-14 13:44), contenant des choix de talents et des liens vers les guides Icy Veins ; métadonnées d'arbre de TalentsForever.com (CC BY 4.0). Les guides restent accessibles par leurs URL, sans recopie des articles.
 - Prérequis `C_Traits` : rangées débloquées par groupes de 5 points antérieurs dans le même arbre ; `visibleEdges` pour les connexions conditionnelles ; jamais d'achat automatique.
 - Les builds sont soumis à validation des rangs, positions, liens et 51 points lors de leur sélection. Une mise à jour du client peut imposer une révision des données. Test en jeu toujours nécessaire.
+
+## Forever : comparaison côte à côte (14 novembre 2026, version 2.4.1)
+
+- Le nouveau module `ForeverComparison.lua` est chargé uniquement par `BiSCompanion_Forever.toc`, après le planificateur.
+- Le bouton **Mode comparaison** adapte les tailles et positions des fenêtres `PlayerSpellsFrame.TalentsFrame` (interface de jeu) et `BiSCompanionForeverTalentPlanner` (addon) pour les afficher côte à côte.
+- Les échelles et les points d'ancrage d'origine sont conservés uniquement en mémoire pendant le mode et restaurés lorsqu'il se termine, y compris en cas de fermeture des talents ou du planificateur. Pendant le combat, la restauration attend `PLAYER_REGEN_ENABLED`.
+- Des tests Lua simulés valident l'ouverture des talents, l'activation, la restauration et les protections en combat. La compatibilité avec le positionnement réel des panneaux Blizzard reste à valider en jeu.

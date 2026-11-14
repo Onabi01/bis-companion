@@ -7,11 +7,11 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
 | **WoW Forever** | 1.60.1 | `16001` | **BiS en préparation** ; planificateur de talents avec liens/prérequis, 51 points, 45 builds Icy Veins et sauvegardes personnelles |
 
-Version commune de l'addon : **2.4.0** (nouveau planificateur Forever ; Retail inchangé hors numéro de version).
+Version commune de l'addon : **2.4.1** (mode comparaison côte à côte pour les talents Forever ; Retail inchangé hors numéro de version).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Téléchargez [BiSCompanion-Universal-2.4.0.zip](releases/BiSCompanion-Universal-2.4.0.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
+1. Téléchargez [BiSCompanion-Universal-2.4.1.zip](releases/BiSCompanion-Universal-2.4.1.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -36,18 +36,20 @@ Python 3.9+ (bibliothèque standard uniquement) :
 ```bash
 python tools/validate_1215.py
 python tools/validate_forever.py
+python tools/validate_forever_talents.py
+python tools/validate_forever_comparison.py
 python tools/audit_coverage.py
 python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.4.0.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.4.1.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
 - `BiSCompanion.lua`, `Core/Data.lua`, `Core/Character.lua`, `Core/Tooltip.lua` : logique commune aux deux éditions.
 - `Core/UI.lua`, `Core/EncounterJournal.lua`, `Core/Talents.lua` : modules Retail.
-- `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua`, `ForeverIcyVeinsBuilds.lua` : adaptations, planification et recommandations de talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
+- `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua`, `ForeverIcyVeinsBuilds.lua`, `ForeverComparison.lua` : adaptations, planification, recommandations et comparaison des talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
 - `BisData.lua`, `ClassSpecMapping.lua`, `TalentData.lua`, `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
 - `ForeverMapping.lua`, `ForeverData.lua` : correspondances de classe et 27 listes vides Forever. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
 - `tools/` : validations et générateur du ZIP unique.
@@ -74,3 +76,17 @@ Voir [LICENCE.txt](LICENCE.txt) (GNU GPL v3 ou version ultérieure, selon la dé
 - Le bouton **Enregistrer / Save** copie le plan sous un nom dans `BiSCompanionCustomData.foreverNamedTalentBuilds`. **Nouveau / New** repart de zéro. La sélection d'un modèle ne modifie jamais le modèle Icy Veins. Les anciens brouillons `foreverTalentPlans` restent stockés.
 - Les modèles proviennent de [guides Icy Veins WoW Forever](https://www.icy-veins.com/wow-forever/). Les correspondances de talents et les codes ont été recoupés avec les données de [Zbuilds (Zael98)](https://github.com/Zael98/Zbuilds) générées le 14 novembre 2026. Les noms et positions proviennent de données WoW Forever et de [Talents Forever](https://talentsforever.com/) (CC BY 4.0). Aucun texte de guide n'est recopié ; les liens des guides sont conservés.
 - **À tester en jeu :** la disposition du talent tree, le chargement des recommandations et les flèches. Une différence de version de Forever peut rendre un build incompatible ; dans ce cas, le programme ne le charge pas plutôt que de placer de mauvais points.
+
+## Mode comparaison des talents sur Forever (2.4.1)
+
+Dans le planificateur Forever, clique sur **Mode comparaison**. Le module ouvre la fenêtre **Talents** du jeu si possible, puis positionne **les talents officiels à gauche** et **BiSCompanion à droite**. Il adapte les échelles à l'espace disponible sans modifier l'échelle générale de l'interface.
+
+- Le bouton devient **Quitter comparaison**. Un second clic restaure l'échelle et les points d'ancrage d'origine des **deux** fenêtres.
+- Fermer l'une des fenêtres ou quitter l'onglet Talents du jeu restaure aussi la disposition initiale.
+- Les fenêtres ne sont pas déplacées en combat. Si le mode est quitté pendant un combat, la restauration attend la fin du combat.
+- Sur les petits écrans, le mode refuse une disposition qui rendrait les fenêtres illisibles et affiche une explication dans le chat.
+- Si la fenêtre du jeu n'a pas pu être ouverte automatiquement, ouvre les Talents avec **N**, puis clique de nouveau sur le bouton.
+
+Cette fonction ne change aucun talent en jeu, ne modifie pas les builds sauvegardés et n'est pas chargée sur Retail. **À vérifier dans le client Forever 1.60.1**, notamment avec des addons modifiant la fenêtre de talents.
+
+Les détails par version sont dans [CHANGELOG.md](CHANGELOG.md).
