@@ -12,6 +12,7 @@ assert "CommonItems.lua" not in files, "Retail sets/crafts must not be loaded by
 assert "ForeverData.lua" in files
 assert "ForeverTalentPlanner.lua" in files
 assert "ForeverIcyVeinsBuilds.lua" in files
+assert "ForeverComparison.lua" in files
 
 mapping = (ROOT / "ForeverMapping.lua").read_text(encoding="utf-8")
 data = (ROOT / "ForeverData.lua").read_text(encoding="utf-8")
