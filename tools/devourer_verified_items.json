@@ -1,0 +1,24 @@
+{
+  "game": "retail",
+  "patch": "12.1.5",
+  "spec": "Demon Hunter / Devourer",
+  "gear_guide": "https://www.icy-veins.com/wow/devourer-demon-hunter-pve-dps-gear-best-in-slot/",
+  "verified_items": [
+    {"slot": "Head", "name": "Abyssal Doomhound's Relentless Stare", "id": 271537, "url": "https://www.wowhead.com/item=271537"},
+    {"slot": "Shoulders", "name": "Abyssal Doomhound's Jaws", "id": 271535, "url": "https://www.wowhead.com/item=271535"},
+    {"slot": "Back", "name": "Silken Voodoo Drape", "id": 268253, "url": "https://www.wowhead.com/item=268253"},
+    {"slot": "Chest", "name": "Abyssal Doomhound's Coreguard", "id": 271540, "url": "https://www.wowhead.com/item=271540"},
+    {"slot": "Wrists", "name": "Silvermoon Agent's Deflectors", "id": 244576, "url": "https://www.wowhead.com/item=244576"},
+    {"slot": "Hands", "name": "Abyssal Doomhound's Studded Gauntlets", "id": 271538, "url": "https://www.wowhead.com/item=271538"},
+    {"slot": "Neck", "name": "Aqirbane Reliquary", "id": 268265, "url": "https://www.wowhead.com/item=268265"},
+    {"slot": "Waist", "name": "Sash of the Forlorn Vessel", "id": 268256, "url": "https://www.wowhead.com/item=268256"},
+    {"slot": "Legs", "name": "Abyssal Doomhound's Legwraps", "id": 271536, "url": "https://www.wowhead.com/item=271536"},
+    {"slot": "Feet", "name": "Silvermoon Agent's Sneakers", "id": 244569, "url": "https://www.wowhead.com/item=244569"},
+    {"slot": "Ring 1", "name": "Band of the Swarmcaller", "id": 281029, "url": "https://www.wowhead.com/item=281029"},
+    {"slot": "Ring 2", "name": "Charged Sandstone Band", "id": 158366, "url": "https://www.wowhead.com/item=158366"},
+    {"slot": "Trinket 1", "name": "Twisted Horror's Tendril", "id": 281215, "url": "https://www.wowhead.com/item=281215"},
+    {"slot": "Trinket 2", "name": "Gebbo's Bottomless Bag", "id": 270164, "url": "https://www.wowhead.com/item=270164"},
+    {"slot": "Weapon", "name": "Jan'thrazet, the Soul Fang", "id": 271092, "url": "https://www.wowhead.com/item=271092"},
+    {"slot": "Off Hand", "name": "Baleful Hexblade", "id": 268211, "url": "https://www.wowhead.com/item=268211"}
+  ]
+}

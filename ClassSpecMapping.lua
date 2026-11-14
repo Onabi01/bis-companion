@@ -8,10 +8,12 @@ BiSCompanionClassSpecMapping = {
     {classID = 6, className = "Death Knight", specID = 252, specName = "Unholy", heroName = "San'layn", heroID = 31, specKey = "DK_Unholy_San'layn"},
 
     -- Demon Hunter
+    {classID = 12, className = "Demon Hunter", specID = 1480, specName = "Devourer", heroName = "Annihilator", heroID = 0, specKey = "DH_Devourer_Annihilator"},
+    {classID = 12, className = "Demon Hunter", specID = 1480, specName = "Devourer", heroName = "Void-Scarred", heroID = 0, specKey = "DH_Devourer_Void-Scarred"},
     {classID = 12, className = "Demon Hunter", specID = 577, specName = "Havoc", heroName = "Aldrachi Reaver", heroID = 35, specKey = "DH_Havoc_Aldrachi Reaver"},
     {classID = 12, className = "Demon Hunter", specID = 577, specName = "Havoc", heroName = "Fel-Scarred", heroID = 34, specKey = "DH_Havoc_Fel-Scarred"},
     {classID = 12, className = "Demon Hunter", specID = 581, specName = "Vengeance", heroName = "Aldrachi Reaver", heroID = 35, specKey = "DH_Vengeance_Aldrachi Reaver"},
-    {classID = 12, className = "Demon Hunter", specID = 581, specName = "Vengeance", heroName = "Fel-Scarred", heroID = 34, specKey = "DH_Vengeance_Fel-Scarred"},
+    {classID = 12, className = "Demon Hunter", specID = 581, specName = "Vengeance", heroName = "Annihilator", heroID = 0, specKey = "DH_Vengeance_Annihilator"},
 
     -- Druid
     {classID = 11, className = "Druid", specID = 102, specName = "Balance", heroName = "Keeper of the Grove", heroID = 23, specKey = "Druid_Balance_Keeper of the Grove"},

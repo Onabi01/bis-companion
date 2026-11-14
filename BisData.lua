@@ -1,1340 +1,1442 @@
 BiSCompanionBisData = BiSCompanionBisData or {}
 
+-- Devourer Demon Hunter, Midnight 12.1.5, Overall BiS
+-- https://www.icy-veins.com/wow/devourer-demon-hunter-pve-dps-gear-best-in-slot/
+BiSCompanionBisData["DH_Devourer_Annihilator"] = {
+    { slot = "Head", name = "Abyssal Doomhound's Relentless Stare", source = "Catalyst / Ula'tek", id = "271537" },
+    { slot = "Neck", name = "Aqirbane Reliquary", source = "Ula'tek", id = "268265" },
+    { slot = "Shoulders", name = "Abyssal Doomhound's Jaws", source = "Catalyst / Vashnik", id = "271535" },
+    { slot = "Back", name = "Silken Voodoo Drape", source = "Coiled Altar", id = "268253" },
+    { slot = "Chest", name = "Abyssal Doomhound's Coreguard", source = "Catalyst / Kith'ix", id = "271540" },
+    { slot = "Wrists", name = "Silvermoon Agent's Deflectors", source = "Crafting", id = "244576" },
+    { slot = "Hands", name = "Abyssal Doomhound's Studded Gauntlets", source = "Entombed Sentinels", id = "271538" },
+    { slot = "Waist", name = "Sash of the Forlorn Vessel", source = "Coiled Altar", id = "268256" },
+    { slot = "Legs", name = "Abyssal Doomhound's Legwraps", source = "Catalyst / Coiled Altar", id = "271536" },
+    { slot = "Feet", name = "Silvermoon Agent's Sneakers", source = "Crafting", id = "244569" },
+    { slot = "Ring 1", name = "Band of the Swarmcaller", source = "Kith'ix", id = "281029" },
+    { slot = "Ring 2", name = "Charged Sandstone Band", source = "Temple of Sethraliss", id = "158366" },
+    { slot = "Trinket 1", name = "Twisted Horror's Tendril", source = "Kith'ix", id = "281215" },
+    { slot = "Trinket 2", name = "Gebbo's Bottomless Bag", source = "The Lost Explorers", id = "270164" },
+    { slot = "Weapon", name = "Jan'thrazet, the Soul Fang", source = "Ula'tek", id = "271092" },
+    { slot = "Off Hand", name = "Baleful Hexblade", source = "Coiled Altar", id = "268211" },
+}
+BiSCompanionBisData["DH_Devourer_Void-Scarred"] = BiSCompanionBisData["DH_Devourer_Annihilator"]
+
+-- Arcane Mage, Midnight 12.1.5, Overall BiS
+-- https://www.icy-veins.com/wow/arcane-mage-pve-dps-gear-best-in-slot/
+BiSCompanionBisData["Mage_Arcane_Sunfury"] = {
+    { slot = "Head", name = "Venomkeeper's Horrific Cowl", source = "Ula'tek", id = "271874" },
+    { slot = "Neck", name = "Aqirbane Reliquary", source = "Ula'tek", id = "268265" },
+    { slot = "Shoulders", name = "Primal Leywarden's Manaflux", source = "Twin Fangs / Catalyst", id = "271562" },
+    { slot = "Back", name = "Silken Voodoo Drape", source = "Coiled Altar", id = "268253" },
+    { slot = "Chest", name = "Crest of the Primal Leywarden", source = "Altar of Fangs / Catalyst", id = "271567" },
+    { slot = "Wrists", name = "Martyr's Bindings", source = "Crafting", id = "239648" },
+    { slot = "Hands", name = "Primal Leywarden's Manashapers", source = "Coiled Altar / Catalyst", id = "271565" },
+    { slot = "Waist", name = "Caustic Chain-Wrapped Sash", source = "Sszorak", id = "268257" },
+    { slot = "Legs", name = "Primal Leywarden's Tailored Legwraps", source = "Kith'ix / Catalyst", id = "271563" },
+    { slot = "Feet", name = "Cackling Soultreads", source = "Coiled Altar", id = "268255" },
+    { slot = "Ring 1", name = "Alluring Bubbleband", source = "Tidebound Grotto", id = "268266" },
+    { slot = "Ring 2", name = "Pilfered Precious Band", source = "Den of Nalorakk", id = "251148" },
+    { slot = "Trinket 1", name = "Freightrunner's Flask", source = "Murder Row", id = "250215" },
+    { slot = "Trinket 2", name = "Twisted Horror's Tendril", source = "Kith'ix", id = "281215" },
+    { slot = "Weapon", name = "Jan'thrazet, the Soul Fang", source = "Ula'tek", id = "271092" },
+    { slot = "Off Hand", name = "Aln'hara Lantern", source = "Crafting", id = "245769" },
+}
+
+-- Frost Mage, Midnight 12.1.5, Overall BiS
+-- https://www.icy-veins.com/wow/frost-mage-pve-dps-gear-best-in-slot
+local frostMage1215 = {
+    { slot = "Head", name = "Crown of the Primal Leywarden", source = "Ula'tek / Catalyst", id = "271564" },
+    { slot = "Neck", name = "Aqirbane Reliquary", source = "Ula'tek", id = "268265" },
+    { slot = "Shoulders", name = "Primal Leywarden's Manaflux", source = "Temple of Sethraliss / Catalyst", id = "271562" },
+    { slot = "Back", name = "Silken Voodoo Drape", source = "Coiled Altar", id = "268253" },
+    { slot = "Chest", name = "Crest of the Primal Leywarden", source = "Altar of Fangs / Catalyst", id = "271567" },
+    { slot = "Wrists", name = "Winter's Embrace Bracers", source = "Den of Nalorakk", id = "251154" },
+    { slot = "Hands", name = "Primal Leywarden's Manashapers", source = "Coiled Altar", id = "271565" },
+    { slot = "Waist", name = "Martyr's Waistwrap", source = "Crafting", id = "239649" },
+    { slot = "Legs", name = "Down-Lined Breeches", source = "King's Rest", id = "159234" },
+    { slot = "Feet", name = "Cackling Soultreads", source = "Coiled Altar", id = "268255" },
+    { slot = "Ring 1", name = "Charged Sandstone Band", source = "Temple of Sethraliss", id = "158366" },
+    { slot = "Ring 2", name = "Vile Alchemist's Band", source = "Vashnik", id = "268249" },
+    { slot = "Trinket 1", name = "Gebbo's Bottomless Bag", source = "Lost Explorers", id = "270164" },
+    { slot = "Trinket 2", name = "Twisted Horror's Tendril", source = "Kith'ix", id = "281215" },
+    { slot = "Weapon", name = "Jan'thrazet, the Soul Fang", source = "Ula'tek", id = "271092" },
+    { slot = "Off Hand", name = "Aln'hara Lantern", source = "Crafting", id = "245769" },
+}
+
+-- Fire Mage, Midnight 12.1.5, Overall BiS
+-- https://www.icy-veins.com/wow/fire-mage-pve-dps-gear-best-in-slot
+local fireMage1215 = {
+    { slot = "Head", name = "Venomkeeper's Horrific Cowl", source = "Ula'tek", id = "271874" },
+    { slot = "Neck", name = "Aqirbane Reliquary", source = "Ula'tek", id = "268265" },
+    { slot = "Shoulders", name = "Primal Leywarden's Manaflux", source = "Twin Fangs / Catalyst", id = "271562" },
+    { slot = "Back", name = "Silken Voodoo Drape", source = "Coiled Altar", id = "268253" },
+    { slot = "Chest", name = "Crest of the Primal Leywarden", source = "Altar of Fangs / Catalyst", id = "271567" },
+    { slot = "Wrists", name = "Martyr's Bindings", source = "Crafting", id = "239648" },
+    { slot = "Hands", name = "Primal Leywarden's Manashapers", source = "Coiled Altar / Catalyst", id = "271565" },
+    { slot = "Waist", name = "Caustic Chain-Wrapped Sash", source = "Sszorak", id = "268257" },
+    { slot = "Legs", name = "Primal Leywarden's Tailored Legwraps", source = "Nek'zali / Catalyst", id = "271563" },
+    { slot = "Feet", name = "Cackling Soultreads", source = "Coiled Altar", id = "268255" },
+    { slot = "Ring 1", name = "Alluring Bubbleband", source = "Tidebound Grotto", id = "268266" },
+    { slot = "Ring 2", name = "Ritual Binder's Ring", source = "King's Rest", id = "159459" },
+    { slot = "Trinket 1", name = "Vile Vial of Volatile Venom", source = "Altar of Fangs", id = "273796" },
+    { slot = "Trinket 2", name = "Gebbo's Bottomless Bag", source = "Lost Explorers", id = "270164" },
+    { slot = "Weapon", name = "Jan'thrazet, the Soul Fang", source = "Ula'tek", id = "271092" },
+    { slot = "Off Hand", name = "Aln'hara Lantern", source = "Crafting", id = "245769" },
+}
+
+-- Affliction Warlock, Midnight 12.1.5, Overall BiS
+-- https://www.icy-veins.com/wow/affliction-warlock-pve-dps-gear-best-in-slot
+local afflictionWarlock1215 = {
+    { slot = "Head", name = "Venomkeeper's Horrific Cowl", source = "Ula'tek", id = "271874" },
+    { slot = "Neck", name = "Aqirbane Reliquary", source = "Ula'tek", id = "268265" },
+    { slot = "Shoulders", name = "Spires of the Damned Necrolyte", source = "Temple of Sethraliss / Catalyst", id = "271544" },
+    { slot = "Back", name = "Silken Voodoo Drape", source = "Coiled Altar", id = "268253" },
+    { slot = "Chest", name = "Damned Necrolyte's Rattling Robes", source = "Vashnik / Catalyst", id = "271549" },
+    { slot = "Wrists", name = "Martyr's Bindings", source = "Crafting", id = "239648" },
+    { slot = "Hands", name = "Damned Necrolyte's Charred Grasps", source = "Coiled Altar / Catalyst", id = "271547" },
+    { slot = "Waist", name = "Ethereal Netherwrap", source = "Voidscar Arena", id = "251222" },
+    { slot = "Legs", name = "Damned Necrolyte's Leg Bindings", source = "Kith'ix / Catalyst", id = "271545" },
+    { slot = "Feet", name = "Cackling Soultreads", source = "Coiled Altar", id = "268255" },
+    { slot = "Ring 1", name = "Band of the Amani Warlord", source = "Altar of Fangs", id = "273792" },
+    { slot = "Ring 2", name = "Apex Brute's Claw Ring", source = "Sszorak", id = "268252" },
+    { slot = "Trinket 1", name = "Stormbound Emblem of Dazar", source = "King's Rest", id = "273649" },
+    { slot = "Trinket 2", name = "Twisted Horror's Tendril", source = "Kith'ix", id = "281215" },
+    { slot = "Weapon", name = "Jan'thrazet, the Soul Fang", source = "Ula'tek", id = "271092" },
+    { slot = "Off Hand", name = "Aln'hara Lantern", source = "Crafting", id = "245769" },
+}
+
+-- https://www.icy-veins.com/wow/demonology-warlock-pve-dps-gear-best-in-slot
+-- https://www.icy-veins.com/wow/destruction-warlock-pve-dps-gear-best-in-slot
+local function warlockVariant1215(replacements)
+    local result = {}
+    for i, item in ipairs(afflictionWarlock1215) do
+        result[i] = replacements[item.slot] or item
+    end
+    return result
+end
+local demonologyWarlock1215 = warlockVariant1215({
+    ["Ring 1"] = { slot = "Ring 1", name = "Charged Sandstone Band", source = "Temple of Sethraliss", id = "158366" },
+    ["Ring 2"] = { slot = "Ring 2", name = "Band of the Swarmcaller", source = "Kith'ix", id = "281029" },
+})
+local destructionWarlock1215 = warlockVariant1215({
+    ["Ring 1"] = { slot = "Ring 1", name = "Charged Sandstone Band", source = "Temple of Sethraliss", id = "158366" },
+    ["Ring 2"] = { slot = "Ring 2", name = "Apex Brute's Claw Ring", source = "Sszorak", id = "268252" },
+    ["Trinket 1"] = { slot = "Trinket 1", name = "Freightrunner's Flask", source = "Murder Row", id = "250215" },
+})
+
 -- DK_Blood_Deathbringer
 BiSCompanionBisData["DK_Blood_Deathbringer"] = {
-    { slot = "Head", name = "Cauldron Champion's Crown", source = "Catalyst / Raid / Vault", id = "229253" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Cauldron Champion's Screamplate", source = "Catalyst / Raid / Vault", id = "229251" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Muckdiver's Wading Plate", source = "Operation: Floodgate", id = "234506" },
+    { slot = "Head", name = "Hollow Sentinel's Stonemask", source = "Catalyst / Raid / Vault", id = "237628" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Hollow Sentinel's Perches", source = "Catalyst / Raid / Vault", id = "237626" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Hollow Sentinel's Breastplate", source = "Catalyst / Raid / Vault", id = "237631" },
     { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", id = "222435" },
-    { slot = "Hands", name = "Cauldron Champion's Fistguards", source = "Catalyst / Raid / Vault", id = "229254" },
-    { slot = "Waist", name = "Heaviestweight Title Belt", source = "Cauldron of Carnage", id = "228873" },
-    { slot = "Legs", name = "Cauldron Champion's Tattered Cuisses", source = "Catalyst / Raid / Vault", id = "229252" },
-    { slot = "Feet", name = "Pyroclastic Greatboots", source = "Operation: Mechagon Workshop", id = "168972" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Thunderlord's Crackling Citrine", "Fathomdweller's Runed Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "219309" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" },
+    { slot = "Hands", name = "Hollow Sentinel's Gauntlets", source = "Catalyst / Raid / Vault", id = "237629" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", id = "222431" },
+    { slot = "Legs", name = "Halkias's Towering Pillars", source = "Halls of Atonement", id = "178818" },
+    { slot = "Feet", name = "Devoted Plate Walkers", source = "	Priory of the Sacred Flame", id = "221123" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Cursed Stone Idol", source = "Chrome King Gallywix", id = "230198" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Skyreaver, Greataxe of the Keepers", source = "Tazavesh: So'Leah's Gambit", id = "185810" }
 }
 
 -- San'layn Blood Death Knight
 BiSCompanionBisData["DK_Blood_San'layn"] = {
-    { slot = "Head", name = "Cauldron Champion's Crown", source = "Catalyst / Raid / Vault", id = "229253" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Cauldron Champion's Screamplate", source = "Catalyst / Raid / Vault", id = "229251" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Cauldron Champion's Ribcage", source = "Catalyst / Raid / Vault", id = "229256" },
+    { slot = "Head", name = "Hollow Sentinel's Stonemask", source = "Catalyst / Raid / Vault", id = "237628" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Hollow Sentinel's Perches", source = "Catalyst / Raid / Vault", id = "237626" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Hollow Sentinel's Breastplate", source = "Catalyst / Raid / Vault", id = "237631" },
     { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", id = "222435" },
     { slot = "Hands", name = "Cauldron Champion's Fistguards", source = "Catalyst / Raid / Vault", id = "229254" },
     { slot = "Waist", name = "Coin-Operated Girdle", source = "One-Armed Bandit", id = "228886" },
-    { slot = "Legs", name = "Galvanized Oxxein Legguards", source = "Theater of Pain", id = "178800" },
-    { slot = "Feet", name = "Sabatons of Rampaging Elements", source = "The MOTHERLODE!!", id = "159679" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Thunderlord's Crackling Citrine", "Fathomdweller's Runed Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "219309" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Legs", name = "Halkias's Towering Pillars", source = "Halls of Atonement", id = "178818" },
+    { slot = "Feet", name = "Hollow Sentinel's Greatboots", source = "Catalyst", id = "237630" },
+    { slot = "Ring 1", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Cursed Stone Idol", source = "Chrome King Gallywix", id = "230198" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Maw of the Void", source = "Nexus King Salhadaar", id = "243365" }
 }
 
 -- Deathbringer Frost Death Knight
 BiSCompanionBisData["DK_Frost_Deathbringer"] = {
-    { slot = "Head", name = "Fullthrottle Facerig", source = "Vexie", id = "228858" },
-    { slot = "Neck", name = "Undermine Merc's Dog Tags", source = "Liberation of Undermine BoE", id = "232663" },
-    { slot = "Shoulders", name = "Cauldron Champion's Screamplate", source = "Rik Reverb / Catalyst / Vault", id = "229251" },
-    { slot = "Back", name = "Chef Chewie's Towel", source = "Cinderbrew Meadery", id = "221054" },
-    { slot = "Chest", name = "Cauldron Champion's Ribcage", source = "Sprocketmonger / Catalyst / Vault", id = "229256" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Blacksmithing", id = "222435" },
-    { slot = "Hands", name = "Cauldron Champion's Fistguards", source = "Cauldron of Carnage / Catalyst / Vault", id = "229254" },
-    { slot = "Waist", name = "Automatic Waist Tightener", source = "Operation: Mechagon Workshop", id = "168976" },
-    { slot = "Legs", name = "Cauldron Champion's Tattered Cuisses", source = "Stix Bunkjunker / Catalyst / Vault", id = "229252" },
-    { slot = "Feet", name = "Hops-Laden Greatboots", source = "Cinderbrew Meadery", id = "221061" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Remixed Ignition Saber", source = "Rik Reverb", id = "228895" },
-    { slot = "Off Hand", name = "Charged Slicer", source = "Blacksmithing", id = "222451" }
+    { slot = "Head", name = "Hollow Sentinel's Stonemask", source = "Catalyst / Raid / Vault", id = "237628" },
+    { slot = "Neck", name = "Sin Stained Pendant", source = "Halls of Atonement", id = "178827" },
+    { slot = "Shoulders", name = "Hollow Sentinel's Perches", source = "Catalyst / Raid / Vault", id = "237626" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Hollow Sentinel's Breastplate", source = "Catalyst / Raid / Vault", id = "237631" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Craft", gems = { "Writhing Armor Banding", "Crit + Mastery" }, id = "222435" },
+    { slot = "Hands", name = "Breached Containment Guards", source = "Forgeweaver Araz", id = "237526" },
+    { slot = "Waist", name = "Girdle of Somber Ploys", source = "The Dawnbreaker", id = "221133" },
+    { slot = "Legs", name = "Hollow Sentinel's Stonekilt", source = "Catalyst / Raid / Vault", id = "237627" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
+    { slot = "Weapon", name = "Charged Claymore", source = "Crafting", gems = { "Ascendance", "Crit + Haste" }, id = "222447" }
 }
 
 -- Rider of the Apocalypse Frost Death Knight
 BiSCompanionBisData["DK_Frost_Rider of the Apocalypse"] = {
-    { slot = "Head", name = "Fullthrottle Facerig", source = "Vexie", id = "228858" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Cauldron Champion's Screamplate", source = "Rik Reverb / Catalyst / Vault", id = "229251" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Cauldron Champion's Ribcage", source = "Sprocketmonger / Catalyst / Vault", id = "229256" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Blacksmithing", id = "222435" },
-    { slot = "Hands", name = "Cauldron Champion's Fistguards", source = "Cauldron of Carnage / Catalyst / Vault", id = "229254" },
-    { slot = "Waist", name = "Automatic Waist Tightener", source = "Operation: Mechagon Workshop", id = "168976" },
-    { slot = "Legs", name = "Cauldron Champion's Tattered Cuisses", source = "Stix Bunkjunker / Catalyst / Vault", id = "229252" },
-    { slot = "Feet", name = "Hops-Laden Greatboots", source = "Cinderbrew Meadery", id = "221061" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Bloodoath Signet", source = "Theater of Pain", id = "178871" },
-    { slot = "Trinket 1", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Remixed Ignition Saber", source = "Rik Reverb", id = "228895" },
-    { slot = "Off Hand", name = "Charged Slicer", source = "Blacksmithing", id = "222451" }
+    { slot = "Head", name = "Hollow Sentinel's Stonemask", source = "Catalyst / Raid / Vault", id = "237628" },
+    { slot = "Neck", name = "Sin Stained Pendant", source = "Halls of Atonement", id = "178827" },
+    { slot = "Shoulders", name = "Hollow Sentinel's Perches", source = "Catalyst / Raid / Vault", id = "237626" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Hollow Sentinel's Breastplate", source = "Catalyst / Raid / Vault", id = "237631" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Craft", gems = { "Writhing Armor Banding", "Crit + Mastery" }, id = "222435" },
+    { slot = "Hands", name = "Breached Containment Guards", source = "Forgeweaver Araz", id = "237526" },
+    { slot = "Waist", name = "Girdle of Somber Ploys", source = "The Dawnbreaker", id = "221133" },
+    { slot = "Legs", name = "Hollow Sentinel's Stonekilt", source = "Catalyst / Raid / Vault", id = "237627" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 1", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
+    { slot = "Weapon", name = "Charged Claymore", source = "Crafting", gems = { "Ascendance", "Crit + Haste" }, id = "222447" }
 }
 
--- Overall Unholy Death Knight
+-- Unholy Death Knight Rider of the Apocalypse
 BiSCompanionBisData["DK_Unholy_Rider of the Apocalypse"] = {
-    { slot = "Head", name = "Cauldron Champion's Crown", source = "Catalyst / Raid / Vault", id = "229253" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Cauldron Champion's Screamplate", source = "Catalyst / Raid / Vault", id = "229251" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Cauldron Champion's Ribcage", source = "Catalyst / Raid / Vault", id = "229256" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", id = "222435" },
-    { slot = "Hands", name = "Cauldron Champion's Fistguards", source = "Catalyst / Raid / Vault", id = "229254" },
-    { slot = "Waist", name = "Coin-Operated Girdle", source = "One-Armed Bandit", id = "228886" },
-    { slot = "Legs", name = "Galvanized Oxxein Legguards", source = "Theater of Pain", id = "178800" },
-    { slot = "Feet", name = "Cauldron Champion's Greatboots", source = "Catalyst", id = "229255" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Mechano-Core Amplifier", source = "Delves / Vault", id = "232485" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Hollow Sentinel's Stonemask", source = "Catalyst / Raid / Vault", id = "237628" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Hollow Sentinel's Perches", source = "Catalyst / Raid / Vault", id = "237626" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Hollow Sentinel's Breastplate", source = "Catalyst / Raid / Vault", id = "237631" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Craft", gems = { "Dawnthread Lining", "Crit + Mastery" }, id = "222435" },
+    { slot = "Hands", name = "Breached Containment Guards", source = "Forgeweaver Araz", id = "237526" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", gems = { "Dawnthread Lining", "Crit + Mastery" }, id = "222431" },
+    { slot = "Legs", name = "Hollow Sentinel's Stonekilt", source = "Catalyst / Raid / Vault", id = "237627" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Fatebound Crusader", source = "Eco-Dome Al'dani", id = "242487" }
 }
 
--- Overall Unholy Death Knight
+-- Unholy Death Knight San'layn
 BiSCompanionBisData["DK_Unholy_San'layn"] = {
-    { slot = "Head", name = "Cauldron Champion's Crown", source = "Catalyst / Raid / Vault", id = "229253" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Cauldron Champion's Screamplate", source = "Catalyst / Raid / Vault", id = "229251" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Cauldron Champion's Ribcage", source = "Catalyst / Raid / Vault", id = "229256" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", id = "222435" },
-    { slot = "Hands", name = "Cauldron Champion's Fistguards", source = "Catalyst / Raid / Vault", id = "229254" },
-    { slot = "Waist", name = "Coin-Operated Girdle", source = "One-Armed Bandit", id = "228886" },
-    { slot = "Legs", name = "Galvanized Oxxein Legguards", source = "Theater of Pain", id = "178800" },
-    { slot = "Feet", name = "Cauldron Champion's Greatboots", source = "Catalyst", id = "229255" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Mechano-Core Amplifier", source = "Delves / Vault", id = "232485" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Hollow Sentinel's Stonemask", source = "Catalyst / Raid / Vault", id = "237628" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Hollow Sentinel's Perches", source = "Catalyst / Raid / Vault", id = "237626" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Hollow Sentinel's Breastplate", source = "Catalyst / Raid / Vault", id = "237631" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Craft", gems = { "Dawnthread Lining", "Crit + Mastery" }, id = "222435" },
+    { slot = "Hands", name = "Breached Containment Guards", source = "Forgeweaver Araz", id = "237526" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", gems = { "Dawnthread Lining", "Crit + Mastery" }, id = "222431" },
+    { slot = "Legs", name = "Hollow Sentinel's Stonekilt", source = "Catalyst / Raid / Vault", id = "237627" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Fatebound Crusader", source = "Eco-Dome Al'dani", id = "242487" }
 }
 
 -- Aldrachi Reaver Havoc Demon Hunter
 BiSCompanionBisData["DH_Havoc_Aldrachi Reaver"] = {
-    { slot = "Head", name = "Fel-Dealer's Visor", source = "One-Armed Bandit", id = "229316" },
-    { slot = "Neck", name = "Undermine Merc's Dog Tags", source = "Liberation of Undermine Bind on Equip Drop", id = "232663" },
-    { slot = "Shoulders", name = "Fel-Dealer's Recycled Reavers", source = "Rik Reverb", id = "229314" },
-    { slot = "Back", name = "Chef Chewie's Towel", source = "Cinderbrew Meadery", id = "221054" },
-    { slot = "Chest", name = "Fel-Dealer's Soul Engine", source = "Sprocketmonger", id = "229319" },
+    { slot = "Head", name = "Charhound's Vicious Scalp", source = "Catalyst / Raid / Vault", id = "237691" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Charhound's Vicious Hornguards", source = "Catalyst / Raid / Vault", id = "237689" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Charhound's Vicious Bindings", source = "Catalyst / Raid / Vault", id = "237694" },
     { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Tempestwind Handlers", source = "The Rookery", id = "221036" },
-    { slot = "Waist", name = "Fel-Dealer's Waistwrap", source = "Catalyst", id = "229313" },
-    { slot = "Legs", name = "Fel-Dealer's Fur Kilt", source = "Stix Bunkjunker", id = "229315" },
-    { slot = "Feet", name = "Rushed Beta Launchers", source = "Sprocketmonger", id = "228888" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Ring of Perpetual Conflict", source = "Theater of Pain", id = "178872" },
-    { slot = "Trinket 1", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security", id = "232804" },
+    { slot = "Hands", name = "Charhound's Vicious Felclaws", source = "Catalyst / Raid / Vault", id = "237692" },
+    { slot = "Waist", name = "Atomic Phasebelt", source = "Plexus Sentinel", id = "237533" },
+    { slot = "Legs", name = "Gauzewoven Legguards", source = "Ara-Kara, City of Echoes", id = "221153" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Devout Zealot's Ring", source = "The Dawnbreaker", id = "221136" },
+    { slot = "Trinket 1", name = "Sigil of the Cosmic Hunt", source = "The Soul Hunters", id = "242397" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Collapsing Phaseblades", source = "The Soul Hunters", id = "237727" },
     { slot = "Off Hand", name = "Everforged Warglaive", source = "Crafting", id = "222441" }
 }
 
 -- Fel-Scarred Havoc Demon Hunter
 BiSCompanionBisData["DH_Havoc_Fel-Scarred"] = {
-    { slot = "Head", name = "Overclocked Idea Generator", source = "Crafting", id = "221802" },
-    { slot = "Neck", name = "Undermine Merc's Dog Tags", source = "Liberation of Undermine Bind on Equip Drop", id = "232663" },
-    { slot = "Shoulders", name = "Fel-Dealer's Recycled Reavers", source = "Rik Reverb", id = "229314" },
-    { slot = "Back", name = "Chef Chewie's Towel", source = "Cinderbrew Meadery", id = "221054" },
-    { slot = "Chest", name = "Fel-Dealer's Soul Engine", source = "Sprocketmonger", id = "229319" },
+    { slot = "Head", name = "Charhound's Vicious Scalp", source = "Catalyst / Raid / Vault", id = "237691" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Charhound's Vicious Hornguards", source = "Catalyst / Raid / Vault", id = "237689" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Charhound's Vicious Bindings", source = "Catalyst / Raid / Vault", id = "237694" },
     { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Fel-Dealer's Underhandlers", source = "Cauldron of Carnage", id = "229317" },
-    { slot = "Waist", name = "Gleamkeeper's Buckle", source = "Darkflame Cleft", id = "221107" },
-    { slot = "Legs", name = "Fel-Dealer's Fur Kilt", source = "Stix Bunkjunker", id = "229315" },
-    { slot = "Feet", name = "Rushed Beta Launchers", source = "Sprocketmonger", id = "228888" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Ring of Perpetual Conflict", source = "Theater of Pain", id = "178872" },
-    { slot = "Trinket 1", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security", id = "232804" },
+    { slot = "Hands", name = "Charhound's Vicious Felclaws", source = "Catalyst / Raid / Vault", id = "237692" },
+    { slot = "Waist", name = "Atomic Phasebelt", source = "Plexus Sentinel", id = "237533" },
+    { slot = "Legs", name = "Gauzewoven Legguards", source = "Ara-Kara, City of Echoes", id = "221153" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Devout Zealot's Ring", source = "The Dawnbreaker", id = "221136" },
+    { slot = "Trinket 1", name = "Sigil of the Cosmic Hunt", source = "The Soul Hunters", id = "242397" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Collapsing Phaseblades", source = "The Soul Hunters", id = "237727" },
     { slot = "Off Hand", name = "Everforged Warglaive", source = "Crafting", id = "222441" }
 }
 
--- Overall Vengeance Demon Hunter Fel-Scarred
+-- Vengeance Demon Hunter Fel-Scarred
 BiSCompanionBisData["DH_Vengeance_Fel-Scarred"] = {
-    { slot = "Head", name = "Fel-Dealer's Visor", source = "Catalyst/One-Armed Bandit (Liberation of Undermine)/Vault", id = "229316" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb (Liberation of Undermine)", id = "228841" },
-    { slot = "Shoulders", name = "Fel-Dealer's Recycled Reavers", source = "Catalyst/Rik Reverb (Liberation of Undermine/Vault", id = "229314" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock (Liberation of Undermine)", id = "228844" },
-    { slot = "Chest", name = "Fel-Dealer's Soul Engine", source = "Catalyst/Sprocketmonger Lockenstock (Liberation of Undermine)/Vault", id = "229319" },
-    { slot = "Wrists", name = "Servo-Arm Bindings", source = "The MOTHERLODE!!", id = "158353" },
-    { slot = "Hands", name = "Fel-Dealer's Underhandlers", source = "Catalyst/Cauldron of Carnage (Liberation of Undermine)/Vault", id = "229317" },
-    { slot = "Waist", name = "Adrenal Surge Clasp", source = "Leatherworking", id = "219502" },
-    { slot = "Legs", name = "Shadowspawn Leggings", source = "Darkflame Cleft", id = "221114" },
-    { slot = "Feet", name = "Dragster's Last Stride", source = "Vexie and the Geargrinders (Liberation of Undermine)", id = "228876" },
-    { slot = "Ring 1", name = "Bloodoath Signet", source = "Theater of Pain", id = "178871" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix (Liberation of Undermine)", id = "231265" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Chromebustible Bomb Suit", source = "Chrome King Gallywix", id = "230029" },
+    { slot = "Head", name = "Charhound's Vicious Scalp", source = "Catalyst / Raid / Vault", id = "237691" },
+    { slot = "Neck", name = "Cabochon of the Infinite Flight", source = "Tazavesh, the Veiled Market", id = "175546" },
+    { slot = "Shoulders", name = "Charhound's Vicious Hornguards", source = "Catalyst / Raid / Vault", id = "237689" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Charhound's Vicious Bindings", source = "Catalyst / Raid / Vault", id = "237694" },
+    { slot = "Wrists", name = "Bindings of Lost Essence", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237546" },
+    { slot = "Hands", name = "Charhound's Vicious Felclaws", source = "Catalyst / Raid / Vault", id = "237692" },
+    { slot = "Waist", name = "Venza's Powderbelt", source = "Tazavesh, the Veiled Market", id = "185809" },
+    { slot = "Legs", name = "Charhound's Vicious Hidecoat", source = "Catalyst / Raid / Vault", id = "237690" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Binding of Binding", source = "Crafting", id = "215133" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
     { slot = "Weapon", name = "Sonic Ka-BOOM!-erang", source = "Operation: Floodgate", id = "234491" },
-    { slot = "Off Hand", name = "Everforged Longsword", source = "Crafting", id = "222440" }
+    { slot = "Off Hand", name = "Everforged Warglaive", source = "Crafting", gems = { " Blessed Weapon Grip", "Crit + Haste" }, id = "222441" }
 }
 
--- Overall Vengeance Demon Hunter Aldrachi Reaver
+-- Vengeance Demon Hunter Aldrachi Reaver
 BiSCompanionBisData["DH_Vengeance_Aldrachi Reaver"] = {
-    { slot = "Head", name = "Fel-Dealer's Visor", source = "Catalyst/One-Armed Bandit (Liberation of Undermine)/Vault", id = "229316" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb (Liberation of Undermine)", id = "228841" },
-    { slot = "Shoulders", name = "Fel-Dealer's Recycled Reavers", source = "Catalyst/Rik Reverb (Liberation of Undermine/Vault", id = "229314" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock (Liberation of Undermine)", id = "228844" },
-    { slot = "Chest", name = "Fel-Dealer's Soul Engine", source = "Catalyst/Sprocketmonger Lockenstock (Liberation of Undermine)/Vault", id = "229319" },
-    { slot = "Wrists", name = "Servo-Arm Bindings", source = "The MOTHERLODE!!", id = "158353" },
-    { slot = "Hands", name = "Fel-Dealer's Underhandlers", source = "Catalyst/Cauldron of Carnage (Liberation of Undermine)/Vault", id = "229317" },
-    { slot = "Waist", name = "Adrenal Surge Clasp", source = "Leatherworking", id = "219502" },
-    { slot = "Legs", name = "Shadowspawn Leggings", source = "Darkflame Cleft", id = "221114" },
-    { slot = "Feet", name = "Dragster's Last Stride", source = "Vexie and the Geargrinders (Liberation of Undermine)", id = "228876" },
-    { slot = "Ring 1", name = "Bloodoath Signet", source = "Theater of Pain", id = "178871" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix (Liberation of Undermine)", id = "231265" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Chromebustible Bomb Suit", source = "Chrome King Gallywix", id = "230029" },
+    { slot = "Head", name = "Charhound's Vicious Scalp", source = "Catalyst / Raid / Vault", id = "237691" },
+    { slot = "Neck", name = "Cabochon of the Infinite Flight", source = "Tazavesh, the Veiled Market", id = "175546" },
+    { slot = "Shoulders", name = "Charhound's Vicious Hornguards", source = "Catalyst / Raid / Vault", id = "237689" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Charhound's Vicious Bindings", source = "Catalyst / Raid / Vault", id = "237694" },
+    { slot = "Wrists", name = "Bindings of Lost Essence", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237546" },
+    { slot = "Hands", name = "Charhound's Vicious Felclaws", source = "Catalyst / Raid / Vault", id = "237692" },
+    { slot = "Waist", name = "Venza's Powderbelt", source = "Tazavesh, the Veiled Market", id = "185809" },
+    { slot = "Legs", name = "Charhound's Vicious Hidecoat", source = "Catalyst / Raid / Vault", id = "237690" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Binding of Binding", source = "Crafting", id = "215133" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
     { slot = "Weapon", name = "Sonic Ka-BOOM!-erang", source = "Operation: Floodgate", id = "234491" },
-    { slot = "Off Hand", name = "Everforged Longsword", source = "Crafting", id = "222440" }
+    { slot = "Off Hand", name = "Everforged Warglaive", source = "Crafting", gems = { "Blessed Weapon Grip", "Crit + Haste" }, id = "222441" }
 }
 
--- Overall Balance Druid Keeper of the Grove
+-- Balance Druid Keeper of the Grove
 BiSCompanionBisData["Druid_Balance_Keeper of the Grove"] = {
-    { slot = "Head", name = "Branches of Reclaiming Blight", source = "Catalyst / One-Armed Bandit", id = "229307" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Catalyst / Rik Reverb", id = "229305" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Robes of Reclaiming Blight", source = "Catalyst / Sprocketmonger", id = "229310" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Shimmering Glimclaws", source = "Darkflame Cleft", id = "221102" },
-    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", id = "219331" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Catalyst / Stix Bunkjunker", id = "229306" },
-    { slot = "Feet", name = "Stalwart Guardian's Boots", source = "Priory of the Sacred Flame", id = "221120" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = " Sin Stained Pendant", source = "Halls of Atonement", id = "178827" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Vest of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237685" },
+    { slot = "Wrists", name = "Time-Compressed Wristguards", source = "Dimensius The All Devouring - Manaforge Omega", id = "237562" },
+    { slot = "Hands", name = "Winged Gamma Handlers", source = "Dimensius The All Devouring - Manaforge Omega", id = "237540" },
+    { slot = "Waist", name = "Atomic Phasebelt", source = "Plexus Sentinel - Manaforge Omega", id = "237533" },
+    { slot = "Legs", name = "Breeches of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237681" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Ring 2", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Spire", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237730" }
 }
 
--- Overall Balance Druid Elune's Chosen
+-- Balance Druid Elune's Chosen
 BiSCompanionBisData["Druid_Balance_Elune's Chosen"] = {
-    { slot = "Head", name = "Branches of Reclaiming Blight", source = "Catalyst / One-Armed Bandit", id = "229307" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Catalyst / Rik Reverb", id = "229305" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Robes of Reclaiming Blight", source = "Catalyst / Sprocketmonger", id = "229310" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Shimmering Glimclaws", source = "Darkflame Cleft", id = "221102" },
-    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", id = "219331" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Catalyst / Stix Bunkjunker", id = "229306" },
-    { slot = "Feet", name = "Stalwart Guardian's Boots", source = "Priory of the Sacred Flame", id = "221120" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = " Sin Stained Pendant", source = "Halls of Atonement", id = "178827" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Vest of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237685" },
+    { slot = "Wrists", name = "Time-Compressed Wristguards", source = "Dimensius The All Devouring - Manaforge Omega", id = "237562" },
+    { slot = "Hands", name = "Winged Gamma Handlers", source = "Dimensius The All Devouring - Manaforge Omega", id = "237540" },
+    { slot = "Waist", name = "Atomic Phasebelt", source = "Plexus Sentinel - Manaforge Omega", id = "237533" },
+    { slot = "Legs", name = "Breeches of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237681" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Ring 2", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Spire", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237730" }
 }
 
 -- Wildstalker Feral Druid
 BiSCompanionBisData["Druid_Feral_Wildstalker"] = {
-    { slot = "Head", name = "Branches of Reclaiming Blight", source = "Catalyst / Raid / Vault", id = "229307" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Catalyst / Raid / Vault", id = "229305" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Robes of Reclaiming Blight", source = "Catalyst / Raid / Vault", id = "229310" },
-    { slot = "Wrists", name = "Disturbed Kelp Wraps", source = "Operation: Floodgate", id = "234499" },
-    { slot = "Hands", name = "Rune-Branded Grasps", source = "Crafting", id = "219333" },
-    { slot = "Waist", name = "Hitman's Holster", source = "Mug'Zee", id = "228880" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Catalyst / Raid / Vault", id = "229306" },
-    { slot = "Feet", name = "Stalwart Guardian's Boots", source = "Priory of the Sacred Flame", id = "221120" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "So'azmi's Fractal Vest", source = "Tazavesh: Streets of Wonder", id = "185786" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", gems = { "Crit + Mastery" }, id = "219334" },
+    { slot = "Hands", name = "Wings of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237683" },
+    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", gems = { "Crit + Mastery" },id = "219331" },
+    { slot = "Legs", name = "Breeches of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237681" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Radiant Necromancer's Band", source = "	Priory of the Sacred Flame", id = "221200" },
+    { slot = "Ring 2", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
--- Overall Guardian Druid Druid of the Claw
+-- Druid of the Claw Feral Druid
+BiSCompanionBisData["Druid_Feral_Druid of the Claw"] = {
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "So'azmi's Fractal Vest", source = "Tazavesh: Streets of Wonder", id = "185786" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", gems = { "Crit + Mastery" }, id = "219334" },
+    { slot = "Hands", name = "Wings of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237683" },
+    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", gems = { "Crit + Mastery" },id = "219331" },
+    { slot = "Legs", name = "Breeches of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237681" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Radiant Necromancer's Band", source = "	Priory of the Sacred Flame", id = "221200" },
+    { slot = "Ring 2", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
+}
+
+-- Guardian Druid Druid of the Claw
 BiSCompanionBisData["Druid_Guardian_Druid of the Claw"] = {
-    { slot = "Head", name = "Mekgineer's Mindbending Headgear", source = "Operation: Mechagon Workshop", id = "235224" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Rik Reverb / Catalyst", id = "229305" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Robes of Reclaiming Blight", source = "Sprocketmonger / Catalyst", id = "229310" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Grips of Reclaiming Blight", source = "Cauldron of Carnage / Catalyst", id = "229308" },
-    { slot = "Waist", name = "Hitman's Holster", source = "Mug'zee, Heads of Security", id = "228880" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Stix Bunkjunker / Catalyst", id = "229306" },
-    { slot = "Feet", name = "Dragster's Last Stride", source = "Vexie", id = "228876" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Reverb Radio", source = "Rik Reverb", id = "230194" },
-    { slot = "Trinket 2", name = "Mister Lock-N-Stalk", source = "Sprocketmonger", id = "230193" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Vest of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237685" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", gems = { "Duskthread Lining Embellishment" }, id = "219334" },
+    { slot = "Hands", name = "Winged Gamma Handlers", source = "Dimensius The All Devouring - Manaforge Omega", id = "237540" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Overcharged Delves", gems = { "Static Charge" },id = "219331" },
+    { slot = "Legs", name = "Breeches of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237681" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Ring of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment" }, id = "215135" },
+    { slot = "Trinket 1", name = "Brand of Ceaseless Ire", source = "The Soul Hunters in Manaforge Omega", id = "242401" },
+    { slot = "Trinket 2", name = "Ticking Sack of Terror ", source = "	Tazavesh: Streets of Wonder", id = "185844" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
--- Overall Guardian Druid Elune's Chosen
+-- Guardian Druid Elune's Chosen
 BiSCompanionBisData["Druid_Guardian_Elune's Chosen"] = {
-    { slot = "Head", name = "Mekgineer's Mindbending Headgear", source = "Operation: Mechagon Workshop", id = "235224" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Rik Reverb / Catalyst", id = "229305" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Robes of Reclaiming Blight", source = "Sprocketmonger / Catalyst", id = "229310" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Grips of Reclaiming Blight", source = "Cauldron of Carnage / Catalyst", id = "229308" },
-    { slot = "Waist", name = "Hitman's Holster", source = "Mug'zee, Heads of Security", id = "228880" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Stix Bunkjunker / Catalyst", id = "229306" },
-    { slot = "Feet", name = "Dragster's Last Stride", source = "Vexie", id = "228876" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Reverb Radio", source = "Rik Reverb", id = "230194" },
-    { slot = "Trinket 2", name = "Mister Lock-N-Stalk", source = "Sprocketmonger", id = "230193" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Vest of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237685" },
+    { slot = "Wrists", name = "Time-Compressed Wristguards", source = "Dimensius The All Devouring - Manaforge Omega", id = "237562" },
+    { slot = "Hands", name = "Winged Gamma Handlers", source = "Dimensius The All Devouring - Manaforge Omega", id = "237540" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Overcharged Delves", gems = { "Static Charge" },id = "219331" },
+    { slot = "Legs", name = "Breeches of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237681" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Ring of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment" }, id = "215135" },
+    { slot = "Trinket 1", name = "Brand of Ceaseless Ire", source = "The Soul Hunters in Manaforge Omega", id = "242401" },
+    { slot = "Trinket 2", name = "Ticking Sack of Terror ", source = "	Tazavesh: Streets of Wonder", id = "185844" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
--- Overall Restoration Druid Keeper of the Grove
+-- Restoration Druid Keeper of the Grove
 BiSCompanionBisData["Druid_Resto_Keeper of the Grove"] = {
-    { slot = "Head", name = "Branches of Reclaiming Blight", source = "One-Armed Bandit", id = "229307" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Rik Reverb", id = "229305" },
-    { slot = "Back", name = "Electrician's Siphoning Filter", source = "Operation: Floodgate", id = "234507" },
-    { slot = "Chest", name = "\"Streamlined\" Cartel Uniform", source = "Chrome King Gallywix", id = "228864" },
-    { slot = "Wrists", name = "Battle-Scarred Fisticuffs", source = "Cinderbrew Meadery", id = "221053" },
-    { slot = "Hands", name = "Grips of Reclaiming Blight", source = "Cauldron of Carnage", id = "229308" },
-    { slot = "Waist", name = "Competitor's Battle Cord", source = "Cauldron of Carnage", id = "228856" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Stix Bunkjunker", id = "229306" },
-    { slot = "Feet", name = "Stalwart Guardian's Boots", source = "Priory of the Sacred Flame", id = "221120" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Operator's Fraud Detector", source = "One-Armed Bandit", id = "228906" },
-    alternates = {
-        { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
-    }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Vest of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237685" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", gems = { "Duskthread Lining Embellishment" }, id = "219334" },
+    { slot = "Hands", name = "Wings of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237683" },
+    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", gems = { "Haste + Mastery", "Writhing Armor Banding" },id = "219331" },
+    { slot = "Legs", name = "Skyterror's Stonehide Leggings", source = "Halls of Atonement", id = "178819" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Ring 2", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "228896" }
 }
 
--- Overall Restoration Druid
+-- Restoration Druid Wildstalker
 BiSCompanionBisData["Druid_Resto_Wildstalker"] = {
-    { slot = "Head", name = "Branches of Reclaiming Blight", source = "One-Armed Bandit", id = "229307" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Jaws of Reclaiming Blight", source = "Rik Reverb", id = "229305" },
-    { slot = "Back", name = "Electrician's Siphoning Filter", source = "Operation: Floodgate", id = "234507" },
-    { slot = "Chest", name = "\"Streamlined\" Cartel Uniform", source = "Chrome King Gallywix", id = "228864" },
-    { slot = "Wrists", name = "Battle-Scarred Fisticuffs", source = "Cinderbrew Meadery", id = "221053" },
-    { slot = "Hands", name = "Grips of Reclaiming Blight", source = "Cauldron of Carnage", id = "229308" },
-    { slot = "Waist", name = "Competitor's Battle Cord", source = "Cauldron of Carnage", id = "228856" },
-    { slot = "Legs", name = "Moccasins of Reclaiming Blight", source = "Stix Bunkjunker", id = "229306" },
-    { slot = "Feet", name = "Stalwart Guardian's Boots", source = "Priory of the Sacred Flame", id = "221120" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Operator's Fraud Detector", source = "One-Armed Bandit", id = "228906" },
-    alternates = {
-        { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
-    }
+    { slot = "Head", name = "Skymane of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237682" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Ritual Pauldrons of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237680" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Vest of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237685" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", gems = { "Duskthread Lining Embellishment" }, id = "219334" },
+    { slot = "Hands", name = "Wings of the Mother Eagle", source = "Catalyst / Raid / Vault", id = "237683" },
+    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", gems = { "Haste + Mastery", "Writhing Armor Banding" },id = "219331" },
+    { slot = "Legs", name = "Skyterror's Stonehide Leggings", source = "Halls of Atonement", id = "178819" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Ring 2", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "228896" }
 }
 
--- Beast Mastery Hunter
-BiSCompanionBisData["Hunter_BM"] = {
-    { slot = "Head", name = "Tireless Collector's Chained Cowl", source = "Catalyst / Raid / Vault", id = "229271" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Epaulettes of Failed Enforcers", source = "Mug'zee, Heads of Security", id = "228860" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Tireless Collector's Battlegear", source = "Catalyst / Raid / Vault", id = "229274" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", id = "219342" },
-    { slot = "Hands", name = "Tireless Collector's Gauntlets", source = "Catalyst / Raid / Vault", id = "229272" },
-    { slot = "Waist", name = "Portable Power Generator", source = "Operation: Floodgate", id = "234501" },
-    { slot = "Legs", name = "Tireless Collector's Armored Breeches", source = "Catalyst / Raid / Vault", id = "229270" },
-    { slot = "Feet", name = "Glyph-Etched Stompers", source = "Crafted", id = "219335" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Signet of the Priory", source = "Priory of the Sacred Flame", id = "219308" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "\"Tiny Pal\"", source = "Mug'zee, Heads of Security", id = "225588" },
-    alternates = {
-        { slot = "Weapon", name = "Tournament Arc", source = "Cauldron of Carnage", id = "228900" }
-    }
+-- Beast Mastery Hunter Dark Ranger
+BiSCompanionBisData["Hunter_BM_Dark Ranger"] = {
+    { slot = "Head", name = "Midnight Herald's Cowl", source = "Catalyst / Raid / Vault", id = "237646" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Midnight Herald's Shadowguards", source = "Catalyst / Raid / Vault", id = "237644" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Midnight Herald's Hauberk", source = "Catalyst / Raid / Vault", id = "237649" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Glyph-Etched Gauntlets", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219341" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge" }, id = "245965" },
+    { slot = "Legs", name = "Midnight Herald's Petticoat ", source = "Catalyst / Raid / Vault", id = "237645" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Ara-Kara Sacbrood", source = "Ara-Kara, City of Echoes", id = "219314" },
+    { slot = "Weapon", name = "Lacerated Current Caster", source = "Ara-Kara, City of Echoes", id = "237733" }
+}
+
+-- Beast Mastery Hunter Pack Leader
+BiSCompanionBisData["Hunter_BM_Pack Leader"] = {
+    { slot = "Head", name = "Midnight Herald's Cowl", source = "Catalyst / Raid / Vault", id = "237646" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Midnight Herald's Shadowguards", source = "Catalyst / Raid / Vault", id = "237644" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Midnight Herald's Hauberk", source = "Catalyst / Raid / Vault", id = "237649" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Glyph-Etched Gauntlets", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219341" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge" }, id = "245965" },
+    { slot = "Legs", name = "Midnight Herald's Petticoat ", source = "Catalyst / Raid / Vault", id = "237645" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Ara-Kara Sacbrood", source = "Ara-Kara, City of Echoes", id = "219314" },
+    { slot = "Weapon", name = "Lacerated Current Caster", source = "Ara-Kara, City of Echoes", id = "237733" }
 }
 
 -- Sentinel Marksmanship Hunter
 BiSCompanionBisData["Hunter_Marks_Sentinel"] = {
-    { slot = "Head", name = "Tireless Collector's Chained Cowl", source = "Catalyst / Raid / Vault", id = "229271" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Crashguard Spaulders", source = "The MOTHERLODE!!", id = "235416" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Tireless Collector's Battlegear", source = "Catalyst / Raid / Vault", id = "229274" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting", id = "219342" },
-    { slot = "Hands", name = "Tireless Collector's Gauntlets", source = "Catalyst / Raid / Vault", id = "229272" },
-    { slot = "Waist", name = "Dealer's Covetous Chain", source = "Chrome King Gallywix", id = "228877" },
-    { slot = "Legs", name = "Tireless Collector's Armored Breeches", source = "Catalyst / Raid / Vault", id = "229270" },
-    { slot = "Feet", name = "Shrapnel-Ridden Sabatons", source = "Stix Bunkjunker", id = "228862" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Mechano-Core Amplifier", source = "Delves", id = "232485" },
-    { slot = "Weapon", name = "\"Tiny Pal\"", source = "Mug'zee, Heads of Security", id = "225588" },
-    alternates = {
-        { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" }
-    }
+    { slot = "Head", name = "Midnight Herald's Cowl", source = "Catalyst / Raid / Vault", id = "237646" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Midnight Herald's Shadowguards", source = "Catalyst / Raid / Vault", id = "237644" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Midnight Herald's Hauberk", source = "Catalyst / Raid / Vault", id = "237649" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Glyph-Etched Gauntlets", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219341" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge" }, id = "245965" },
+    { slot = "Legs", name = "Midnight Herald's Petticoat ", source = "Catalyst / Raid / Vault", id = "237645" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Devout Zealot's Ring", source = "The Dawnbreaker", id = "221136" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Yasahm the Riftbreaker", source = "Tazavesh: So'Leah's Gambit", id = "185783" }
 }
 
 -- Dark Ranger Marksmanship Hunter
 BiSCompanionBisData["Hunter_Marks_Dark Ranger"] = {
-    { slot = "Head", name = "Tireless Collector's Chained Cowl", source = "Catalyst / Raid / Vault", id = "229271" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Crashguard Spaulders", source = "The MOTHERLODE!!", id = "235416" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Tireless Collector's Battlegear", source = "Catalyst / Raid / Vault", id = "229274" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting", id = "219342" },
-    { slot = "Hands", name = "Tireless Collector's Gauntlets", source = "Catalyst / Raid / Vault", id = "229272" },
-    { slot = "Waist", name = "Dealer's Covetous Chain", source = "Chrome King Gallywix", id = "228877" },
-    { slot = "Legs", name = "Tireless Collector's Armored Breeches", source = "Catalyst / Raid / Vault", id = "229270" },
-    { slot = "Feet", name = "Shrapnel-Ridden Sabatons", source = "Stix Bunkjunker", id = "228862" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Mechano-Core Amplifier", source = "Delves", id = "232485" },
-    { slot = "Weapon", name = "\"Tiny Pal\"", source = "Mug'zee, Heads of Security", id = "225588" },
-    alternates = {
-        { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" }
-    }
+    { slot = "Head", name = "Midnight Herald's Cowl", source = "Catalyst / Raid / Vault", id = "237646" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Midnight Herald's Shadowguards", source = "Catalyst / Raid / Vault", id = "237644" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Midnight Herald's Hauberk", source = "Catalyst / Raid / Vault", id = "237649" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Glyph-Etched Gauntlets", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219341" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge" }, id = "245965" },
+    { slot = "Legs", name = "Midnight Herald's Petticoat ", source = "Catalyst / Raid / Vault", id = "237645" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Devout Zealot's Ring", source = "The Dawnbreaker", id = "221136" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Yasahm the Riftbreaker", source = "Tazavesh: So'Leah's Gambit", id = "185783" }
 }
 
--- Sentinel Survival Hunter
-BiSCompanionBisData["Hunter_Survival_Sentinel"] = {
-    { slot = "Head", name = "Tireless Collector's Chained Cowl", source = "Catalyst / Raid / Vault", id = "229271" },
-    { slot = "Neck", name = "Gobfather's Gifted Bling", source = "Mug'Zee", id = "228842" },
-    { slot = "Shoulders", name = "Crashguard Spaulders", source = "The MOTHERLODE!!", id = "235416" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock", id = "228844" },
-    { slot = "Chest", name = "Tireless Collector's Battlegear", source = "Catalyst / Raid / Vault", id = "229274" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted - Leatherworking", id = "219342" },
-    { slot = "Hands", name = "Tireless Collector's Gauntlets", source = "Catalyst / Raid / Vault", id = "229272" },
-    { slot = "Waist", name = "Glyph-Etched Binding", source = "Crafted - Leatherworking", id = "225580" },
-    { slot = "Legs", name = "Tireless Collector's Armored Breeches", source = "Catalyst / Raid / Vault", id = "229270" },
-    { slot = "Feet", name = "Tireless Collector's Spiked Cleats", source = "Catalyst", id = "229273" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
+-- Sentinel Survival Hunter Pack Leader
+BiSCompanionBisData["Hunter_Survival_Pack Leader"] = {
+    { slot = "Head", name = "Midnight Herald's Cowl", source = "Catalyst / Raid / Vault", id = "237646" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Midnight Herald's Shadowguards", source = "Catalyst / Raid / Vault", id = "237644" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Midnight Herald's Hauberk", source = "Catalyst / Raid / Vault", id = "237649" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Mastery + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Glyph-Etched Gauntlets", source = "Crafted", gems = { "Dawnthread Lining", "Mastery + Haste" }, id = "219341" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge" }, id = "245965" },
+    { slot = "Legs", name = "Midnight Herald's Petticoat ", source = "Catalyst / Raid / Vault", id = "237645" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Ring 2", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
     { slot = "Trinket 1", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Trinket 2", name = "Signet of the Priory", source = "Priory of the Sacred Flame", id = "219308" },
-    { slot = "Weapon", name = "Giga Bank-Breaker", source = "One-Armed Bandit", id = "228905" }
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Spellstrike Warplance", source = "Eco-Dome Al'dani", id = "242481" }
+}
+
+-- Sentinel Survival Hunter Sentinel
+BiSCompanionBisData["Hunter_Survival_Sentinel"] = {
+    { slot = "Head", name = "Midnight Herald's Cowl", source = "Catalyst / Raid / Vault", id = "237646" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Midnight Herald's Shadowguards", source = "Catalyst / Raid / Vault", id = "237644" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Midnight Herald's Hauberk", source = "Catalyst / Raid / Vault", id = "237649" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Mastery + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Glyph-Etched Gauntlets", source = "Crafted", gems = { "Dawnthread Lining", "Mastery + Haste" }, id = "219341" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge" }, id = "245965" },
+    { slot = "Legs", name = "Midnight Herald's Petticoat ", source = "Catalyst / Raid / Vault", id = "237645" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Ring 2", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Spellstrike Warplance", source = "Eco-Dome Al'dani", id = "242481" }
 }
 
 -- Arcane Mage
 BiSCompanionBisData["Mage_Arcane_Spellslinger"] = {
-    { slot = "Head", name = "Aspectral Emissary's Crystalline Cowl", source = "Catalyst / Raid / Vault", id = "229343" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Aspectral Emissary's Arcane Vents", source = "Catalyst / Raid / Vault", id = "229341" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon", id = "199921" },
-    { slot = "Chest", name = "Petticoat of the Self-Stylized Azerite Baron", source = "The MOTHERLODE!!", id = "235420" },
-    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", id = "222815" },
-    { slot = "Hands", name = "Aspectral Emissary's Hardened Grasp", source = "Catalyst / Raid / Vault", id = "229344" },
-    { slot = "Waist", name = "Ringmaster's Cummerbund", source = "Operation: Mechagon", id = "168958" },
-    { slot = "Legs", name = "Aspectral Emissary's Trousers", source = "Catalyst / Raid / Vault", id = "229342" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Crafting", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Synergistic Brewterializer", source = "Cinderbrew Meadery", id = "219299" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Weapon", name = "Neural Synapse Enhancer", source = "Operation: Mechagon", id = "168973" }
+    { slot = "Head", name = "Augur's Ephemeral Wide-Brim", source = "Catalyst / Raid / Vault", id = "237718" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Augur's Ephemeral Orbs of Power", source = "Catalyst / Raid / Vault", id = "237716" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Socketed with Pure Precise Fiber" },id = "235499" },
+    { slot = "Chest", name = "Augur's Ephemeral Habiliments", source = "Catalyst / Raid / Vault", id = "237721" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Haste + Versa", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Codebreaker's Cunning Handwraps", source = "Tazavesh, the Veiled Market", id = "246275" },
+    { slot = "Waist", name = "Singularity Cincture", source = "Dimensius The All Devouring in Manaforge Omega", id = "237559" },
+    { slot = "Legs", name = "Augur's Ephemeral Trousers", source = "Catalyst / Raid / Vault", id = "237717" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Radiant Necromancer's Band", source = "	Priory of the Sacred Flame", id = "221200" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Haste + Versa" }, id = "222566" }
 }
 
 -- Sunfury Fire Mage
 BiSCompanionBisData["Mage_Fire_Sunfury"] = {
-    { slot = "Head", name = "Aspectral Emissary's Crystalline Cowl", source = "Catalyst / Raid / Vault", id = "229343" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Aspectral Emissary's Arcane Vents", source = "Catalyst / Raid / Vault", id = "229341" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Aspectral Emissary's Primal Robes", source = "Catalyst / Raid / Vault", id = "229346" },
-    { slot = "Wrists", name = "Hyperthread Wristwraps", source = "Operation: Mechagon Workshop", id = "168989" },
-    { slot = "Hands", name = "Punctured Apiary Gloves", source = "Cinderbrew Meadery", id = "221067" },
-    { slot = "Waist", name = "Vatwork Janitor's Wasteband", source = "Bind on Equip", id = "232655" },
-    { slot = "Legs", name = "Aspectral Emissary's Trousers", source = "Catalyst / Raid / Vault", id = "229342" },
-    { slot = "Feet", name = "Cemented Murloc-Swimmers", source = "Mug'zee, Heads of Security", id = "228879" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Wick's Golden Loop", source = "Darkflame Cleft", id = "221099" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Elysian Flame Crown", source = "Priory of the Sacred Flame", id = "221131" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Augur's Ephemeral Orbs of Power", source = "Catalyst / Raid / Vault", id = "237716" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Socketed with Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Augur's Ephemeral Habiliments", source = "Catalyst / Raid / Vault", id = "237721" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Haste + Mastery", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Augur's Ephemeral Mitts", source = "Catalyst / Raid / Vault", id = "237719" },
+    { slot = "Waist", name = "Forgeweaver's Journal Holster", source = "Forgeweaver Araz - Manaforge Omega", id = "237538" },
+    { slot = "Legs", name = "Augur's Ephemeral Trousers", source = "Catalyst / Raid / Vault", id = "237717" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Haste + Mastery" }, id = "222566" }
 }
 
 -- Frostfire Fire Mage
 BiSCompanionBisData["Mage_Fire_Frostfire"] = {
-    { slot = "Head", name = "Aspectral Emissary's Crystalline Cowl", source = "Catalyst / Raid / Vault", id = "229343" },
-    { slot = "Neck", name = "Amulet of Earthen Craftsmanship", source = "Crafting", id = "215136" },
-    { slot = "Shoulders", name = "Aspectral Emissary's Arcane Vents", source = "Catalyst / Raid / Vault", id = "229341" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Aspectral Emissary's Primal Robes", source = "Catalyst / Raid / Vault", id = "229346" },
-    { slot = "Wrists", name = "Hyperthread Wristwraps", source = "Operation: Mechagon Workshop", id = "168989" },
-    { slot = "Hands", name = "Punctured Apiary Gloves", source = "Cinderbrew Meadery", id = "221067" },
-    { slot = "Waist", name = "Ringmaster's Cummerbund", source = "Operation: Mechagon Workshop", id = "168958" },
-    { slot = "Legs", name = "Aspectral Emissary's Trousers", source = "Catalyst / Raid / Vault", id = "229342" },
-    { slot = "Feet", name = "Cemented Murloc-Swimmers", source = "Mug'zee, Heads of Security", id = "228879" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "Wick's Golden Loop", source = "Darkflame Cleft", id = "221099" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Weapon", name = "Neural Synapse Enhancer", source = "Operation: Mechagon Workshop", id = "168973" }
+    { slot = "Head", name = "Elysian Flame Crown", source = "Priory of the Sacred Flame", id = "221131" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Augur's Ephemeral Orbs of Power", source = "Catalyst / Raid / Vault", id = "237716" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Socketed with Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Augur's Ephemeral Habiliments", source = "Catalyst / Raid / Vault", id = "237721" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Haste + Mastery", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Augur's Ephemeral Mitts", source = "Catalyst / Raid / Vault", id = "237719" },
+    { slot = "Waist", name = "Forgeweaver's Journal Holster", source = "Forgeweaver Araz - Manaforge Omega", id = "237538" },
+    { slot = "Legs", name = "Augur's Ephemeral Trousers", source = "Catalyst / Raid / Vault", id = "237717" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Haste + Mastery" }, id = "222566" }
 }
 
 -- Spellslinger Frost Mage
 BiSCompanionBisData["Mage_Frost_Spellslinger"] = {
-    { slot = "Head", name = "Inventor's Ingenious Trifocals", source = "Operation: Mechagon Workshop", id = "235226" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Aspectral Emissary's Arcane Vents", source = "Catalyst / Raid / Vault", id = "229341" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Aspectral Emissary's Primal Robes", source = "Catalyst / Raid / Vault", id = "229346" },
-    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", id = "222815" },
-    { slot = "Hands", name = "Aspectral Emissary's Hardened Grasp", source = "Catalyst / Raid / Vault", id = "229344" },
-    { slot = "Waist", name = "Aspectral Emissary's Cummerbund", source = "Catalyst", id = "229340" },
-    { slot = "Legs", name = "Aspectral Emissary's Trousers", source = "Catalyst / Raid / Vault", id = "229342" },
-    { slot = "Feet", name = "Cloudstrider Soles", source = "The Rookery", id = "221043" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "Wick's Golden Loop", source = "Darkflame Cleft", id = "221099" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Synergistic Brewterializer", source = "Cinderbrew Meadery", id = "219299" },
-    { slot = "Weapon", name = "Blastfurious Machete", source = "Vexie", id = "231268" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Augur's Ephemeral Wide-Brim", source = "Catalyst / Raid / Vault", id = "237718" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Augur's Ephemeral Orbs of Power", source = "Catalyst / Raid / Vault", id = "237716" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Socketed with Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Zealous Warden's Raiment", source = "Priory of the Sacred Flame", id = "221126" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Crit + Versa", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Augur's Ephemeral Mitts", source = "Catalyst / Raid / Vault", id = "237719" },
+    { slot = "Waist", name = "Burrower's Cinch", source = "Ara-Kara, City of Echoes", id = "221158" },
+    { slot = "Legs", name = "Augur's Ephemeral Trousers", source = "Catalyst / Raid / Vault", id = "237717" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
 -- Frostfire Frost Mage
 BiSCompanionBisData["Mage_Frost_Frostfire"] = {
-    { slot = "Head", name = "Inventor's Ingenious Trifocals", source = "Operation: Mechagon Workshop", id = "235226" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Aspectral Emissary's Arcane Vents", source = "Catalyst / Raid / Vault", id = "229341" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Aspectral Emissary's Primal Robes", source = "Catalyst / Raid / Vault", id = "229346" },
-    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", id = "222815" },
-    { slot = "Hands", name = "Aspectral Emissary's Hardened Grasp", source = "Catalyst / Raid / Vault", id = "229344" },
-    { slot = "Waist", name = "Aspectral Emissary's Cummerbund", source = "Catalyst", id = "229340" },
-    { slot = "Legs", name = "Aspectral Emissary's Trousers", source = "Catalyst / Raid / Vault", id = "229342" },
-    { slot = "Feet", name = "Cloudstrider Soles", source = "The Rookery", id = "221043" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "Wick's Golden Loop", source = "Darkflame Cleft", id = "221099" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Synergistic Brewterializer", source = "Cinderbrew Meadery", id = "219299" },
-    { slot = "Weapon", name = "Blastfurious Machete", source = "Vexie", id = "231268" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Augur's Ephemeral Wide-Brim", source = "Catalyst / Raid / Vault", id = "237718" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Augur's Ephemeral Orbs of Power", source = "Catalyst / Raid / Vault", id = "237716" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Socketed with Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Zealous Warden's Raiment", source = "Priory of the Sacred Flame", id = "221126" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Crit + Versa", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Augur's Ephemeral Mitts", source = "Catalyst / Raid / Vault", id = "237719" },
+    { slot = "Waist", name = "Burrower's Cinch", source = "Ara-Kara, City of Echoes", id = "221158" },
+    { slot = "Legs", name = "Augur's Ephemeral Trousers", source = "Catalyst / Raid / Vault", id = "237717" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
 -- Overall Brewmaster Monk
 BiSCompanionBisData["Monk_BM_Shado-Pan"] = {
-    { slot = "Head", name = "Ageless Serpent's Mane", source = "One-Armed Bandit (Liberation of Undermine), The Catalyst, The Great Vault", id = "229298" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Rik Reverb (Liberation of Undermine), The Catalyst, The Great Vault", id = "229296" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon Workshop", id = "199921" },
-    { slot = "Chest", name = "Venture Co. Plenipotentiary Vest", source = "The MOTHERLODE!!", id = "235417" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Cauldron of Carnage (Liberation of Undermine), The Catalyst, The Great Vault", id = "229299" },
-    { slot = "Waist", name = "Adrenal Surge Clasp", source = "Leatherworking", id = "219502" },
-    { slot = "Legs", name = "Ageless Serpent's Leggings", source = "Stix Bunkjunker (Liberation of Undermine), The Catalyst, The Great Vault", id = "229297" },
-    { slot = "Feet", name = "Ageless Serpent's Ankleweights", source = "The Catalyst", id = "229300" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix (Liberation of Undermine)", id = "231265" },
-    { slot = "Trinket 1", name = "Ringing Ritual Mud", source = "Operation: Floodgate", id = "232543" },
-    { slot = "Trinket 2", name = "Cinderbrew Stein", source = "Cinderbrew Meadery", id = "219297" },
-    { slot = "Weapon", name = "Giga Bank-Breaker", source = "One-Armed Bandit (Liberation of Undermine)", id = "228905" }
+    { slot = "Head", name = "Half-Mask of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237673" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Glyphs of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237671" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Versa" },id = "235499" },
+    { slot = "Chest", name = "Gi of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237676" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Crit + Versa"}, id = "219334" },
+    { slot = "Hands", name = "Grasp of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237674" },
+    { slot = "Waist", name = "Adrenal Surge Clasp", source = "Leatherworking",gems = { "Crit + Versa"}, id = "219502" },
+    { slot = "Legs", name = "Anomalous Starlit Breeches", source = "Tazavesh: So'Leah's Gambit", id = "185801" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Brand of Ceaseless Ire", source = "The Soul Hunters in Manaforge Omega", id = "242401" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
 -- Overall Brewmaster Monk
 BiSCompanionBisData["Monk_BM_Master of Harmony"] = {
-    { slot = "Head", name = "Ageless Serpent's Mane", source = "One-Armed Bandit (Liberation of Undermine), The Catalyst, The Great Vault", id = "229298" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Rik Reverb (Liberation of Undermine), The Catalyst, The Great Vault", id = "229296" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon Workshop", id = "199921" },
-    { slot = "Chest", name = "Venture Co. Plenipotentiary Vest", source = "The MOTHERLODE!!", id = "235417" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Cauldron of Carnage (Liberation of Undermine), The Catalyst, The Great Vault", id = "229299" },
-    { slot = "Waist", name = "Adrenal Surge Clasp", source = "Leatherworking", id = "219502" },
-    { slot = "Legs", name = "Ageless Serpent's Leggings", source = "Stix Bunkjunker (Liberation of Undermine), The Catalyst, The Great Vault", id = "229297" },
-    { slot = "Feet", name = "Ageless Serpent's Ankleweights", source = "The Catalyst", id = "229300" },
-    { slot = "Ring 1", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix (Liberation of Undermine)", id = "231265" },
-    { slot = "Trinket 1", name = "Ringing Ritual Mud", source = "Operation: Floodgate", id = "232543" },
-    { slot = "Trinket 2", name = "Cinderbrew Stein", source = "Cinderbrew Meadery", id = "219297" },
-    { slot = "Weapon", name = "Giga Bank-Breaker", source = "One-Armed Bandit (Liberation of Undermine)", id = "228905" }
+    { slot = "Head", name = "Half-Mask of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237673" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Glyphs of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237671" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Versa" },id = "235499" },
+    { slot = "Chest", name = "Gi of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237676" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Crit + Versa"}, id = "219334" },
+    { slot = "Hands", name = "Grasp of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237674" },
+    { slot = "Waist", name = "Adrenal Surge Clasp", source = "Leatherworking",gems = { "Crit + Versa"}, id = "219502" },
+    { slot = "Legs", name = "Anomalous Starlit Breeches", source = "Tazavesh: So'Leah's Gambit", id = "185801" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Brand of Ceaseless Ire", source = "The Soul Hunters in Manaforge Omega", id = "242401" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
 -- Mistweaver Monk Best in Slot Gear for Raid Encounters
 BiSCompanionBisData["Monk_MW_Conduit of the Celestials"] = {
-    { slot = "Head", name = "Waterworks Filtration Mask", source = "Operation: Floodgate", id = "234498" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Rik Reverb The Catalyst | The Great Vault", id = "229296" },
-    { slot = "Back", name = "Candlebearer's Shroud", source = "Darkflame Cleft", id = "221109" },
-    { slot = "Chest", name = "Ageless Serpent's Inked Coils", source = "Sprocketmonger The Catalyst | The Great Vault", id = "229301" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Leatherworking", id = "219334" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Cauldron of Carnage The Catalyst | The Great Vault", id = "229299" },
-    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", id = "219331" },
-    { slot = "Legs", name = "Ageless Serpent's Leggings", source = "Stix Bunkjunker The Catalyst | The Great Vault", id = "229297" },
-    { slot = "Feet", name = "Backbreaking Bootstrappers", source = "Cinderbrew Meadery", id = "221071" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Trinket 2", name = "Soulletting Ruby", source = "Theater of Pain", id = "225579" },
-    { slot = "Weapon", name = "Blastfurious Machete", source = "Vexie", id = "231268" },
-    { slot = "Off Hand", name = "Vessel of the Beverage", source = "Cinderbrew Meadery", id = "225593" }
+    { slot = "Head", name = "Half-Mask of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237673" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Glyphs of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237671" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Darksorrow's Corrupted Carapace", source = "The Soul Hunters in Manaforge Omega", id = "237541" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Crit + Haste"}, id = "219334" },
+    { slot = "Hands", name = "Grasp of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237674" },
+    { slot = "Waist", name = "Venza's Powderbelt", source = "Tazavesh, the Veiled Market", id = "185809" },
+    { slot = "Legs", name = "Legwraps of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237672" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Haste" }, id = "222566" }
 }
 
 -- Mistweaver Monk Best in Slot Gear for Raid Encounters
 BiSCompanionBisData["Monk_MW_Master of Harmony"] = {
-    { slot = "Head", name = "Waterworks Filtration Mask", source = "Operation: Floodgate", id = "234498" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Rik Reverb The Catalyst | The Great Vault", id = "229296" },
-    { slot = "Back", name = "Candlebearer's Shroud", source = "Darkflame Cleft", id = "221109" },
-    { slot = "Chest", name = "Ageless Serpent's Inked Coils", source = "Sprocketmonger The Catalyst | The Great Vault", id = "229301" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Leatherworking", id = "219334" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Cauldron of Carnage The Catalyst | The Great Vault", id = "229299" },
-    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting", id = "219331" },
-    { slot = "Legs", name = "Ageless Serpent's Leggings", source = "Stix Bunkjunker The Catalyst | The Great Vault", id = "229297" },
-    { slot = "Feet", name = "Backbreaking Bootstrappers", source = "Cinderbrew Meadery", id = "221071" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Trinket 2", name = "Soulletting Ruby", source = "Theater of Pain", id = "225579" },
-    { slot = "Weapon", name = "Blastfurious Machete", source = "Vexie", id = "231268" },
-    { slot = "Off Hand", name = "Vessel of the Beverage", source = "Cinderbrew Meadery", id = "225593" }
+    { slot = "Head", name = "Half-Mask of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237673" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Glyphs of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237671" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Darksorrow's Corrupted Carapace", source = "The Soul Hunters in Manaforge Omega", id = "237541" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Crit + Haste"}, id = "219334" },
+    { slot = "Hands", name = "Grasp of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237674" },
+    { slot = "Waist", name = "Venza's Powderbelt", source = "Tazavesh, the Veiled Market", id = "185809" },
+    { slot = "Legs", name = "Legwraps of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237672" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Haste" }, id = "222566" }
 }
 
 -- Windwalker Monk Shado-pan
 BiSCompanionBisData["Monk_WW_Shado-pan"] = {
-    { slot = "Head", name = "Ageless Serpent's Mane", source = "Catalyst", id = "229298" },
-    { slot = "Neck", name = "Gobfather's Gifted Bling", source = "Mug'zee, Heads of Security - Liberation of Undermine", id = "228842" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Catalyst", id = "229296" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger - Liberation of Undermine", id = "228844" },
-    { slot = "Chest", name = "Ageless Serpent's Inked Coils", source = "Catalyst", id = "229301" },
-    { slot = "Wrists", name = "Ageless Serpent's Cuffs", source = "Catalyst", id = "229294" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Catalyst", id = "229299" },
-    { slot = "Waist", name = "Mekgineer's Championship Belt", source = "Operation: Mechagon Workshop", id = "168957" },
-    { slot = "Legs", name = "Flame-Seared Leggings", source = "Operation: Mechagon Workshop", id = "168968" },
-    { slot = "Feet", name = "Backbreaking Bootstrappers", source = "Cinderbrew Meadery", id = "221071" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix - Liberation of Undermine", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit - Liberation of Undermine", id = "230027" },
-    { slot = "Trinket 2", name = "Mechano-Core Amplifier", source = "Delves", id = "232485" },
-    { slot = "Weapon", name = "Glorious Defender's Poleaxe", source = "Priory of the Sacred Flame", id = "221116" },
-    alternates = {
-        { slot = "Weapon", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security - Liberation of Undermine", id = "232804" },
-        { slot = "Off Hand", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix - Liberation of Undermine", id = "228899" }
-    }
+    { slot = "Head", name = "Half-Mask of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237673" },
+    { slot = "Neck", name = " Sin Stained Pendant", source = "Halls of Atonement", id = "178827" },
+    { slot = "Shoulders", name = "Glyphs of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237671" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Gi of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237676" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Mastery + Haste"}, id = "219334" },
+    { slot = "Hands", name = "Grasp of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237674" },
+    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting",gems = {"Mastery + Haste"}, id = "219331" },
+    { slot = "Legs", name = "Legwraps of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237672" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
 -- Windwalker Monk Conduit of the Celestials
 BiSCompanionBisData["Monk_WW_Conduit of the Celestials"] = {
-    { slot = "Head", name = "Ageless Serpent's Mane", source = "Catalyst", id = "229298" },
-    { slot = "Neck", name = "Gobfather's Gifted Bling", source = "Mug'zee, Heads of Security - Liberation of Undermine", id = "228842" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Catalyst", id = "229296" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger - Liberation of Undermine", id = "228844" },
-    { slot = "Chest", name = "Ageless Serpent's Inked Coils", source = "Catalyst", id = "229301" },
-    { slot = "Wrists", name = "Ageless Serpent's Cuffs", source = "Catalyst", id = "229294" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Catalyst", id = "229299" },
-    { slot = "Waist", name = "Mekgineer's Championship Belt", source = "Operation: Mechagon Workshop", id = "168957" },
-    { slot = "Legs", name = "Flame-Seared Leggings", source = "Operation: Mechagon Workshop", id = "168968" },
-    { slot = "Feet", name = "Backbreaking Bootstrappers", source = "Cinderbrew Meadery", id = "221071" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix - Liberation of Undermine", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit - Liberation of Undermine", id = "230027" },
-    { slot = "Trinket 2", name = "Mechano-Core Amplifier", source = "Delves", id = "232485" },
-    { slot = "Weapon", name = "Glorious Defender's Poleaxe", source = "Priory of the Sacred Flame", id = "221116" },
-    alternates = {
-        { slot = "Weapon", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security - Liberation of Undermine", id = "232804" },
-        { slot = "Off Hand", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix - Liberation of Undermine", id = "228899" }
-    }
-}
-
--- Overall Windwalker Monk
-BiSCompanionBisData["Monk_MW_Master of Harmony"] = {
-    { slot = "Head", name = "Ageless Serpent's Mane", source = "Catalyst", id = "229298" },
-    { slot = "Neck", name = "Gobfather's Gifted Bling", source = "Mug'zee, Heads of Security - Liberation of Undermine", id = "228842" },
-    { slot = "Shoulders", name = "Ageless Serpent's Shoulderpads", source = "Catalyst", id = "229296" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger - Liberation of Undermine", id = "228844" },
-    { slot = "Chest", name = "Ageless Serpent's Inked Coils", source = "Catalyst", id = "229301" },
-    { slot = "Wrists", name = "Ageless Serpent's Cuffs", source = "Catalyst", id = "229294" },
-    { slot = "Hands", name = "Ageless Serpent's Handguards", source = "Catalyst", id = "229299" },
-    { slot = "Waist", name = "Mekgineer's Championship Belt", source = "Operation: Mechagon Workshop", id = "168957" },
-    { slot = "Legs", name = "Flame-Seared Leggings", source = "Operation: Mechagon Workshop", id = "168968" },
-    { slot = "Feet", name = "Backbreaking Bootstrappers", source = "Cinderbrew Meadery", id = "221071" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix - Liberation of Undermine", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit - Liberation of Undermine", id = "230027" },
-    { slot = "Trinket 2", name = "Mechano-Core Amplifier", source = "Delves", id = "232485" },
-    { slot = "Weapon", name = "Glorious Defender's Poleaxe", source = "Priory of the Sacred Flame", id = "221116" },
-    alternates = {
-        { slot = "Weapon", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security - Liberation of Undermine", id = "232804" },
-        { slot = "Off Hand", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix - Liberation of Undermine", id = "228899" }
-    }
+    { slot = "Head", name = "Half-Mask of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237673" },
+    { slot = "Neck", name = " Sin Stained Pendant", source = "Halls of Atonement", id = "178827" },
+    { slot = "Shoulders", name = "Glyphs of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237671" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Gi of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237676" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Mastery + Haste"}, id = "219334" },
+    { slot = "Hands", name = "Grasp of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237674" },
+    { slot = "Waist", name = "Rune-Branded Waistband", source = "Crafting",gems = {"Mastery + Haste"}, id = "219331" },
+    { slot = "Legs", name = "Legwraps of Fallen Storms", source = "Catalyst / Raid / Vault", id = "237672" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = " Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Harvester's Interdiction", source = "Ara-Kara, City of Echoes", id = "221159" }
 }
 
 -- Overall Holy Paladin
 BiSCompanionBisData["Paladin_Holy_Herald"] = {
-    { slot = "Head", name = "Aureate Sentry's Pledge", source = "One-Armed Bandit", id = "229244" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Aureate Sentry's Roaring Will", source = "Rik Reverb", id = "229242" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Aureate Sentry's Encasement", source = "Sprocketmonger", id = "229247" },
-    { slot = "Wrists", name = "Revved-Up Vambraces", source = "Vexie", id = "228868" },
+    { slot = "Head", name = "Lightmane of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237619" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Chargers of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237617" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery/Haste" },id = "235499" },
+    { slot = "Chest", name = "Cuirass of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237622" },
+    { slot = "Wrists", name = "Yoke of Enveloping Hatred", source = "The Soul Hunters - Manaforge Omega", id = "237561" },
     { slot = "Hands", name = "Jumpstarter's Scaffold-Scrapers", source = "Operation: Floodgate", id = "234504" },
-    { slot = "Waist", name = "Venture Contractor's Floodlight", source = "Operation: Floodgate", id = "234505" },
-    { slot = "Legs", name = "Aureate Sentry's Legguards", source = "Stix Bunkjunker", id = "229243" },
-    { slot = "Feet", name = "Rik's Walkin' Boots", source = "Rik Reverb", id = "228874" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Big Earner's Bludgeon", source = "Mug'zee, Heads of Security", id = "228901" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" }
+    { slot = "Waist", name = "Fresh Ethereal Fetters", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237550" },
+    { slot = "Legs", name = "Cuisses of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237618" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Ward of the Weaving-Beast", source = "Loom’ithar - Manaforge Omega", id = "222566" }
 }
 
 -- Overall Holy Paladin
 BiSCompanionBisData["Paladin_Holy_Lightsmith"] = {
-    { slot = "Head", name = "Aureate Sentry's Pledge", source = "One-Armed Bandit", id = "229244" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Aureate Sentry's Roaring Will", source = "Rik Reverb", id = "229242" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Aureate Sentry's Encasement", source = "Sprocketmonger", id = "229247" },
-    { slot = "Wrists", name = "Revved-Up Vambraces", source = "Vexie", id = "228868" },
+    { slot = "Head", name = "Lightmane of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237619" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Chargers of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237617" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery/Haste" },id = "235499" },
+    { slot = "Chest", name = "Cuirass of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237622" },
+    { slot = "Wrists", name = "Yoke of Enveloping Hatred", source = "The Soul Hunters - Manaforge Omega", id = "237561" },
     { slot = "Hands", name = "Jumpstarter's Scaffold-Scrapers", source = "Operation: Floodgate", id = "234504" },
-    { slot = "Waist", name = "Venture Contractor's Floodlight", source = "Operation: Floodgate", id = "234505" },
-    { slot = "Legs", name = "Aureate Sentry's Legguards", source = "Stix Bunkjunker", id = "229243" },
-    { slot = "Feet", name = "Rik's Walkin' Boots", source = "Rik Reverb", id = "228874" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Big Earner's Bludgeon", source = "Mug'zee, Heads of Security", id = "228901" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" }
+    { slot = "Waist", name = "Fresh Ethereal Fetters", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237550" },
+    { slot = "Legs", name = "Cuisses of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237618" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Ward of the Weaving-Beast", source = "Loom’ithar - Manaforge Omega", id = "222566" }
 }
 
 -- Templar Protection Paladin
 BiSCompanionBisData["Paladin_Prot_Templar"] = {
-    { slot = "Head", name = "Waxsteel Greathelm", source = "Darkflame Cleft", id = "221100" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Aureate Sentry's Roaring Will", source = "Catalyst / Raid / Vault", id = "229242" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Aureate Sentry's Encasement", source = "Catalyst / Raid / Vault", id = "229247" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Blacksmithing", id = "222435" },
-    { slot = "Hands", name = "Aureate Sentry's Gauntlets", source = "Catalyst / Raid / Vault", id = "229245" },
-    { slot = "Waist", name = "Everforged Greatbelt", source = "Blacksmithing", id = "222431" },
-    { slot = "Legs", name = "Aureate Sentry's Legguards", source = "Catalyst / Raid / Vault", id = "229243" },
-    { slot = "Feet", name = "Rik's Walkin' Boots", source = "Rik Reverb", id = "228874" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Footbomb Championship Ring", source = "The MOTHERLODE!!", id = "159462" },
-    { slot = "Weapon", name = "Rail Rider's Bisector", source = "Darkflame Cleft", id = "221096" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" }
+    { slot = "Head", name = "Lightmane of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237619" },
+    { slot = "Neck", name = "Chrysalis of Sundered Souls ", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237568" },
+    { slot = "Shoulders", name = "Chargers of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237617" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste", "Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Cuirass of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237622" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", gems = { "Mastery/Haste" }, id = "237561" },
+    { slot = "Hands", name = "Protectors of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237620" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", gems = { "Dawnthread Lining", "Haste + Mastery" }, id = "222431" },
+    { slot = "Legs", name = "Shrapnel-Fused Legguards", source = "Fractillus - Manaforge Omega", id = "237530" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Brand of Ceaseless Ire", source = "The Soul Hunters in Manaforge Omega", id = "242401" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Mandibular Bonewhacker", source = "Eco-Dome Al'dani", id = "242470" },
+    { slot = "Off Hand", name = "Sanctified Priory Wall", source = "Priory of the Sacred Flame", id = "221117" }
 }
 
 -- Lightsmith Protection Paladin
 BiSCompanionBisData["Paladin_Prot_Lightsmith"] = {
-    { slot = "Head", name = "Waxsteel Greathelm", source = "Darkflame Cleft", id = "221100" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Aureate Sentry's Roaring Will", source = "Catalyst / Raid / Vault", id = "229242" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Aureate Sentry's Encasement", source = "Catalyst / Raid / Vault", id = "229247" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Blacksmithing", id = "222435" },
-    { slot = "Hands", name = "Aureate Sentry's Gauntlets", source = "Catalyst / Raid / Vault", id = "229245" },
-    { slot = "Waist", name = "Everforged Greatbelt", source = "Blacksmithing", id = "222431" },
-    { slot = "Legs", name = "Aureate Sentry's Legguards", source = "Catalyst / Raid / Vault", id = "229243" },
-    { slot = "Feet", name = "Rik's Walkin' Boots", source = "Rik Reverb", id = "228874" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Footbomb Championship Ring", source = "The MOTHERLODE!!", id = "159462" },
-    { slot = "Weapon", name = "Rail Rider's Bisector", source = "Darkflame Cleft", id = "221096" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" }
+    { slot = "Head", name = "Lightmane of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237619" },
+    { slot = "Neck", name = "Chrysalis of Sundered Souls ", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237568" },
+    { slot = "Shoulders", name = "Chargers of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237617" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste", "Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Cuirass of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237622" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", gems = { "Mastery/Haste" }, id = "237561" },
+    { slot = "Hands", name = "Protectors of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237620" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", gems = { "Dawnthread Lining", "Haste + Mastery" }, id = "222431" },
+    { slot = "Legs", name = "Shrapnel-Fused Legguards", source = "Fractillus - Manaforge Omega", id = "237530" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Signet of Collapsing Stars", source = "Tazavesh: So'Leah's Gambit", id = "185813" },
+    { slot = "Trinket 1", name = "Brand of Ceaseless Ire", source = "The Soul Hunters in Manaforge Omega", id = "242401" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Mandibular Bonewhacker", source = "Eco-Dome Al'dani", id = "242470" },
+    { slot = "Off Hand", name = "Sanctified Priory Wall", source = "Priory of the Sacred Flame", id = "221117" }
 }
 
 -- Overall Retribution Paladin Herald
 BiSCompanionBisData["Paladin_Ret_Herald"] = {
-    { slot = "Head", name = "Fullthrottle Facerig", source = "The Geargrinder", id = "228858" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Aureate Sentry's Roaring Will", source = "Catalyst / Raid / Vault", id = "229242" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Aureate Sentry's Encasement", source = "Catalyst / Raid / Vault", id = "229247" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", id = "222435" },
-    { slot = "Hands", name = "Aureate Sentry's Gauntlets", source = "Catalyst / Raid / Vault", id = "229245" },
-    { slot = "Waist", name = "Coin-Operated Girdle", source = "One-Armed Bandit", id = "228886" },
-    { slot = "Legs", name = "Aureate Sentry's Legguards", source = "Catalyst / Raid / Vault", id = "229243" },
-    { slot = "Feet", name = "Cutthroat Competition Stompers", source = "Chrome King Gallywix", id = "228887" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Lightmane of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237619" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Chargers of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237617" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Cuirass of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237622" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", gems = { "Mastery/Crit" }, id = "237561" },
+    { slot = "Hands", name = "Protectors of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237620" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", gems = { "Dawnthread Lining", "Crit + Mastery" }, id = "222431" },
+    { slot = "Legs", name = "Cuisses of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237618" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Photon Sabre Prime", source = "Forgeweaver Araz - Manaforge Omega", id = "237737" }
 }
 
 -- Overall Retribution Paladin Templar
 BiSCompanionBisData["Paladin_Ret_Templar"] = {
-    { slot = "Head", name = "Fullthrottle Facerig", source = "The Geargrinder", id = "228858" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Aureate Sentry's Roaring Will", source = "Catalyst / Raid / Vault", id = "229242" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Aureate Sentry's Encasement", source = "Catalyst / Raid / Vault", id = "229247" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", id = "222435" },
-    { slot = "Hands", name = "Aureate Sentry's Gauntlets", source = "Catalyst / Raid / Vault", id = "229245" },
-    { slot = "Waist", name = "Coin-Operated Girdle", source = "One-Armed Bandit", id = "228886" },
-    { slot = "Legs", name = "Aureate Sentry's Legguards", source = "Catalyst / Raid / Vault", id = "229243" },
-    { slot = "Feet", name = "Cutthroat Competition Stompers", source = "Chrome King Gallywix", id = "228887" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Lightmane of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237619" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Chargers of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237617" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Cuirass of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237622" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafting", gems = { "Mastery/Crit" }, id = "237561" },
+    { slot = "Hands", name = "Protectors of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237620" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafting", gems = { "Dawnthread Lining", "Crit + Mastery" }, id = "222431" },
+    { slot = "Legs", name = "Cuisses of the Lucent Battalion", source = "Catalyst / Raid / Vault", id = "237618" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Photon Sabre Prime", source = "Forgeweaver Araz - Manaforge Omega", id = "237737" }
 }
 
 -- Discipline Priest_Disc_Oracle
 BiSCompanionBisData["Priest_Disc_Oracle"] = {
-    { slot = "Head", name = "Confessor's Unshakable Halo", source = "Catalyst / Raid / Vault", id = "229334" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Confessor's Unshakable Radiance", source = "Catalyst / Raid / Vault", id = "229332" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Confessor's Unshakable Vestment", source = "Catalyst / Raid / Vault", id = "229337" },
-    { slot = "Wrists", name = "Illicit Bankroll Bracers", source = "Chrome King Gallywix", id = "228881" },
-    { slot = "Hands", name = "Confessor's Unshakable Mitts", source = "Catalyst / Raid / Vault", id = "229335" },
-    { slot = "Waist", name = "Ringmaster's Cummerbund", source = "Operation: Mechagon Workshop", id = "168958" },
-    { slot = "Legs", name = "Pit Doctor's Petticoat", source = "Vexie", id = "228865" },
-    { slot = "Feet", name = "Cemented Murloc-Swimmers", source = "Mug'zee, Heads of Security", id = "228879" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Dying Star's Veil", source = "Catalyst / Raid / Vault", id = "237709" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Dying Star's Pyrelights", source = "Catalyst / Raid / Vault", id = "237707" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Dying Star's Cassock", source = "Catalyst / Raid / Vault", id = "237712" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Crit + Haste", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Bloodwrath's Gnarled Claws", source = "The Soul Hunters - Manaforge Omega", id = "237549" },
+    { slot = "Waist", name = "Pan-Dimensional Packing Cord", source = "Tazavesh, the Veiled Market", id = "185807" },
+    { slot = "Legs", name = "Dying Star's Leggings", source = "Catalyst / Raid / Vault", id = "237708" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Haste" }, id = "222566" }
 }
 
 -- Discipline Priest_Disc_Voidweaver
 BiSCompanionBisData["Priest_Disc_Voidweaver"] = {
-    { slot = "Head", name = "Confessor's Unshakable Halo", source = "Catalyst / Raid / Vault", id = "229334" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Confessor's Unshakable Radiance", source = "Catalyst / Raid / Vault", id = "229332" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Confessor's Unshakable Vestment", source = "Catalyst / Raid / Vault", id = "229337" },
-    { slot = "Wrists", name = "Illicit Bankroll Bracers", source = "Chrome King Gallywix", id = "228881" },
-    { slot = "Hands", name = "Confessor's Unshakable Mitts", source = "Catalyst / Raid / Vault", id = "229335" },
-    { slot = "Waist", name = "Ringmaster's Cummerbund", source = "Operation: Mechagon Workshop", id = "168958" },
-    { slot = "Legs", name = "Pit Doctor's Petticoat", source = "Vexie", id = "228865" },
-    { slot = "Feet", name = "Cemented Murloc-Swimmers", source = "Mug'zee, Heads of Security", id = "228879" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Dying Star's Veil", source = "Catalyst / Raid / Vault", id = "237709" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Dying Star's Pyrelights", source = "Catalyst / Raid / Vault", id = "237707" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Dying Star's Cassock", source = "Catalyst / Raid / Vault", id = "237712" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Crit + Haste", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Dying Star's Caress", source = "Catalyst / Raid / Vault", id = "237710" },
+    { slot = "Waist", name = "Forgeweaver's Journal Holster", source = "Forgeweaver Araz - Manaforge Omega", id = "237538" },
+    { slot = "Legs", name = "Stellar Navigation Slacks", source = "Dimensius The All Devouring - Manaforge Omega", id = "237542" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Trinket 1", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Haste" }, id = "222566" }
 }
 
 
--- Holy Priest
-BiSCompanionBisData["Priest_Holy"] = {
-    { slot = "Head", name = "Cleanup Crew's Wastemask", source = "Stix Bunkjunker", id = "228871" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Confessor's Unshakable Radiance", source = "Catalyst / Raid / Vault", id = "229332" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Confessor's Unshakable Vestment", source = "Catalyst / Raid / Vault", id = "229337" },
-    { slot = "Wrists", name = "Gleamwax Shackles", source = "Darkflame Cleft", id = "221104" },
-    { slot = "Hands", name = "Confessor's Unshakable Mitts", source = "Catalyst / Raid / Vault", id = "229335" },
-    { slot = "Waist", name = "Honorbound Retainer's Sash", source = "Priory of the Sacred Flame", id = "221121" },
-    { slot = "Legs", name = "Confessor's Unshakable Leggings", source = "Catalyst / Raid / Vault", id = "229333" },
-    { slot = "Feet", name = "Hotstep Heel-Turners", source = "Cauldron of Carnage", id = "228847" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Big Earner's Bludgeon", source = "Mug'zee, Heads of Security", id = "228901" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+-- Holy Priest VoidWeaver
+BiSCompanionBisData["Priest_Holy_Archon"] = {
+    { slot = "Head", name = "Dying Star's Veil", source = "Catalyst / Raid / Vault", id = "237709" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Dying Star's Pyrelights", source = "Catalyst / Raid / Vault", id = "237707" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Dying Star's Cassock", source = "Catalyst / Raid / Vault", id = "237712" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Crit + Haste", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Dying Star's Caress", source = "Catalyst / Raid / Vault", id = "237710" },
+    { slot = "Waist", name = "Singularity Cincture", source = "Dimensius The All Devouring in Manaforge Omega", id = "237559" },
+    { slot = "Legs", name = "Dying Star's Leggings", source = "Catalyst / Raid / Vault", id = "237708" },
+    { slot = "Feet", name = "Membranous Slippers", source = "The Dawnbreaker", id = "221149" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Haste" }, id = "222566" }
+}
+
+-- Holy Priest Oracle
+BiSCompanionBisData["Priest_Holy_Oracle"] = {
+    { slot = "Head", name = "Dying Star's Veil", source = "Catalyst / Raid / Vault", id = "237709" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Dying Star's Pyrelights", source = "Catalyst / Raid / Vault", id = "237707" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Dying Star's Cassock", source = "Catalyst / Raid / Vault", id = "237712" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Crit + Haste", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Dying Star's Caress", source = "Catalyst / Raid / Vault", id = "237710" },
+    { slot = "Waist", name = "Singularity Cincture", source = "Dimensius The All Devouring in Manaforge Omega", id = "237559" },
+    { slot = "Legs", name = "Dying Star's Leggings", source = "Catalyst / Raid / Vault", id = "237708" },
+    { slot = "Feet", name = "Membranous Slippers", source = "The Dawnbreaker", id = "221149" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Haste" }, id = "222566" }
 }
 
 -- Shadow Priest_Shadow_Archon
 BiSCompanionBisData["Priest_Shadow_Archon"] = {
-    { slot = "Head", name = "Confessor's Unshakable Halo", source = "Catalyst | Raid | Vault", id = "229334" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Confessor's Unshakable Radiance", source = "Catalyst | Raid | Vault", id = "229332" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Confessor's Unshakable Vestment", source = "Catalyst | Raid | Vault", id = "229337" },
-    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", id = "222815" },
-    { slot = "Hands", name = "Confessor's Unshakable Mitts", source = "Catalyst | Raid | Vault", id = "229335" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Pit Doctor's Petticoat", source = "Vexie", id = "228865" },
-    { slot = "Feet", name = "Cemented Murloc-Swimmers", source = "Mug'zee, Heads of Security", id = "228879" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Big Earner's Bludgeon", source = "Mug'zee, Heads of Security", id = "228901" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Dying Star's Veil", source = "Catalyst / Raid / Vault", id = "237709" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Sinlight Shoulderpads", source = "Halls of Atonement", id = "246276" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Dying Star's Cassock", source = "Catalyst / Raid / Vault", id = "237712" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Mastery + Haste", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Dying Star's Caress", source = "Catalyst / Raid / Vault", id = "237710" },
+    { slot = "Waist", name = "Singularity Cincture", source = "Dimensius The All Devouring in Manaforge Omega", id = "237559" },
+    { slot = "Legs", name = "Dying Star's Leggings", source = "Catalyst / Raid / Vault", id = "237708" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Mastery + Haste" }, id = "222566" }
 }
 
 -- Shadow Priest_Shadow_Voidweaver 
 BiSCompanionBisData["Priest_Shadow_Voidweaver"] = {
-    { slot = "Head", name = "Confessor's Unshakable Halo", source = "Catalyst | Raid | Vault", id = "229334" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Confessor's Unshakable Radiance", source = "Catalyst | Raid | Vault", id = "229332" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844" },
-    { slot = "Chest", name = "Confessor's Unshakable Vestment", source = "Catalyst | Raid | Vault", id = "229337" },
-    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", id = "222815" },
-    { slot = "Hands", name = "Confessor's Unshakable Mitts", source = "Catalyst | Raid | Vault", id = "229335" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Pit Doctor's Petticoat", source = "Vexie", id = "228865" },
-    { slot = "Feet", name = "Cemented Murloc-Swimmers", source = "Mug'zee, Heads of Security", id = "228879" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Big Earner's Bludgeon", source = "Mug'zee, Heads of Security", id = "228901" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting", id = "222566" }
+    { slot = "Head", name = "Dying Star's Veil", source = "Catalyst / Raid / Vault", id = "237709" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Sinlight Shoulderpads", source = "Halls of Atonement", id = "246276" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Dying Star's Cassock", source = "Catalyst / Raid / Vault", id = "237712" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Mastery + Haste", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Dying Star's Caress", source = "Catalyst / Raid / Vault", id = "237710" },
+    { slot = "Waist", name = "Singularity Cincture", source = "Dimensius The All Devouring in Manaforge Omega", id = "237559" },
+    { slot = "Legs", name = "Dying Star's Leggings", source = "Catalyst / Raid / Vault", id = "237708" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Mastery + Haste" }, id = "222566" }
 }
 
 -- Deathstalker Assassination Rogue
 BiSCompanionBisData["Rogue_Assassination_Deathstalker"] = {
-    { slot = "Head", name = "Spectral Gambler's Damned Visage", source = "One-Armed Bandit", id = "229289" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Spectral Gambler's Bladed Mantle", source = "Rik Reverb", id = "229287" },
-    { slot = "Back", name = "Electrician's Siphoning Filter", source = "Operation: Floodgate", id = "234507" },
-    { slot = "Chest", name = "Venture Co. Plenipotentiary Vest", source = "The MOTHERLODE!!", id = "235417" },
-    { slot = "Wrists", name = "Disturbed Kelp Wraps", source = "Operation: Floodgate", id = "234499" },
-    { slot = "Hands", name = "Spectral Gambler's Gloves", source = "Cauldron of Carnage", id = "229290" },
-    { slot = "Waist", name = "Gleamkeeper's Buckle", source = "Darkflame Cleft", id = "221107" },
-    { slot = "Legs", name = "Spectral Gambler's Pantaloons", source = "Stix Bunkjunker", id = "229288" },
-    { slot = "Feet", name = "Rune-Branded Kickers", source = "Crafting", id = "219327" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Trinket 1", name = "Mechano-Core Amplifier", source = "Delves", id = "232485" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Random Number Perforator", source = "One-Armed Bandit", id = "231266" },
-    { slot = "Off Hand", name = "Everforged Stabber", source = "Crafting", id = "222438" }
+    { slot = "Head", name = "Hood of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237664" },
+    { slot = "Neck", name = "Ornately Engraved Amplifier", source = "Tazavesh: Streets of Wonder", id = "185842" },
+    { slot = "Shoulders", name = "Smokemantle of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237662" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Tactical Vest of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237667" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Mastery + Crit"}, id = "219334" },
+    { slot = "Hands", name = "Deathgrips of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237665" },
+    { slot = "Waist", name = "Atomic Phasebelt", source = "Plexus Sentinel - Manaforge Omega", id = "237533" },
+    { slot = "Legs", name = "Pants of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237663" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "Seal of the Panoply", source = "	Tazavesh: Streets of Wonder", id = "185840" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Vengeful Netherspike", source = "Nexus King Salhadaar - Manaforge Omega", id = "237740" },
+    { slot = "Off Hand", name = "Everforged Stabber", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Mastery + Crit" }, id = "222438" }
 }
 
 -- Hidden Opportunity Outlaw Rogue Trickster
 BiSCompanionBisData["Rogue_Outlaw_Trickster"] = {
-    { slot = "Head", name = "Spectral Gambler's Damned Visage", source = "Catalyst / Raid / Vault", id = "229289" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Spectral Gambler's Bladed Mantle", source = "Catalyst / Raid / Vault", id = "229287" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon Workshop", id = "199921" },
-    { slot = "Chest", name = "Seraphic Wraps of the Ordained", source = "Priory of the Sacred Flame", id = "221130" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Spectral Gambler's Gloves", source = "Catalyst / Raid / Vault", id = "229290" },
-    { slot = "Waist", name = "Brewery Toiler's Waistband", source = "Cinderbrew Meadery", id = "221058" },
-    { slot = "Legs", name = "Spectral Gambler's Pantaloons", source = "Catalyst / Raid / Vault", id = "229288" },
-    { slot = "Feet", name = "Mercenary Miner's Boots", source = "The MOTHERLODE!!", id = "159336" },
-    { slot = "Ring 1", name = "Ring of Earthen Craftsmanship", source = "Crafting", id = "215135" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Zee's Thug Hotline", source = "Mug'zee, Heads of Security", id = "230199" },
-    { slot = "Weapon", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix", id = "228899" },
-    { slot = "Off Hand", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security", id = "232804" }
+    { slot = "Head", name = "Hood of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237664" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Smokemantle of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237662" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Versa" },id = "235499" },
+    { slot = "Chest", name = "Tactical Vest of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237667" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Writhing Armor Banding","Versa + Crit"}, id = "219334" },
+    { slot = "Hands", name = "Deathgrips of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237665" },
+    { slot = "Waist", name = "Venza's Powderbelt", source = "Tazavesh, the Veiled Market", id = "185809" },
+    { slot = "Legs", name = "Pants of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237663" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Ring of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment","Crit + Versa" }, id = "215135" },
+    { slot = "Ring 2", name = "Ring of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment","Crit + Versa" }, id = "215135" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Sigil of the Cosmic Hunt", source = "The Soul Hunters", id = "242397" },
+    { slot = "Weapon", name = "Zephyrous Sail Carver", source = "The Dawnbreaker", id = "221144" },
+    { slot = "Off Hand", name = "Zephyrous Sail Carver", source = "The Dawnbreaker", id = "221144" }
 }
 
 -- Keep it Rolling Outlaw Rogue
-BiSCompanionBisData["Rogue_Outlaw_Keep it Rolling"] = {
-    { slot = "Head", name = "Spectral Gambler's Damned Visage", source = "Catalyst / Raid / Vault", id = "229289" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Spectral Gambler's Bladed Mantle", source = "Catalyst / Raid / Vault", id = "229287" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon Workshop", id = "199921" },
-    { slot = "Chest", name = "Seraphic Wraps of the Ordained", source = "Priory of the Sacred Flame", id = "221130" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Spectral Gambler's Gloves", source = "Catalyst / Raid / Vault", id = "229290" },
-    { slot = "Waist", name = "Brewery Toiler's Waistband", source = "Cinderbrew Meadery", id = "221058" },
-    { slot = "Legs", name = "Spectral Gambler's Pantaloons", source = "Catalyst / Raid / Vault", id = "229288" },
-    { slot = "Feet", name = "Rune-Branded Kickers", source = "Crafting", id = "219327" },
-    { slot = "Ring 1", name = "Wick's Golden Loop", source = "Darkflame Cleft", id = "221099" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Zee's Thug Hotline", source = "Mug'zee, Heads of Security", id = "230199" },
-    { slot = "Weapon", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix", id = "228899" },
-    { slot = "Off Hand", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security", id = "232804" }
+BiSCompanionBisData["Rogue_Outlaw_Fatebound"] = {
+    { slot = "Head", name = "Hood of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237664" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Smokemantle of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237662" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Versa" },id = "235499" },
+    { slot = "Chest", name = "Tactical Vest of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237667" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Elemental Focusing Lens","Versa + Crit"}, id = "219334" },
+    { slot = "Hands", name = "Deathgrips of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237665" },
+    { slot = "Waist", name = "Venza's Powderbelt", source = "Tazavesh, the Veiled Market", id = "185809" },
+    { slot = "Legs", name = "Pants of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237663" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Ring of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment","Crit + Versa" }, id = "215135" },
+    { slot = "Ring 2", name = "Ring of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment","Crit + Versa" }, id = "215135" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Sigil of the Cosmic Hunt", source = "The Soul Hunters", id = "242397" },
+    { slot = "Weapon", name = "Zephyrous Sail Carver", source = "The Dawnbreaker", id = "221144" },
+    { slot = "Off Hand", name = "Zephyrous Sail Carver", source = "The Dawnbreaker", id = "221144" }
 }
 
 -- Hidden Opportunity Outlaw Rogue Fatebound
-BiSCompanionBisData["Rogue_Outlaw_Fatebound"] = {
-    { slot = "Head", name = "Spectral Gambler's Damned Visage", source = "Catalyst / Raid / Vault", id = "229289" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Spectral Gambler's Bladed Mantle", source = "Catalyst / Raid / Vault", id = "229287" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon Workshop", id = "199921" },
-    { slot = "Chest", name = "Seraphic Wraps of the Ordained", source = "Priory of the Sacred Flame", id = "221130" },
-    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting", id = "219334" },
-    { slot = "Hands", name = "Spectral Gambler's Gloves", source = "Catalyst / Raid / Vault", id = "229290" },
-    { slot = "Waist", name = "Brewery Toiler's Waistband", source = "Cinderbrew Meadery", id = "221058" },
-    { slot = "Legs", name = "Spectral Gambler's Pantaloons", source = "Catalyst / Raid / Vault", id = "229288" },
-    { slot = "Feet", name = "Mercenary Miner's Boots", source = "The MOTHERLODE!!", id = "159336" },
-    { slot = "Ring 1", name = "Ring of Earthen Craftsmanship", source = "Crafting", id = "215135" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Zee's Thug Hotline", source = "Mug'zee, Heads of Security", id = "230199" },
-    { slot = "Weapon", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix", id = "228899" },
-    { slot = "Off Hand", name = "Capo's Molten Knuckles", source = "Mug'zee, Heads of Security", id = "232804" }
-}
-
--- Subtlety Rogue Deathstalker
 BiSCompanionBisData["Rogue_Subtlety_Deathstalker"] = {
-    { slot = "Head", name = "Spectral Gambler's Damned Visage", source = "One-Armed Bandit / Catalyst / Vault", id = "229289" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Spectral Gambler's Bladed Mantle", source = "Rik Reverb / Catalyst / Vault", id = "229287" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Tailoring", id = "222817" },
-    { slot = "Chest", name = "Spectral Gambler's Vest", source = "Sprocketmonger / Catalyst / Vault", id = "229292" },
-    { slot = "Wrists", name = "Hustler's Ante-Uppers", source = "One-Armed Bandit", id = "228885" },
-    { slot = "Hands", name = "Enforcer's Sticky Fingers", source = "Mug'zee, Heads of Security", id = "228863" },
-    { slot = "Waist", name = "Competitor's Battle Cord", source = "Cauldron of Carnage", id = "228856" },
-    { slot = "Legs", name = "Spectral Gambler's Pantaloons", source = "Stix Bunkjunker / Catalyst / Vault", id = "229288" },
-    { slot = "Feet", name = "Rune-Branded Kickers", source = "Leatherworking", id = "219327" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Ritual Bone Band", source = "Theater of Pain", id = "178870" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Pyrotechnic Needle-Dropper", source = "Rik Reverb", id = "228897" },
-    { slot = "Off Hand", name = "Pyrotechnic Needle-Dropper", source = "Rik Reverb", id = "228897" }
+    { slot = "Head", name = "Hood of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237664" },
+    { slot = "Neck", name = "Amulet of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment","Mastery + Versa" }, id = "185842" },
+    { slot = "Shoulders", name = "Deathbound Shoulderpads", source = "Loom’ithar in Manaforge Omega", id = "237552" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Tactical Vest of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237667" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Elemental Focusing Lens","Mastery + Versa"}, id = "219334" },
+    { slot = "Hands", name = "Deathgrips of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237665" },
+    { slot = "Waist", name = "Reaper's Dreadbelt", source = "Nexus King Salhadaar - Manaforge Omega", id = "237557" },
+    { slot = "Legs", name = "Pants of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237663" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Unyielding Netherprism", source = "Fractillus in Manaforge Omega", id = "242395" },
+    { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
+    { slot = "Weapon", name = "Prodigious Gene Splicer", source = "Loom’ithar - Manaforge Omega", id = "237729" },
+    { slot = "Off Hand", name = "Prodigious Gene Splicer", source = "Loom’ithar - Manaforge Omega", id = "237729" }
 }
 
 -- Subtlety Rogue
 BiSCompanionBisData["Rogue_Subtlety_Trickster"] = {
-    { slot = "Head", name = "Spectral Gambler's Damned Visage", source = "One-Armed Bandit / Catalyst / Vault", id = "229289" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Spectral Gambler's Bladed Mantle", source = "Rik Reverb / Catalyst / Vault", id = "229287" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Tailoring", id = "222817" },
-    { slot = "Chest", name = "Spectral Gambler's Vest", source = "Sprocketmonger / Catalyst / Vault", id = "229292" },
-    { slot = "Wrists", name = "Hustler's Ante-Uppers", source = "One-Armed Bandit", id = "228885" },
-    { slot = "Hands", name = "Enforcer's Sticky Fingers", source = "Mug'zee, Heads of Security", id = "228863" },
-    { slot = "Waist", name = "Competitor's Battle Cord", source = "Cauldron of Carnage", id = "228856" },
-    { slot = "Legs", name = "Spectral Gambler's Pantaloons", source = "Stix Bunkjunker / Catalyst / Vault", id = "229288" },
-    { slot = "Feet", name = "Rune-Branded Kickers", source = "Leatherworking", id = "219327" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Ritual Bone Band", source = "Theater of Pain", id = "178870" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Pyrotechnic Needle-Dropper", source = "Rik Reverb", id = "228897" },
-    { slot = "Off Hand", name = "Pyrotechnic Needle-Dropper", source = "Rik Reverb", id = "228897" }
+    { slot = "Head", name = "Hood of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237664" },
+    { slot = "Neck", name = "Amulet of Earthen Craftsmanship", source = "Crafting", gems = { "Elemental Focusing Lens Embellishment","Mastery + Versa" }, id = "185842" },
+    { slot = "Shoulders", name = "Deathbound Shoulderpads", source = "Loom’ithar in Manaforge Omega", id = "237552" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery" },id = "235499" },
+    { slot = "Chest", name = "Tactical Vest of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237667" },
+    { slot = "Wrists", name = "Rune-Branded Armbands", source = "Crafting",gems = { "Elemental Focusing Lens","Mastery + Versa"}, id = "219334" },
+    { slot = "Hands", name = "Deathgrips of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237665" },
+    { slot = "Waist", name = "Reaper's Dreadbelt", source = "Nexus King Salhadaar - Manaforge Omega", id = "237557" },
+    { slot = "Legs", name = "Pants of the Sudden Eclipse", source = "Catalyst / Raid / Vault", id = "237663" },
+    { slot = "Feet", name = "Interloper's Reinforced Sandals", source = "The Soul Hunters", id = "243306" },
+    { slot = "Ring 1", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Unyielding Netherprism", source = "Fractillus in Manaforge Omega", id = "242395" },
+    { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
+    { slot = "Weapon", name = "Prodigious Gene Splicer", source = "Loom’ithar - Manaforge Omega", id = "237729" },
+    { slot = "Off Hand", name = "Prodigious Gene Splicer", source = "Loom’ithar - Manaforge Omega", id = "237729" }
 }
 
 -- Elemental Shaman Farseer
 BiSCompanionBisData["Shaman_Ele_Farseer"] = {
-    { slot = "Head", name = "Gale Sovereign's Charged Hood", source = "Catalyst / Raid / Vault", id = "229262" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Gale Sovereign's Zephyrs", source = "Catalyst / Raid / Vault", id = "229260" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Gale Sovereign's Clouded Hauberk", source = "Catalyst / Raid / Vault", id = "229265" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting", id = "219342" },
-    { slot = "Hands", name = "Gale Sovereign's Grasps", source = "Catalyst / Raid / Vault", id = "229263" },
-    { slot = "Waist", name = "Sash of the Fierce Diva", source = "Rik Reverb", id = "228845" },
-    { slot = "Legs", name = "Chemical Blaster's Legguards", source = "The MOTHERLODE!!", id = "158341" },
-    { slot = "Feet", name = "Regal Mekanospurs", source = "Operation: Mechagon Workshop", id = "168982" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Footbomb Championship Ring", source = "The MOTHERLODE!!", id = "159462" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Nathrian Usurper's Mask", source = "Halls of Atonement", id = "178816" },
+    { slot = "Neck", name = "Momma's Mega Medallion", source = "Operation: Floodgate", id = "251880" },
+    { slot = "Shoulders", name = "Fangs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237635" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery", "Pure Dexterous Fiber" },id = "235499" },
+    { slot = "Chest", name = "Furs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237640" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting",gems = { "Mastery + Versa", "Writhing Armor Banding" }, id = "219342" },
+    { slot = "Hands", name = "Claws of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237638" },
+    { slot = "Waist", name = "Clasp of Furious Freedom", source = "The Soul Hunters - Manaforge Omega", id = "237554" },
+    { slot = "Legs", name = "Tassets of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237636" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "237728" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafted",gems = { "Darkmoon Sigil: Ascension Embellishment", "Versa + Mastery" }, id = "222566" }
 }
 
 -- Elemental Shaman Stormbringer
 BiSCompanionBisData["Shaman_Ele_Stormbringer"] = {
-    { slot = "Head", name = "Gale Sovereign's Charged Hood", source = "Catalyst / Raid / Vault", id = "229262" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Gale Sovereign's Zephyrs", source = "Catalyst / Raid / Vault", id = "229260" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafting", id = "222817" },
-    { slot = "Chest", name = "Gale Sovereign's Clouded Hauberk", source = "Catalyst / Raid / Vault", id = "229265" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting", id = "219342" },
-    { slot = "Hands", name = "Gale Sovereign's Grasps", source = "Catalyst / Raid / Vault", id = "229263" },
-    { slot = "Waist", name = "Sash of the Fierce Diva", source = "Rik Reverb", id = "228845" },
-    { slot = "Legs", name = "Chemical Blaster's Legguards", source = "The MOTHERLODE!!", id = "158341" },
-    { slot = "Feet", name = "Regal Mekanospurs", source = "Operation: Mechagon Workshop", id = "168982" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Footbomb Championship Ring", source = "The MOTHERLODE!!", id = "159462" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Nathrian Usurper's Mask", source = "Halls of Atonement", id = "178816" },
+    { slot = "Neck", name = "Momma's Mega Medallion", source = "Operation: Floodgate", id = "251880" },
+    { slot = "Shoulders", name = "Fangs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237635" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery", "Pure Dexterous Fiber" },id = "235499" },
+    { slot = "Chest", name = "Furs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237640" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting",gems = { "Mastery + Versa", "Writhing Armor Banding" }, id = "219342" },
+    { slot = "Hands", name = "Claws of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237638" },
+    { slot = "Waist", name = "Clasp of Furious Freedom", source = "The Soul Hunters - Manaforge Omega", id = "237554" },
+    { slot = "Legs", name = "Tassets of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237636" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "237728" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafted",gems = { "Darkmoon Sigil: Ascension Embellishment", "Versa + Mastery" }, id = "222566" }
 }
 
 
 -- Totemic Restoration Shaman
 BiSCompanionBisData["Shaman_Resto_Totemic"] = {
-    { slot = "Head", name = "Sanitized Scraphood", source = "Stix Bunkjunker", id = "228859" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Gale Sovereign's Zephyrs", source = "Catalyst / Raid / Vault", id = "229260" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafted", id = "222817" },
-    { slot = "Chest", name = "Gale Sovereign's Clouded Hauberk", source = "Catalyst / Raid / Vault", id = "229265" },
-    { slot = "Wrists", name = "I'pa's Pale Aleguards", source = "Cinderbrew Meadery", id = "221059" },
-    { slot = "Hands", name = "Gale Sovereign's Grasps", source = "Catalyst / Raid / Vault", id = "229263" },
-    { slot = "Waist", name = "Dealer's Covetous Chain", source = "Chrome King Gallywix", id = "228877" },
-    { slot = "Legs", name = "Gale Sovereign's Pantaloons", source = "Catalyst / Raid / Vault", id = "229261" },
-    { slot = "Feet", name = "Shrapnel-Ridden Sabatons", source = "Vexie", id = "228862" },
-    { slot = "Ring 1", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Vagabond's Bounding Baton", source = "Crafting", id = "222568" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" },
-    alternates = {
-        { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-        { slot = "Weapon", name = "Everforged Dagger", source = "Crafting", id = "222439" },
-        { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Mariner's Hallowed Citrine", "Old Salt's Bardic Citrine", "Legendary Skipper's Citrine" }, id = "228411" }
-    }
+    { slot = "Head", name = "Aspect of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237637" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Claws of Failed Resistance", source = "Dimensius The All Devouring - Manaforge Omega", id = "237537" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Pure Precise Fiber" },id = "235499" },
+    { slot = "Chest", name = "Furs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237640" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting",gems = { "Crit + Versa", "Writhing Armor Banding" }, id = "219342" },
+    { slot = "Hands", name = "Claws of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237638" },
+    { slot = "Waist", name = "Colossal Lifetether", source = "Loom’ithar - Manaforge Omega", id = "237522" },
+    { slot = "Legs", name = "Tassets of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237636" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "So'leah's Secret Technique", source = "Tazavesh: So'Leah's Gambit", id = "185818" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "237728" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafted",gems = { "Darkmoon Sigil: Ascension Embellishment", "Versa + Crit" }, id = "222566" }
 }
 
 -- Farseer Restoration Shaman
 BiSCompanionBisData["Shaman_Resto_Farseer"] = {
-    { slot = "Head", name = "Sanitized Scraphood", source = "Stix Bunkjunker", id = "228859" },
-    { slot = "Neck", name = "Flickering Glowtorc", source = "Darkflame Cleft", id = "221103" },
-    { slot = "Shoulders", name = "Gale Sovereign's Zephyrs", source = "Catalyst / Raid / Vault", id = "229260" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafted", id = "222817" },
-    { slot = "Chest", name = "Gale Sovereign's Clouded Hauberk", source = "Catalyst / Raid / Vault", id = "229265" },
-    { slot = "Wrists", name = "I'pa's Pale Aleguards", source = "Cinderbrew Meadery", id = "221059" },
-    { slot = "Hands", name = "Gale Sovereign's Grasps", source = "Catalyst / Raid / Vault", id = "229263" },
-    { slot = "Waist", name = "Dealer's Covetous Chain", source = "Chrome King Gallywix", id = "228877" },
-    { slot = "Legs", name = "Gale Sovereign's Pantaloons", source = "Catalyst / Raid / Vault", id = "229261" },
-    { slot = "Feet", name = "Shrapnel-Ridden Sabatons", source = "Vexie", id = "228862" },
-    { slot = "Ring 1", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Vagabond's Bounding Baton", source = "Crafting", id = "222568" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" },
-    alternates = {
-        { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-        { slot = "Weapon", name = "Everforged Dagger", source = "Crafting", id = "222439" },
-        { slot = "Ring 2", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Mariner's Hallowed Citrine", "Old Salt's Bardic Citrine", "Legendary Skipper's Citrine" }, id = "228411" }
-    }
+    { slot = "Head", name = "Aspect of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237637" },
+    { slot = "Neck", name = "Bloodstained Memento ", source = "Priory of the Sacred Flame", id = "252009" },
+    { slot = "Shoulders", name = "Claws of Failed Resistance", source = "Dimensius The All Devouring - Manaforge Omega", id = "237537" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit", "Pure Precise Fiber" },id = "235499" },
+    { slot = "Chest", name = "Furs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237640" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting",gems = { "Crit + Versa", "Writhing Armor Banding" }, id = "219342" },
+    { slot = "Hands", name = "Claws of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237638" },
+    { slot = "Waist", name = "Colossal Lifetether", source = "Loom’ithar - Manaforge Omega", id = "237522" },
+    { slot = "Legs", name = "Tassets of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237636" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "So'leah's Secret Technique", source = "Tazavesh: So'Leah's Gambit", id = "185818" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "237728" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafted",gems = { "Darkmoon Sigil: Ascension Embellishment", "Versa + Crit" }, id = "222566" }
 }
 
--- Overall Enhancement Shaman Stormbringer
+-- Enhancement Shaman Stormbringer
 BiSCompanionBisData["Shaman_Enh_Stormbringer"] = {
-    { slot = "Head", name = "Gale Sovereign's Charged Hood", source = "Catalyst | Raid | Vault", id = "229262" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Gale Sovereign's Zephyrs", source = "Catalyst | Raid | Vault", id = "229260" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Tailoring", id = "222817" },
-    { slot = "Chest", name = "Gale Sovereign's Clouded Hauberk", source = "Catalyst | Raid | Vault", id = "229265" },
-    { slot = "Wrists", name = "Made Manacles", source = "Mug'zee, Heads of Security", id = "228878" },
-    { slot = "Hands", name = "Gale Sovereign's Grasps", source = "Catalyst | Raid | Vault", id = "229263" },
-    { slot = "Waist", name = "Maniacal Monarch's Girdle", source = "Operation: Mechagon Workshop", id = "168983" },
-    { slot = "Legs", name = "Chemical Blaster's Legguards", source = "The MOTHERLODE!!", id = "158341" },
-    { slot = "Feet", name = "Treads of the Galvanic Skysoarer", source = "The Rookery", id = "221035" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix", id = "228899" },
-    { slot = "Off Hand", name = "Charged Facesmasher", source = "Blacksmithing", id = "222446" },
-    alternates = {
-        { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-        { slot = "Trinket 2", name = "Signet of the Priory", source = "Priory of the Sacred Flame", id = "219308" },
-        { slot = "Weapon", name = "Crusher of the Unsettled", source = "Cinderbrew Meadery", id = "221051" }
-    }
+    { slot = "Head", name = "Aspect of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237637" },
+    { slot = "Neck", name = "Cabochon of the Infinite Flight", source = "Tazavesh, the Veiled Market", id = "175546" },
+    { slot = "Shoulders", name = "Fangs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237635" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste", "Pure Chronomantic Fiber" },id = "235499" },
+    { slot = "Chest", name = "Harvested Attendant's Uniform", source = "Forgeweaver Araz", id = "237529" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting",gems = { "Haste + Mastery", "Writhing Armor Banding" }, id = "219342" },
+    { slot = "Hands", name = "Claws of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237638" },
+    { slot = "Waist", name = "Clasp of Furious Freedom", source = "The Soul Hunters - Manaforge Omega", id = "237554" },
+    { slot = "Legs", name = "Tassets of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237636" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Fatebreaker, Destroyer of Futures", source = "Tazavesh: So'Leah's Gambit", id = "185823" },
+    { slot = "Off Hand", name = "Charged Facesmasher", source = "Blacksmithing", gems = { "Haste + Mastery" }, id = "222446" },
 }
 
--- Overall Enhancement Shaman Totemic
+-- Enhancement Shaman Totemic
 BiSCompanionBisData["Shaman_Enh_Totemic"] = {
-    { slot = "Head", name = "Gale Sovereign's Charged Hood", source = "Catalyst | Raid | Vault", id = "229262" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Gale Sovereign's Zephyrs", source = "Catalyst | Raid | Vault", id = "229260" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Tailoring", id = "222817" },
-    { slot = "Chest", name = "Gale Sovereign's Clouded Hauberk", source = "Catalyst | Raid | Vault", id = "229265" },
-    { slot = "Wrists", name = "Made Manacles", source = "Mug'zee, Heads of Security", id = "228878" },
-    { slot = "Hands", name = "Gale Sovereign's Grasps", source = "Catalyst | Raid | Vault", id = "229263" },
-    { slot = "Waist", name = "Maniacal Monarch's Girdle", source = "Operation: Mechagon Workshop", id = "168983" },
-    { slot = "Legs", name = "Chemical Blaster's Legguards", source = "The MOTHERLODE!!", id = "158341" },
-    { slot = "Feet", name = "Treads of the Galvanic Skysoarer", source = "The Rookery", id = "221035" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Miniature Roulette Wheel", source = "One-Armed Bandit", id = "228843" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Gallywix's Iron Thumb", source = "Chrome King Gallywix", id = "228899" },
-    { slot = "Off Hand", name = "Charged Facesmasher", source = "Blacksmithing", id = "222446" },
-    alternates = {
-        { slot = "Trinket 2", name = "Improvised Seaforium Pacemaker", source = "Operation: Floodgate", id = "232541" },
-        { slot = "Trinket 2", name = "Signet of the Priory", source = "Priory of the Sacred Flame", id = "219308" },
-        { slot = "Weapon", name = "Crusher of the Unsettled", source = "Cinderbrew Meadery", id = "221051" }
-    }
+    { slot = "Head", name = "Aspect of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237637" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Fangs of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237635" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Mastery", "Pure Energizing Fiber" },id = "235499" },
+    { slot = "Chest", name = "Soaring Decimator's Hauberk", source = "	Halls of Atonement", id = "178815" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafting",gems = { "Haste + Mastery", "Writhing Armor Banding" }, id = "219342" },
+    { slot = "Hands", name = "Claws of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237638" },
+    { slot = "Waist", name = "Portable Power Generator", source = "Operation: Floodgate", id = "234501" },
+    { slot = "Legs", name = "Tassets of Channeled Fury", source = "Catalyst / Raid / Vault", id = "237636" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "High Nerubian Signet", source = "Ara-Kara, City of Echoes", id = "221141" },
+    { slot = "Ring 2", name = "Whispers of K'aresh", source = "	Eco-Dome Al'dani", id = "242491" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Weapon", name = "Fatebreaker, Destroyer of Futures", source = "Tazavesh: So'Leah's Gambit", id = "185823" },
+    { slot = "Off Hand", name = "Charged Facesmasher", source = "Blacksmithing", gems = { "Haste + Mastery" }, id = "222446" },
 }
 
--- Overall Affliction Warlock Hellcaller
+-- Affliction Warlock Hellcaller
 BiSCompanionBisData["Warlock_Aff_Hellcaller"] = {
-    { slot = "Head", name = "Spliced Fiendtrader's Transcendence", source = "Catalyst, Raid, or Great Vault", id = "229325" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Spliced Fiendtrader's Loyal Servants", source = "Catalyst, Raid, or Great Vault", id = "229323" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Spliced Fiendtrader's Surgical Gown", source = "Catalyst, Raid, or Great Vault", id = "229328" },
-    { slot = "Wrists", name = "Underparty Admission Bracelet", source = "Rik Reverb", id = "228857" },
-    { slot = "Hands", name = "Golden Handshakers", source = "Chrome King Gallywix", id = "228872" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Spliced Fiendtrader's Skin Tights", source = "Catalyst, Raid, or Great Vault", id = "229324" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Tailoring", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Inscription", id = "222566" },
-    alternates = {
-        { slot = "Weapon", name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" }
-    }
+    { slot = "Head", name = "Cowl of Branching Fate", source = "Tazavesh, the Veiled Market", id = "185795" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Inquisitor's Gaze of Madness", source = "Catalyst / Raid / Vault", id = "237698" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Inquisitor's Robes of Madness", source = "Catalyst / Raid / Vault", id = "237703" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Mastery + Crit", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Inquisitor's Clutches of Madness", source = "Catalyst / Raid / Vault", id = "237701" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest", gems = { "Static Charge"}, id = "242664" },
+    { slot = "Legs", name = "Inquisitor's Leggings of Madness", source = "Catalyst / Raid / Vault", id = "237699" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
--- Overall Affliction Warlock Soul Harvester
+-- Affliction Warlock Soul Harvester
 BiSCompanionBisData["Warlock_Aff_Soul Harvester"] = {
-    { slot = "Head", name = "Spliced Fiendtrader's Transcendence", source = "Catalyst, Raid, or Great Vault", id = "229325" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Spliced Fiendtrader's Loyal Servants", source = "Catalyst, Raid, or Great Vault", id = "229323" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Spliced Fiendtrader's Surgical Gown", source = "Catalyst, Raid, or Great Vault", id = "229328" },
-    { slot = "Wrists", name = "Underparty Admission Bracelet", source = "Rik Reverb", id = "228857" },
-    { slot = "Hands", name = "Golden Handshakers", source = "Chrome King Gallywix", id = "228872" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Spliced Fiendtrader's Skin Tights", source = "Catalyst, Raid, or Great Vault", id = "229324" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Tailoring", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Inscription", id = "222566" },
-    alternates = {
-        { slot = "Weapon", name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" }
-    }
+    { slot = "Head", name = "Cowl of Branching Fate", source = "Tazavesh, the Veiled Market", id = "185795" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Inquisitor's Gaze of Madness", source = "Catalyst / Raid / Vault", id = "237698" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Inquisitor's Robes of Madness", source = "Catalyst / Raid / Vault", id = "237703" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Mastery + Crit", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Inquisitor's Clutches of Madness", source = "Catalyst / Raid / Vault", id = "237701" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest", gems = { "Static Charge"}, id = "242664" },
+    { slot = "Legs", name = "Inquisitor's Leggings of Madness", source = "Catalyst / Raid / Vault", id = "237699" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
--- Overall Demonology Warlock Soul Harvester
+-- Demonology Warlock Soul Harvester
 BiSCompanionBisData["Warlock_Demo_Soul Harvester"] = {
-    { slot = "Head", name = "Spliced Fiendtrader's Transcendence", source = "Catalyst, Raid, or Great Vault", id = "229325" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Spliced Fiendtrader's Loyal Servants", source = "Catalyst, Raid, or Great Vault", id = "229323" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Spliced Fiendtrader's Surgical Gown", source = "Catalyst, Raid, or Great Vault", id = "229328" },
-    { slot = "Wrists", name = "Underparty Admission Bracelet", source = "Rik Reverb", id = "228857" },
-    { slot = "Hands", name = "Golden Handshakers", source = "Chrome King Gallywix", id = "228872" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Spliced Fiendtrader's Skin Tights", source = "Catalyst, Raid, or Great Vault", id = "229324" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Tailoring", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Inscription", id = "222566" },
-    alternates = {
-        { slot = "Weapon", name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" }
-    }
+    { slot = "Head", name = "Cowl of Branching Fate", source = "Tazavesh, the Veiled Market", id = "185795" },
+    { slot = "Neck", name = "Chrysalis of Sundered Souls ", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237568" },
+    { slot = "Shoulders", name = "Inquisitor's Gaze of Madness", source = "Catalyst / Raid / Vault", id = "237698" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Inquisitor's Robes of Madness", source = "Catalyst / Raid / Vault", id = "237703" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Haste + Crit", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Inquisitor's Clutches of Madness", source = "Catalyst / Raid / Vault", id = "237701" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest", gems = { "Static Charge"}, id = "242664" },
+    { slot = "Legs", name = "Inquisitor's Leggings of Madness", source = "Catalyst / Raid / Vault", id = "237699" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
--- Overall Demonology Warlock Diabolist
+-- Demonology Warlock Diabolist
 BiSCompanionBisData["Warlock_Demo_Diabolist"] = {
-    { slot = "Head", name = "Spliced Fiendtrader's Transcendence", source = "Catalyst, Raid, or Great Vault", id = "229325" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Spliced Fiendtrader's Loyal Servants", source = "Catalyst, Raid, or Great Vault", id = "229323" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Spliced Fiendtrader's Surgical Gown", source = "Catalyst, Raid, or Great Vault", id = "229328" },
-    { slot = "Wrists", name = "Underparty Admission Bracelet", source = "Rik Reverb", id = "228857" },
-    { slot = "Hands", name = "Golden Handshakers", source = "Chrome King Gallywix", id = "228872" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Spliced Fiendtrader's Skin Tights", source = "Catalyst, Raid, or Great Vault", id = "229324" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Tailoring", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Inscription", id = "222566" },
-    alternates = {
-        { slot = "Weapon", name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" }
-    }
+    { slot = "Head", name = "Cowl of Branching Fate", source = "Tazavesh, the Veiled Market", id = "185795" },
+    { slot = "Neck", name = "Chrysalis of Sundered Souls ", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237568" },
+    { slot = "Shoulders", name = "Inquisitor's Gaze of Madness", source = "Catalyst / Raid / Vault", id = "237698" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Inquisitor's Robes of Madness", source = "Catalyst / Raid / Vault", id = "237703" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Haste + Crit", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Inquisitor's Clutches of Madness", source = "Catalyst / Raid / Vault", id = "237701" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest", gems = { "Static Charge"}, id = "242664" },
+    { slot = "Legs", name = "Inquisitor's Leggings of Madness", source = "Catalyst / Raid / Vault", id = "237699" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
--- Overall Destruction Warlock
+-- Destruction Warlock Hellcaller
 BiSCompanionBisData["Warlock_Destro_Hellcaller"] = {
-    { slot = "Head", name = "Spliced Fiendtrader's Transcendence", source = "Catalyst, Raid, or Great Vault", id = "229325" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Spliced Fiendtrader's Loyal Servants", source = "Catalyst, Raid, or Great Vault", id = "229323" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Spliced Fiendtrader's Surgical Gown", source = "Catalyst, Raid, or Great Vault", id = "229328" },
-    { slot = "Wrists", name = "Underparty Admission Bracelet", source = "Rik Reverb", id = "228857" },
-    { slot = "Hands", name = "Golden Handshakers", source = "Chrome King Gallywix", id = "228872" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Spliced Fiendtrader's Skin Tights", source = "Catalyst, Raid, or Great Vault", id = "229324" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Tailoring", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Inscription", id = "222566" },
-    alternates = {
-        { slot = "Weapon", name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" }
-    }
+    { slot = "Head", name = "Cowl of Branching Fate", source = "Tazavesh, the Veiled Market", id = "185795" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Inquisitor's Gaze of Madness", source = "Catalyst / Raid / Vault", id = "237698" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Inquisitor's Robes of Madness", source = "Catalyst / Raid / Vault", id = "237703" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Mastery + Crit", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Inquisitor's Clutches of Madness", source = "Catalyst / Raid / Vault", id = "237701" },
+    { slot = "Waist", name = "Cord of the Dark Word", source = "Halls of Atonement", id = "178822" },
+    { slot = "Legs", name = "Inquisitor's Leggings of Madness", source = "Catalyst / Raid / Vault", id = "237699" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
--- Overall Destruction Warlock
+-- Destruction Warlock Diabolist
 BiSCompanionBisData["Warlock_Destro_Diabolist"] = {
-    { slot = "Head", name = "Spliced Fiendtrader's Transcendence", source = "Catalyst, Raid, or Great Vault", id = "229325" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Spliced Fiendtrader's Loyal Servants", source = "Catalyst, Raid, or Great Vault", id = "229323" },
-    { slot = "Back", name = "Undercircuit Racing Flag", source = "Vexie", id = "228839" },
-    { slot = "Chest", name = "Spliced Fiendtrader's Surgical Gown", source = "Catalyst, Raid, or Great Vault", id = "229328" },
-    { slot = "Wrists", name = "Underparty Admission Bracelet", source = "Rik Reverb", id = "228857" },
-    { slot = "Hands", name = "Golden Handshakers", source = "Chrome King Gallywix", id = "228872" },
-    { slot = "Waist", name = "Refiner's Conveyor Belt", source = "Sprocketmonger", id = "228882" },
-    { slot = "Legs", name = "Spliced Fiendtrader's Skin Tights", source = "Catalyst, Raid, or Great Vault", id = "229324" },
-    { slot = "Feet", name = "Consecrated Slippers", source = "Tailoring", id = "222814" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Weapon", name = "Stix's Metal Detector", source = "Stix Bunkjunker", id = "228896" },
-    { slot = "Off Hand", name = "Vagabond's Torch", source = "Inscription", id = "222566" },
-    alternates = {
-        { slot = "Weapon", name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" }
-    }
+    { slot = "Head", name = "Cowl of Branching Fate", source = "Tazavesh, the Veiled Market", id = "185795" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Inquisitor's Gaze of Madness", source = "Catalyst / Raid / Vault", id = "237698" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Inquisitor's Robes of Madness", source = "Catalyst / Raid / Vault", id = "237703" },
+    { slot = "Wrists", name = "Consecrated Cuffs", source = "Crafting", gems = { "Mastery + Crit", "Writhing Armor Banding" }, id = "222815" },
+    { slot = "Hands", name = "Inquisitor's Clutches of Madness", source = "Catalyst / Raid / Vault", id = "237701" },
+    { slot = "Waist", name = "Cord of the Dark Word", source = "Halls of Atonement", id = "178822" },
+    { slot = "Legs", name = "Inquisitor's Leggings of Madness", source = "Catalyst / Raid / Vault", id = "237699" },
+    { slot = "Feet", name = "Interloper's Silken Striders", source = "The Soul Hunters - Manaforge Omega", id = "243305" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Azhiccaran Parapodia ", source = "Eco-Dome Al'dani", id = "242497" },
+    { slot = "Weapon", name = "Voidglass Sovereign's Blade", source = "Nexus King Salhadaar - Manaforge Omega", id = "237735" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafting",gems = { "Darkmoon Sigil: Ascension","Crit + Versa" }, id = "222566" }
 }
 
 -- Warrior_Arms_Colossus
 BiSCompanionBisData["Warrior_Arms_Colossus"] = {
-    { slot = "Head", name = "Enforcer's Backalley Faceshield", source = "One-Armed Bandit", id = "229235" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Enforcer's Backalley Shoulderplates", source = "Rik Reverb", id = "229233" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafted", id = "222817" },
-    { slot = "Chest", name = "\"Bullet-Proof\" Vestplate", source = "Mug'zee, Heads of Security", id = "228851" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted", id = "222435" },
-    { slot = "Hands", name = "Enforcer's Backalley Crushers", source = "Cauldron of Carnage", id = "229236" },
-    { slot = "Waist", name = "Enforcer's Backalley Girdle", source = "Catalyst", id = "229232" },
-    { slot = "Legs", name = "Enforcer's Backalley Chausses", source = "Stix Bunkjunker", id = "229234" },
-    { slot = "Feet", name = "Cutthroat Competition Stompers", source = "Chrome King Gallywix", id = "228887" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Fathomdweller's Runed Citrine", "Thunderlord's Crackling Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Living Weapon's Faceshield", source = "Catalyst / Raid / Vault", id = "237610" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Living Weapon's Ramparts", source = "Catalyst / Raid / Vault", id = "237608" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Living Weapon's Bulwark", source = "Catalyst / Raid / Vault", id = "237613" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted",gems = {"Crit + Haste"}, id = "222435" },
+    { slot = "Hands", name = "Living Weapon's Crushers", source = "Catalyst / Raid / Vault", id = "237611" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafted",gems = {"Crit + Haste"}, id = "222431" },
+    { slot = "Legs", name = "Living Weapon's Legguards", source = "Catalyst / Raid / Vault", id = "237609" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Devout Zealot's Ring", source = "The Dawnbreaker", id = "221136" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Ara-Kara Sacbrood", source = "Ara-Kara, City of Echoes", id = "219314" },
+    { slot = "Weapon", name = "Maw of the Void", source = "	Nexus King Salhadaar - Manaforge Omega", id = "243365" }
 }
 
 -- Warrior_Arms_Slayer
 BiSCompanionBisData["Warrior_Arms_Slayer"] = {
-    { slot = "Head", name = "Enforcer's Backalley Faceshield", source = "One-Armed Bandit", id = "229235" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Enforcer's Backalley Shoulderplates", source = "Rik Reverb", id = "229233" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafted", id = "222817" },
-    { slot = "Chest", name = "\"Bullet-Proof\" Vestplate", source = "Mug'zee, Heads of Security", id = "228851" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted", id = "222435" },
-    { slot = "Hands", name = "Enforcer's Backalley Crushers", source = "Cauldron of Carnage", id = "229236" },
-    { slot = "Waist", name = "Enforcer's Backalley Girdle", source = "Catalyst", id = "229232" },
-    { slot = "Legs", name = "Enforcer's Backalley Chausses", source = "Stix Bunkjunker", id = "229234" },
-    { slot = "Feet", name = "Cutthroat Competition Stompers", source = "Chrome King Gallywix", id = "228887" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Fathomdweller's Runed Citrine", "Thunderlord's Crackling Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" }
+    { slot = "Head", name = "Living Weapon's Faceshield", source = "Catalyst / Raid / Vault", id = "237610" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Living Weapon's Ramparts", source = "Catalyst / Raid / Vault", id = "237608" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Crit" },id = "235499" },
+    { slot = "Chest", name = "Living Weapon's Bulwark", source = "Catalyst / Raid / Vault", id = "237613" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted",gems = {"Crit + Haste"}, id = "222435" },
+    { slot = "Hands", name = "Living Weapon's Crushers", source = "Catalyst / Raid / Vault", id = "237611" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafted",gems = {"Crit + Haste"}, id = "222431" },
+    { slot = "Legs", name = "Living Weapon's Legguards", source = "Catalyst / Raid / Vault", id = "237609" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Devout Zealot's Ring", source = "The Dawnbreaker", id = "221136" },
+    { slot = "Trinket 1", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Trinket 2", name = "Ara-Kara Sacbrood", source = "Ara-Kara, City of Echoes", id = "219314" },
+    { slot = "Weapon", name = "Maw of the Void", source = "	Nexus King Salhadaar - Manaforge Omega", id = "243365" }
 }
 
--- Protection Warrior  Mountain Thane
+-- Protection Warrior Mountain Thane
 BiSCompanionBisData["Warrior_Prot_Mountain Thane"] = {
-    { slot = "Head", name = "Enforcer's Backalley Faceshield", source = "Catalyst / Raid / Vault", id = "229235" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Enforcer's Backalley Shoulderplates", source = "Catalyst / Raid / Vault", id = "229233" },
-    { slot = "Back", name = "Trashmaster's Mantle", source = "Operation: Mechagon Workshop", id = "199921" },
-    { slot = "Chest", name = "Slashproof Business Plate", source = "Cinderbrew Meadery", id = "221069" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Blacksmithing", id = "222435" },
-    { slot = "Hands", name = "Enforcer's Backalley Crushers", source = "Catalyst / Raid / Vault", id = "229236" },
-    { slot = "Waist", name = "Heaviestweight Title Belt", source = "Cauldron of Carnage", id = "228873" },
-    { slot = "Legs", name = "Enforcer's Backalley Chausses", source = "Catalyst / Raid / Vault", id = "229234" },
-    { slot = "Feet", name = "Pyroclastic Greatboots", source = "Operation: Mechagon Workshop", id = "168972" },
-    { slot = "Ring 1", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Ring 2", name = "Faded Championship Ring", source = "Cauldron of Carnage", id = "228840" },
-	{ slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Tearing Sawtooth Blade", source = "Operation: Mechagon Workshop", id = "169608" },
-    { slot = "Off Hand", name = "Titan of Industry", source = "Chrome King Gallywix", id = "228889" }
+    { slot = "Head", name = "Living Weapon's Faceshield", source = "Catalyst / Raid / Vault", id = "237610" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Living Weapon's Ramparts", source = "Catalyst / Raid / Vault", id = "237608" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Haste" },id = "235499" },
+    { slot = "Chest", name = "Breastplate of Otherworldly Influence", source = "Halls of Atonement", id = "178814" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted",gems = {"Crit + Haste"}, id = "222435" },
+    { slot = "Hands", name = "Living Weapon's Crushers", source = "Catalyst / Raid / Vault", id = "237611" },
+    { slot = "Waist", name = "Everforged Greatbelt", source = "Crafted",gems = {"Crit + Haste"}, id = "222431" },
+    { slot = "Legs", name = "Living Weapon's Legguards", source = "Catalyst / Raid / Vault", id = "237609" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Omega", source = "Forgeweaver Araz - Manaforge Omega", id = "237570" },
+    { slot = "Trinket 1", name = "Ticking Sack of Terror ", source = "Tazavesh: Streets of Wonder", id = "185844" },
+    { slot = "Trinket 2", name = "Tome of Light's Devotion", source = "Priory of the Sacred Flame", id = "246344" },
+    { slot = "Weapon", name = "Oath-Breaker's Recompense", source = "Nexus King Salhadaar - Manaforge Omega", id = "237734" },
+    { slot = "Off Hand", name = "Ward of the Weaving-Beast", source = "Loom’ithar in Manaforge Omega", id = "237723" }
 }
 
 -- Protection Warrior Colossus
@@ -1359,157 +1461,171 @@ BiSCompanionBisData["Warrior_Prot_Colossus"] = {
 
 -- Warrior Fury Mountain Thane
 BiSCompanionBisData["Warrior_Fury_Mountain Thane"] = {
-    { slot = "Head", name = "Enforcer's Backalley Faceshield", source = "One-Armed Bandit", id = "229235" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Enforcer's Backalley Shoulderplates", source = "Rik Reverb", id = "229233" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844", alternates = { { name = "Consecrated Cloak", source = "Crafting", id = "222817" } } },
-    { slot = "Chest", name = "Enforcer's Backalley Vestplate", source = "Sprocketmonger", id = "229238" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted", id = "222435" },
-    { slot = "Hands", name = "Enforcer's Backalley Crushers", source = "Cauldron of Carnage", id = "229236" },
-    { slot = "Waist", name = "Lightning-Conductor's Bands", source = "The Rookery", id = "221040" },
-    { slot = "Legs", name = "Thunder-Clad Legguards", source = "The Rookery", id = "221034" },
-    { slot = "Feet", name = "Devoted Plate Walkers", source = "Priory of the Sacred Flame", id = "221123" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Fathomdweller's Runed Citrine", "Thunderlord's Crackling Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Mechano-Core Amplifier", source = "Delves/Great Vault", id = "232485" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" },
-    { slot = "Off Hand", name = "Charged Claymore", source = "Crafted", id = "222447", alternates = { { name = "Capital Punisher", source = "Unknown", id = "228891" } } }
+    { slot = "Head", name = "Bone-Melted Faceplate", source = "BoE Drop - Manaforge Omega", gems = { "Haste + Mastery" }, id = "238028" },
+    { slot = "Neck", name = "Chrysalis of Sundered Souls ", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237568" },
+    { slot = "Shoulders", name = "Living Weapon's Ramparts", source = "Catalyst / Raid / Vault", id = "237608" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Versa" },id = "235499" },
+    { slot = "Chest", name = "Living Weapon's Bulwark", source = "Catalyst / Raid / Vault", id = "237613" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted",gems = {"Mastery + Haste"}, id = "222435" },
+    { slot = "Hands", name = "Living Weapon's Crushers", source = "Catalyst / Raid / Vault", id = "237611" },
+    { slot = "Waist", name = "Living Weapon's Chain", source = "Catalyst", id = "237607" },
+    { slot = "Legs", name = "Living Weapon's Legguards", source = "Catalyst / Raid / Vault", id = "237609" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Radiant Necromancer's Band", source = "	Priory of the Sacred Flame", id = "221200" },
+    { slot = "Ring 2", name = "Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Eradicating Arcanocore", source = "Plexus Sentinel - Manaforge Omega", id = "242394" },
+    { slot = "Trinket 2", name = "Ara-Kara Sacbrood", source = "Ara-Kara, City of Echoes", id = "219314" },
+    { slot = "Weapon", name = "Circuit Breaker", source = "	Operation: Floodgate", id = "234490" },
+    { slot = "Off Hand", name = "Everforged Greataxe", source = "Crafted", gems = { "Haste + Mastery" }, id = "222443" }
 }
 
 -- Warrior Fury Slayer
-BiSCompanionBisData["Warrior_Fury_Slayer"] = {
-    { slot = "Head", name = "Enforcer's Backalley Faceshield", source = "One-Armed Bandit", id = "229235" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Enforcer's Backalley Shoulderplates", source = "Rik Reverb", id = "229233" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger", id = "228844", alternates = { { name = "Consecrated Cloak", source = "Crafting", id = "222817" } } },
-    { slot = "Chest", name = "Enforcer's Backalley Vestplate", source = "Sprocketmonger", id = "229238" },
-    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted", id = "222435" },
-    { slot = "Hands", name = "Enforcer's Backalley Crushers", source = "Cauldron of Carnage", id = "229236" },
-    { slot = "Waist", name = "Lightning-Conductor's Bands", source = "The Rookery", id = "221040" },
-    { slot = "Legs", name = "Thunder-Clad Legguards", source = "The Rookery", id = "221034" },
-    { slot = "Feet", name = "Devoted Plate Walkers", source = "Priory of the Sacred Flame", id = "221123" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Fathomdweller's Runed Citrine", "Thunderlord's Crackling Citrine", "Legendary Skipper's Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Mechano-Core Amplifier", source = "Delves/Great Vault", id = "232485" },
-    { slot = "Trinket 2", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" },
-    { slot = "Off Hand", name = "Charged Claymore", source = "Crafted", id = "222447", alternates = { { name = "Capital Punisher", source = "Unknown", id = "228891" } } }
+BiSCompanionBisData["Warrior_Fury_Slayer"] = {    
+	{ slot = "Head", name = "Bone-Melted Faceplate", source = "BoE Drop - Manaforge Omega", gems = { "Haste + Mastery" }, id = "238028" },
+    { slot = "Neck", name = "Chrysalis of Sundered Souls ", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237568" },
+    { slot = "Shoulders", name = "Living Weapon's Ramparts", source = "Catalyst / Raid / Vault", id = "237608" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest", gems = { "Versa" },id = "235499" },
+    { slot = "Chest", name = "Living Weapon's Bulwark", source = "Catalyst / Raid / Vault", id = "237613" },
+    { slot = "Wrists", name = "Everforged Vambraces", source = "Crafted",gems = {"Mastery + Haste"}, id = "222435" },
+    { slot = "Hands", name = "Living Weapon's Crushers", source = "Catalyst / Raid / Vault", id = "237611" },
+    { slot = "Waist", name = "Living Weapon's Chain", source = "Catalyst", id = "237607" },
+    { slot = "Legs", name = "Living Weapon's Legguards", source = "Catalyst / Raid / Vault", id = "237609" },
+    { slot = "Feet", name = "Interloper's Plated Sabatons", source = "The Soul Hunters", id = "243307" },
+    { slot = "Ring 1", name = "Radiant Necromancer's Band", source = "	Priory of the Sacred Flame", id = "221200" },
+    { slot = "Ring 2", name = "Signet of the False Accuser", source = "Halls of Atonement", id = "178824" },
+    { slot = "Trinket 1", name = "Eradicating Arcanocore", source = "Plexus Sentinel - Manaforge Omega", id = "242394" },
+    { slot = "Trinket 2", name = "Ara-Kara Sacbrood", source = "Ara-Kara, City of Echoes", id = "219314" },
+    { slot = "Weapon", name = "Circuit Breaker", source = "	Operation: Floodgate", id = "234490" },
+    { slot = "Off Hand", name = "Everforged Greataxe", source = "Crafted", gems = { "Haste + Mastery" }, id = "222443" }
 }
 
 
 -- Evoker Devastation Scalecommander
 BiSCompanionBisData["Evoker_Devastation_Scalecommander"] = {
-    { slot = "Head", name = "Sanitized Scraphood", source = "Stix Bunkjunker", id = "228859" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Opulent Treasurescale's Gleaming Mantle", source = "Catalyst / Raid / Vault", id = "229278" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafted", id = "222817" },
-    { slot = "Chest", name = "Opulent Treasurescale's Tunic", source = "Catalyst / Raid / Vault", id = "229283" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", id = "219342" },
-    { slot = "Hands", name = "Opulent Treasurescale's Gold-Counters", source = "Catalyst / Raid / Vault", id = "229281" },
-    { slot = "Waist", name = "Sash of the Fierce Diva", source = "Rik Reverb", id = "228845" },
-    { slot = "Legs", name = "Opulent Treasurescale's Petticoat", source = "Catalyst / Raid / Vault", id = "229279" },
-    { slot = "Feet", name = "Shrapnel-Ridden Sabatons", source = "Vexie and the Geargrinders", id = "228862" },
-    { slot = "Ring 1", name = "Bloodoath Signet", source = "Theater of Pain", id = "178871" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'Zee", id = "230192" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" },
+    { slot = "Head", name = "Spellweaver's Immaculate Focus", source = "Catalyst / Raid / Vault", id = "237655" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Spellweaver's Immaculate Pauldrons", source = "Catalyst / Raid / Vault", id = "237653" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Spellweaver's Immaculate Crestward", source = "Catalyst / Raid / Vault", id = "237658" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Writhing Armor Banding Embellishment"}, id = "219342" },
+    { slot = "Hands", name = "Order Bashers", source = "Tazavesh, the Veiled Market", id = "246282" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge"}, id = "245965" },
+    { slot = "Legs", name = "Spellweaver's Immaculate Runeslacks", source = "Catalyst / Raid / Vault", id = "237654" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "237728" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafted",gems = { "Darkmoon Sigil: Ascension Embellishment", "Crit + Haste" }, id = "222566" }
 }
 
 -- Evoker Devastation Flameshaper
 BiSCompanionBisData["Evoker_Devastation_Flameshaper"] = {
-    { slot = "Head", name = "Sanitized Scraphood", source = "Stix Bunkjunker", id = "228859" },
-    { slot = "Neck", name = "Semi-Charmed Amulet", source = "Rik Reverb", id = "228841" },
-    { slot = "Shoulders", name = "Opulent Treasurescale's Gleaming Mantle", source = "Catalyst / Raid / Vault", id = "229278" },
-    { slot = "Back", name = "Consecrated Cloak", source = "Crafted", id = "222817" },
-    { slot = "Chest", name = "Opulent Treasurescale's Tunic", source = "Catalyst / Raid / Vault", id = "229283" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", id = "219342" },
-    { slot = "Hands", name = "Opulent Treasurescale's Gold-Counters", source = "Catalyst / Raid / Vault", id = "229281" },
-    { slot = "Waist", name = "Sash of the Fierce Diva", source = "Rik Reverb", id = "228845" },
-    { slot = "Legs", name = "Opulent Treasurescale's Petticoat", source = "Catalyst / Raid / Vault", id = "229279" },
-    { slot = "Feet", name = "Shrapnel-Ridden Sabatons", source = "Vexie and the Geargrinders", id = "228862" },
-    { slot = "Ring 1", name = "Bloodoath Signet", source = "Theater of Pain", id = "178871" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "House of Cards", source = "One-Armed Bandit", id = "230027" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'Zee", id = "230192" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805" },
+    { slot = "Head", name = "Spellweaver's Immaculate Focus", source = "Catalyst / Raid / Vault", id = "237655" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Spellweaver's Immaculate Pauldrons", source = "Catalyst / Raid / Vault", id = "237653" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Spellweaver's Immaculate Crestward", source = "Catalyst / Raid / Vault", id = "237658" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Writhing Armor Banding Embellishment"}, id = "219342" },
+    { slot = "Hands", name = "Order Bashers", source = "Tazavesh, the Veiled Market", id = "246282" },
+    { slot = "Waist", name = "Durable Information Securing Container", source = "Quest",gems = { "Static Charge"}, id = "245965" },
+    { slot = "Legs", name = "Spellweaver's Immaculate Runeslacks", source = "Catalyst / Raid / Vault", id = "237654" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Voidglass Kris", source = "Fractillus - Manaforge Omega", id = "237728" },
+    { slot = "Off Hand", name = "Vagabond's Torch", source = "Crafted",gems = { "Darkmoon Sigil: Ascension Embellishment", "Crit + Haste" }, id = "222566" }
 }
 
 -- Evoker Preservation Chronowarden
 BiSCompanionBisData["Evoker_Preservation_Chronowarden"] = {
-    { slot = "Head", name = "Opulent Treasurescale's Crowned Jewel", source = "Catalyst / Raid / Vault", id = "229280" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Opulent Treasurescale's Gleaming Mantle", source = "Catalyst / Raid / Vault", id = "229278" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock (Liberation of Undermine)", id = "228844" },
-    { slot = "Chest", name = "Opulent Treasurescale's Tunic", source = "Catalyst / Raid / Vault", id = "229283" },
-    { slot = "Wrists", name = "Made Manacles", source = "Mug'zee, Heads of Security", id = "228878" },
-    { slot = "Hands", name = "Opulent Treasurescale's Gold-Counters", source = "Catalyst / Raid / Vault", id = "229281" },
-    { slot = "Waist", name = "Maniacal Monarch's Girdle", source = "Operation: Mechagon Workshop", id = "168983" },
-    { slot = "Legs", name = "Chemical Blaster's Legguards", source = "The MOTHERLODE!!", id = "158341" },
-    { slot = "Feet", name = "Treads of the Galvanic Skysoarer", source = "The Rookery", id = "221035" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805", alternates = { { name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" } }},
+    { slot = "Head", name = "Spellweaver's Immaculate Focus", source = "Catalyst / Raid / Vault", id = "237655" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Spellweaver's Immaculate Pauldrons", source = "Catalyst / Raid / Vault", id = "237653" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Soaring Decimator's Hauberk", source = "	Halls of Atonement", id = "178815" },
+    { slot = "Wrists", name = "Arcanotech Wrist-Matrix", source = "Plexus Sentinel - Manaforge Omega", id = "237523" },
+    { slot = "Hands", name = "Spellweaver's Immaculate Scaleguards ", source = "Catalyst / Raid / Vault", id = "237656" },
+    { slot = "Waist", name = "Clasp of Furious Freedom", source = "The Soul Hunters - Manaforge Omega", id = "237554" },
+    { slot = "Legs", name = "Spellweaver's Immaculate Runeslacks", source = "Catalyst / Raid / Vault", id = "237654" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Voidglass Spire", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237730" }
 }
 
 -- Evoker Preservation Flameshaper
 BiSCompanionBisData["Evoker_Preservation_Flameshaper"] = {
-    { slot = "Head", name = "Opulent Treasurescale's Crowned Jewel", source = "Catalyst / Raid / Vault", id = "229280" },
-    { slot = "Neck", name = "Strapped Rescue-Keg", source = "Cinderbrew Meadery", id = "221060" },
-    { slot = "Shoulders", name = "Opulent Treasurescale's Gleaming Mantle", source = "Catalyst / Raid / Vault", id = "229278" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock (Liberation of Undermine)", id = "228844" },
-    { slot = "Chest", name = "Opulent Treasurescale's Tunic", source = "Catalyst / Raid / Vault", id = "229283" },
-    { slot = "Wrists", name = "Made Manacles", source = "Mug'zee, Heads of Security", id = "228878" },
-    { slot = "Hands", name = "Opulent Treasurescale's Gold-Counters", source = "Catalyst / Raid / Vault", id = "229281" },
-    { slot = "Waist", name = "Maniacal Monarch's Girdle", source = "Operation: Mechagon Workshop", id = "168983" },
-    { slot = "Legs", name = "Chemical Blaster's Legguards", source = "The MOTHERLODE!!", id = "158341" },
-    { slot = "Feet", name = "Treads of the Galvanic Skysoarer", source = "The Rookery", id = "221035" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Stormbringer's Runed Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mister Pick-Me-Up", source = "Sprocketmonger", id = "230186" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805", alternates = { { name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" } }},
+    { slot = "Head", name = "Spellweaver's Immaculate Focus", source = "Catalyst / Raid / Vault", id = "237655" },
+    { slot = "Neck", name = "Salhadaar's Folly", source = "Nexus King Salhadaar", id = "242406" },
+    { slot = "Shoulders", name = "Spellweaver's Immaculate Pauldrons", source = "Catalyst / Raid / Vault", id = "237653" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Soaring Decimator's Hauberk", source = "	Halls of Atonement", id = "178815" },
+    { slot = "Wrists", name = "Arcanotech Wrist-Matrix", source = "Plexus Sentinel - Manaforge Omega", id = "237523" },
+    { slot = "Hands", name = "Spellweaver's Immaculate Scaleguards ", source = "Catalyst / Raid / Vault", id = "237656" },
+    { slot = "Waist", name = "Clasp of Furious Freedom", source = "The Soul Hunters - Manaforge Omega", id = "237554" },
+    { slot = "Legs", name = "Spellweaver's Immaculate Runeslacks", source = "Catalyst / Raid / Vault", id = "237654" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Logic Gate: Alpha", source = "Plexus Sentinel - Manaforge Omega", id = "237567" },
+    { slot = "Trinket 1", name = "Diamantine Voidcore", source = "Fractillus - Manaforge Omega", id = "242392" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Voidglass Spire", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237730" }
 }
 
 -- Evoker Augmenter Scalecommander
 BiSCompanionBisData["Evoker_Augmentation_Scalecommander"] = {
-    { slot = "Head", name = "Opulent Treasurescale's Crowned Jewel", source = "Catalyst / Raid / Vault", id = "229280" },
-    { slot = "Neck", name = "Gobfather's Gifted Bling", source = "Mug'zee, Heads of Security", id = "228842" },
-    { slot = "Shoulders", name = "Opulent Treasurescale's Gleaming Mantle", source = "Catalyst / Raid / Vault", id = "229278" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock (Liberation of Undermine)", id = "228844" },
-    { slot = "Chest", name = "Opulent Treasurescale's Tunic", source = "Catalyst / Raid / Vault", id = "229283" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", id = "219342" },
-    { slot = "Hands", name = "Gravi-Gunk Handlers", source = "Sprocketmonger", id = "228842" },
-    { slot = "Waist", name = "Dealer's Covetous Chain", source = "Chrome King Gallywix", id = "228877" },
-    { slot = "Legs", name = "Opulent Treasurescale's Petticoat", source = "Catalyst / Raid / Vault", id = "229279" },
-    { slot = "Feet", name = "Dubious Table-Runners", source = "One-Armed Bandit", id = "221035" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Roaring War-Queen's Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230192" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805", alternates = { { name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" } }},
+    { slot = "Head", name = "Spellweaver's Immaculate Focus", source = "Catalyst / Raid / Vault", id = "237655" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Spellweaver's Immaculate Pauldrons", source = "Catalyst / Raid / Vault", id = "237653" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Spellweaver's Immaculate Crestward", source = "Catalyst / Raid / Vault", id = "237658" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { "Dawnthread Lining", "Crit + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Spellweaver's Immaculate Scaleguards ", source = "Catalyst / Raid / Vault", id = "237656" },
+    { slot = "Waist", name = " Colossal Lifetether", source = "Loom’ithar - Manaforge Omega", id = "237522" },
+    { slot = "Legs", name = "Spellweaver's Immaculate Runeslacks", source = "Catalyst / Raid / Vault", id = "237654" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Voidglass Spire", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237730" }
 }
 
 
 -- Evoker Augmenter Chronowarden
 BiSCompanionBisData["Evoker_Augmentation_Chronowarden"] = {
-    { slot = "Head", name = "Opulent Treasurescale's Crowned Jewel", source = "Catalyst / Raid / Vault", id = "229280" },
-    { slot = "Neck", name = "Gobfather's Gifted Bling", source = "Mug'zee, Heads of Security", id = "221060" },
-    { slot = "Shoulders", name = "Opulent Treasurescale's Gleaming Mantle", source = "Catalyst / Raid / Vault", id = "229278" },
-    { slot = "Back", name = "Test Pilot's Go-Pack", source = "Sprocketmonger Lockenstock (Liberation of Undermine)", id = "228844" },
-    { slot = "Chest", name = "Opulent Treasurescale's Tunic", source = "Catalyst / Raid / Vault", id = "229283" },
-    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", id = "219342" },
-    { slot = "Hands", name = "Gravi-Gunk Handlers", source = "Sprocketmonger", id = "229281" },
-    { slot = "Waist", name = "Dealer's Covetous Chain", source = "Chrome King Gallywix", id = "168983" },
-    { slot = "Legs", name = "Opulent Treasurescale's Petticoat", source = "Catalyst / Raid / Vault", id = "229279" },
-    { slot = "Feet", name = "Dubious Table-Runners", source = "One-Armed Bandit", id = "221035" },
-    { slot = "Ring 1", name = "Cyrce's Circlet", source = "Siren Isle", gems = { "Roaring War-Queen's Citrine", "Fathomdweller's Runed Citrine", "Windsinger's Runed Citrine" }, id = "228411" },
-    { slot = "Ring 2", name = "The Jastor Diamond", source = "Chrome King Gallywix", id = "231265" },
-    { slot = "Trinket 1", name = "Eye of Kezan", source = "Chrome King Gallywix", id = "230198" },
-    { slot = "Trinket 2", name = "Mug's Moxie Jug", source = "Mug'zee, Heads of Security", id = "230186" },
-    { slot = "Weapon", name = "Best-in-Slots", source = "One-Armed Bandit", id = "232805", alternates = { { name = "Alphacoil Ba-Boom Stick", source = "Sprocketmonger", id = "228898" } }},
+    { slot = "Head", name = "Spellweaver's Immaculate Focus", source = "Catalyst / Raid / Vault", id = "237655" },
+    { slot = "Neck", name = "Duskblaze's Desperation", source = "The Soul Hunters - Manaforge Omega", id = "237569" },
+    { slot = "Shoulders", name = "Spellweaver's Immaculate Pauldrons", source = "Catalyst / Raid / Vault", id = "237653" },
+    { slot = "Back", name = "Reshii Wraps", source = "Quest - CRIT stats", id = "235499" },
+    { slot = "Chest", name = "Spellweaver's Immaculate Crestward", source = "Catalyst / Raid / Vault", id = "237658" },
+    { slot = "Wrists", name = "Glyph-Etched Vambraces", source = "Crafted", gems = { " Dawnthread Lining", "Crit + Haste" }, id = "219342" },
+    { slot = "Hands", name = "Spellweaver's Immaculate Scaleguards ", source = "Catalyst / Raid / Vault", id = "237656" },
+    { slot = "Waist", name = " Colossal Lifetether", source = "Loom’ithar - Manaforge Omega", id = "237522" },
+    { slot = "Legs", name = "Spellweaver's Immaculate Runeslacks", source = "Catalyst / Raid / Vault", id = "237654" },
+    { slot = "Feet", name = "Interloper's Chain Boots", source = "The Soul Hunters - Manaforge Omega", id = "233308" },
+    { slot = "Ring 1", name = "Band of the Shattered Soul", source = "Dimensius The All Devouring - Manaforge Omega", id = "242405" },
+    { slot = "Ring 2", name = "Ring of the Panoply", source = "Tazavesh: Streets of Wonder", id = "246281" },
+    { slot = "Trinket 1", name = "Araz's Ritual Forge", source = "Forgeweaver Araz", id = "242402" },
+    { slot = "Trinket 2", name = "Astral Antenna", source = "Loom’ithar", id = "242395" },
+    { slot = "Weapon", name = "Voidglass Spire", source = "Soulbinder Naazindhri - Manaforge Omega", id = "237730" }
 }
 
+BiSCompanionBisData["Mage_Arcane_Spellslinger"] = BiSCompanionBisData["Mage_Arcane_Sunfury"]
+BiSCompanionBisData["Mage_Frost_Spellslinger"] = BiSCompanionBisData["Mage_Frost_Frostfire"]
+BiSCompanionBisData["Mage_Frost_Frostfire"] = frostMage1215
+BiSCompanionBisData["Mage_Frost_Spellslinger"] = frostMage1215
+BiSCompanionBisData["Mage_Fire_Sunfury"] = fireMage1215
+BiSCompanionBisData["Mage_Fire_Frostfire"] = fireMage1215
+BiSCompanionBisData["Warlock_Aff_Hellcaller"] = afflictionWarlock1215
+BiSCompanionBisData["Warlock_Aff_Soul Harvester"] = afflictionWarlock1215
+BiSCompanionBisData["Warlock_Demo_Soul Harvester"] = demonologyWarlock1215
+BiSCompanionBisData["Warlock_Demo_Diabolist"] = demonologyWarlock1215
+BiSCompanionBisData["Warlock_Destro_Hellcaller"] = destructionWarlock1215
+BiSCompanionBisData["Warlock_Destro_Diabolist"] = destructionWarlock1215
