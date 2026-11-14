@@ -36,6 +36,11 @@ def verify():
         assert "Core/Talents.lua" not in forever_files
         assert "compat/forever/Core/UI.lua" not in retail_files
         assert "Core/UI.lua" not in forever_files
+        assert "ForeverBiS60.lua" not in forever_files
+        assert "CommonItems.lua" not in forever_files
+        assert "BiSCompanion/ForeverBiS60.lua" not in names
+        assert "BiSCompanion/CommonItems.lua" not in names
+        assert "ForeverTalentPlanner.lua" in forever_files
 
     print(f"Universal ZIP: OK ({len(files)} files, {path.stat().st_size} bytes)")
 

@@ -100,6 +100,9 @@ end
 ------------------------------------------------------------
 function addon.Core.Data.UpdateBisTable()
     addon.Core.Data.bisTable = {}
+    -- Keep historical custom lists in SavedVariables, but do not treat any
+    -- unverified Forever gear as BiS (including old selected custom lists).
+    if BiSCompanionForever and not BiSCompanionForeverGearReady then return end
 
     local _, specKey = addon.Core.Character.GetPlayerClassAndSpec()
     if not specKey then return end
@@ -176,6 +179,7 @@ function addon.Core.Data.PreloadGreatVaultItems()
 end
 
 function addon.Core.Data.PreloadItemIcons()
+    if BiSCompanionForever and not BiSCompanionForeverGearReady then return end
     if BiSCompanionBisData then
         for _, items in pairs(BiSCompanionBisData) do
             for _, item in ipairs(items) do

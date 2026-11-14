@@ -1,15 +1,13 @@
 ## Interface: 16001
 ## Title: BiSCompanion
-## Notes: Gear lists for World of Warcraft: Forever
+## Notes: Talent planner for WoW Forever; BiS gear is being prepared
 ## Author: Onabi
-## Version: 2.3.0
+## Version: 2.3.1
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
 
 Libs\LibDeflate\LibDeflate.lua
 ForeverMapping.lua
 ForeverData.lua
-ForeverBiS60.lua
-CommonItems.lua
 Core\Data.lua
 Core\Character.lua
 compat\forever\Core\UI.lua

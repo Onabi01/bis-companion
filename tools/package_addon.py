@@ -73,6 +73,8 @@ def get_package_files():
         raise ValueError("Retail would load the Forever-specific UI modules")
     if {"ForeverData.lua", "ForeverBiS60.lua", "ForeverTalentPlanner.lua"} & retail_files:
         raise ValueError("Retail would load Forever data")
+    if {"ForeverBiS60.lua", "CommonItems.lua"} & forever_files:
+        raise ValueError("Forever must not load unverified BiS or Retail item catalogs")
     if {"BisData.lua", "Retail1215.lua", "TalentData.lua", "Core/Talents.lua"} & forever_files:
         raise ValueError("Forever would load Retail data")
 

@@ -11,16 +11,15 @@
 
 Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-death-knight-pve-tank-gear-best-in-slot), [Method, exemple de talents](https://www.method.gg/guides/vengeance-demon-hunter/talents), [Wowhead](https://www.wowhead.com/).
 
-## Forever 1.60.1
+## Forever 1.60.1 — équipements suspendus (14 novembre 2026)
 
-- `BiSCompanion_Forever.toc` cible l'interface `16001` et charge un jeu de données séparé, ainsi que les variantes `compat/forever/Core/` des modules UI et EncounterJournal.
-- Les neuf classes et 27 arbres de spécialisation classiques sont sélectionnables manuellement. La classe du personnage est présélectionnée.
-- `ForeverBiS60.lua` contient les 27 listes de niveau 60, soit 444 objets. Chaque ID provient du lien de la fiche objet du classement [wow-forever.gg](https://wow-forever.gg/tools/gear/). Les emplacements absents de certains tableaux source restent absents de l'addon ; l'emplacement d'arme à distance est affiché lorsqu'il existe.
-- Ces classements sont calculés à partir des poids statistiques du site. Ils ne tiennent pas nécessairement compte des effets d'équipement, des bonus d'ensemble, des résistances ou de la disponibilité réelle des objets. Le site indique que très peu de ses objets ont une source d'obtention connue. Ces listes sont donc des points de départ à revoir en jeu, et non des BiS validés par simulation.
-- Les builds de talents préconfigurés Forever ne sont pas renseignés ; un planificateur visuel séparé existe. L'affichage des 14 emplacements de Paladin Rétribution a été testé en jeu sur Forever 1.60.1 le 9 novembre 2026. Les autres spécialisations et les objets dont l'icône reste « ? » ne sont pas encore vérifiés en jeu. Les données Retail ne sont pas chargées par le manifeste Forever.
-- `python tools/validate_forever.py` contrôle la présence des 27 listes, l'unicité des emplacements et IDs et les fichiers du manifeste.
-
-Sources : [Warcraft Wiki, format TOC](https://warcraft.wiki.gg/wiki/Toc_file), [classements de niveau 60](https://wow-forever.gg/tools/gear/), [WoW Forever officiel](https://worldofwarcraft.blizzard.com/en-us/forever/).
+- Le manifeste `BiSCompanion_Forever.toc` cible l'interface `16001` ; il charge désormais `ForeverData.lua` et **ne charge plus** `ForeverBiS60.lua` ni `CommonItems.lua`.
+- Les neuf classes et 27 spécialisations classiques restent sélectionnables, avec des listes BiS **intentionnellement vides**.
+- Les 444 objets et 27 classements précédents n'étaient pas suffisamment fiables pour Forever. Le fichier `ForeverBiS60.lua` est **conservé comme archive source à auditer**, mais n'est plus inclus dans le ZIP ni exécuté en jeu.
+- `CommonItems.lua` étant un catalogue de sets et crafts Retail, il est également exclu du manifeste Forever.
+- L'interface Forever masque les contrôles d'édition, le menu des listes et les slots d'équipement, et explique que les BiS sont en préparation. Le planificateur de talents reste accessible.
+- **SavedVariables intactes** : les listes personnelles historiques ne sont pas détruites ; leur affichage et leur reconnaissance comme BiS sont temporairement désactivés pour éviter de signaler de mauvais objets.
+- `python tools/validate_forever.py` contrôle le mode suspendu, les 27 listes vides et l'accès au planificateur.
 
 ## Mise à jour
 
@@ -28,7 +27,8 @@ Sources : [Warcraft Wiki, format TOC](https://warcraft.wiki.gg/wiki/Toc_file), [
 
 ## Archive universelle (14 novembre 2026)
 
-- La version commune 2.3.0 est distribuée en **un seul ZIP**. Les manifests `_Standard.toc` et `_Forever.toc` sélectionnent des listes de fichiers distinctes ; un manifeste `.toc` sans suffixe sert de repli Retail.
+- La version commune 2.3.1 est distribuée en **un seul ZIP**. Les manifests `_Standard.toc` et `_Forever.toc` sélectionnent des listes de fichiers distinctes ; un manifeste `.toc` sans suffixe sert de repli Retail.
 - Les fichiers `compat/forever/Core/` sont désormais directement référencés dans le manifeste Forever, sans remplacement de fichiers lors du packaging.
 - `tools/validate_packages.py` contrôle que les deux manifests sont présents, que les chemins existent et que chaque client charge uniquement son jeu de données.
+- Les changements de la 2.3.1 désactivent uniquement l'édition et les données d'équipement Forever ; l'interface Retail n'est pas modifiée.
 - La compatibilité est confirmée par des contrôles **statiques**, pas par une exécution en jeu sur les deux clients.

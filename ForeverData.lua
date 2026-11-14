@@ -1,4 +1,7 @@
--- Empty lists allow manual lists while verified Forever BiS data is prepared.
+-- Forever: placeholders for specialization selection until gear data is verified.
+-- This flag disables all BiS gear display/editing and tooltip matching in Forever.
+-- Previous user SavedVariables are intentionally retained, not overwritten.
+BiSCompanionForeverGearReady = false
 BiSCompanionBisData = {}
 BiSCompanionTalentData = {}
 BiSCompanionBisData["Warrior_Arms"] = {}
