@@ -1,0 +1,25 @@
+## Interface: 120105
+## Title: BiSCompanion
+## Notes: A companion addon for managing Best-in-Slot gear lists
+## Author: Onabi
+## Version: 2.3.0
+## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
+
+Libs\LibDeflate\LibDeflate.lua
+ClassSpecMapping.lua
+BisData.lua
+Retail1215.lua
+Retail1215More.lua
+Retail1215MonkPaladinPriest.lua
+Retail1215RogueShamanEvoker.lua
+TalentData.lua
+RetailTalent1215.lua
+RetailTalent1215More.lua
+RetailCommon1215.lua
+Core\Data.lua       
+Core\Character.lua
+Core\UI.lua
+Core\Talents.lua
+Core\EncounterJournal.lua
+Core\Tooltip.lua
+BiSCompanion.lua      

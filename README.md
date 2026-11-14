@@ -1,57 +1,62 @@
-# BiSCompanion — WoW Retail & WoW Forever
+# BiSCompanion — un addon pour WoW Retail et WoW Forever
 
-Addon World of Warcraft proposant des listes d'équipements Best-in-Slot (BiS), des informations dans les infobulles et une interface liée au personnage. Le dépôt contient **deux éditions**, construites à partir des mêmes sources avec les adaptations nécessaires pour chaque client.
+Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées, infobulles et talents. **Un seul ZIP installable fonctionne sur les deux éditions** grâce aux manifests spécifiques à chaque client. Il n'est pas nécessaire de sélectionner un mode dans les options : le jeu charge lui-même le bon fichier `.toc`.
 
-| Édition | Interface | Version de l'addon | Talents |
+| Client | Version du jeu testée dans les données | Interface | Fonctionnalités |
 | --- | --- | --- | --- |
-| **Retail (Midnight 12.1.5)** | `120105` | `2.2.5` | Builds et codes d'import ; certains restent à confirmer dans le jeu |
-| **Forever (1.60.1)** | `16001` | `2.2.6` | Planificateur visuel non intrusif, sans achat automatique de talents |
+| **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
+| **WoW Forever** | 1.60.1 | `16001` | Listes BiS niveau 60 et planificateur de talents visuel non intrusif |
 
-## Installation
+Version commune de l'addon : **2.3.0** (construit à partir de Retail 2.2.5 et Forever 2.2.6).
 
-Ne copiez **pas le dépôt brut** dans les deux clients : chaque version doit recevoir son propre paquet, avec un fichier de chargement nommé exactement `BiSCompanion.toc`.
+## Installation — le même ZIP dans les deux clients
 
-À partir de Python 3 (sans dépendances supplémentaires) :
+1. Téléchargez [BiSCompanion-Universal-2.3.0.zip](releases/BiSCompanion-Universal-2.3.0.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
+2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
+3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
-```bash
-python tools/package_addon.py --target retail
-python tools/package_addon.py --target forever
-# ou : python tools/package_addon.py --target all
-```
+**Attention :** installez le *dossier* `BiSCompanion`, pas directement les fichiers Lua dans `AddOns`, et ne placez pas le ZIP non extrait dans `AddOns`. En cas de mise à jour depuis une ancienne édition, supprimez d'abord l'ancien dossier de l'addon (sans toucher à `WTF` / `SavedVariables`), puis extrayez le nouveau.
 
-Les fichiers ZIP installables sont créés dans `dist/`. Choisissez uniquement l'archive correspondant à votre client et extrayez le dossier `BiSCompanion` qu'elle contient dans le répertoire `Interface/AddOns` de ce client (le nom exact de ce répertoire dépend de l'installation).
+### Pourquoi un seul ZIP fonctionne
 
-**Attention :** les deux éditions ne doivent pas être mélangées dans le même dossier d'addon. Pour passer d'une édition à l'autre, remplacez le dossier installé, après avoir sauvegardé vos données de jeu si besoin.
+WoW choisit automatiquement le fichier `.toc` adapté :
 
-## Organisation
+- `BiSCompanion_Standard.toc` : Retail / Midnight, interface `120105`, utilise uniquement les modules et données Retail.
+- `BiSCompanion_Forever.toc` : Forever, interface `16001`, utilise uniquement les modules et données Forever, et les deux variantes de modules dans `compat/forever/Core/`.
+- `BiSCompanion.toc` : manifeste Retail de repli pour les systèmes qui ne reconnaissent pas le suffixe `_Standard`.
 
-- `BiSCompanion.toc` : manifeste source **Retail** ; définit le chargement des modules Retail.
-- `BiSCompanion_Forever.toc` : manifeste source **Forever** ; devient `BiSCompanion.toc` lors du packaging Forever.
-- `Core/` : modules partagés (données, interface, personnage, infobulles, Guide de l'aventurier, talents Retail).
-- `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
-- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverBiS60.lua`, `ForeverTalentPlanner.lua` : données et planificateur Forever.
-- `compat/forever/Core/` : copies spécifiques Forever de deux modules Core ; le packaging les substitue **uniquement** dans l'archive Forever. Cela conserve exactement les comportements contenus dans les ZIP sources, sans imposer les modifications Retail à Forever.
-- `tools/` : validation, couverture, préparation des données et packaging.
-- `DATA_STATUS.md` : limites connues et provenance des jeux de données. À lire avant toute publication.
+Le ZIP contient les fichiers Lua des deux éditions, mais **seuls les fichiers énumérés par le manifeste sélectionné sont exécutés**. La présence du code d'une autre édition dans le dossier n'entraîne pas son chargement. Les SavedVariables gardent les mêmes noms pour conserver les préférences existantes, chaque client ayant son propre dossier `WTF`.
 
-## Contrôles
+Documentation du format et de la sélection automatique des TOC : [Warcraft Wiki](https://warcraft.wiki.gg/wiki/.toc).
+
+## Construction de l'archive unique
+
+Python 3.9+ (bibliothèque standard uniquement) :
 
 ```bash
 python tools/validate_1215.py
 python tools/validate_forever.py
 python tools/audit_coverage.py
-python tools/package_addon.py --target all
+python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Ces contrôles vérifient les manifests et la structure des données, **pas** l'exécution de l'addon dans les deux clients. Un test dans Retail et dans Forever reste indispensable avant toute distribution.
+Le résultat est `dist/BiSCompanion-Universal-2.3.0.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
-## Maintenance
+## Organisation des sources
 
-Les versions ont des jeux de données et des interfaces/API différents : ne copiez pas les données d'un client vers l'autre. Modifiez les fichiers partagés avec précaution, puis reconstituez et testez les **deux** ZIP.
+- `BiSCompanion.lua`, `Core/Data.lua`, `Core/Character.lua`, `Core/Tooltip.lua` : logique commune aux deux éditions.
+- `Core/UI.lua`, `Core/EncounterJournal.lua`, `Core/Talents.lua` : modules Retail.
+- `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua` : adaptations et talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
+- `BisData.lua`, `ClassSpecMapping.lua`, `TalentData.lua`, `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
+- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverBiS60.lua`, `CommonItems.lua` : données Forever.
+- `tools/` : validations et générateur du ZIP unique.
+- `DATA_STATUS.md` : provenance et limites connues des données. À consulter avant distribution.
 
-L'état des données du 9 novembre 2026 figure dans `DATA_STATUS.md` ; en particulier, les informations BiS ne sont pas toutes validées par simulation ou en jeu.
+## Tests et limites
+
+Les vérifications ci-dessus valident la présence des fichiers, les interfaces, la sélection logique des modules et le format des données ; **elles ne remplacent pas des tests dans les clients WoW**. Il reste à vérifier en jeu le chargement automatique, l'interface, la détection BiS et le planificateur Forever. Les données BiS ne sont pas toutes validées par simulation ou tests en jeu (voir `DATA_STATUS.md`).
 
 ## Licence
 
-Voir [LICENCE.txt](LICENCE.txt) (GNU GPL v3 ou ultérieure selon la déclaration du projet).
+Voir [LICENCE.txt](LICENCE.txt) (GNU GPL v3 ou version ultérieure, selon la déclaration du projet).
