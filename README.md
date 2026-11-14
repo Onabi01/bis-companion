@@ -1,93 +1,57 @@
-# BiS Companion
+# BiSCompanion — WoW Retail & WoW Forever
 
+Addon World of Warcraft proposant des listes d'équipements Best-in-Slot (BiS), des informations dans les infobulles et une interface liée au personnage. Le dépôt contient **deux éditions**, construites à partir des mêmes sources avec les adaptations nécessaires pour chaque client.
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/Onabi/bis-companion.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/Onabi/bis-companion/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+| Édition | Interface | Version de l'addon | Talents |
+| --- | --- | --- | --- |
+| **Retail (Midnight 12.1.5)** | `120105` | `2.2.5` | Builds et codes d'import ; certains restent à confirmer dans le jeu |
+| **Forever (1.60.1)** | `16001` | `2.2.6` | Planificateur visuel non intrusif, sans achat automatique de talents |
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Ne copiez **pas le dépôt brut** dans les deux clients : chaque version doit recevoir son propre paquet, avec un fichier de chargement nommé exactement `BiSCompanion.toc`.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+À partir de Python 3 (sans dépendances supplémentaires) :
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```bash
+python tools/package_addon.py --target retail
+python tools/package_addon.py --target forever
+# ou : python tools/package_addon.py --target all
+```
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Les fichiers ZIP installables sont créés dans `dist/`. Choisissez uniquement l'archive correspondant à votre client et extrayez le dossier `BiSCompanion` qu'elle contient dans le répertoire `Interface/AddOns` de ce client (le nom exact de ce répertoire dépend de l'installation).
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+**Attention :** les deux éditions ne doivent pas être mélangées dans le même dossier d'addon. Pour passer d'une édition à l'autre, remplacez le dossier installé, après avoir sauvegardé vos données de jeu si besoin.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Organisation
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- `BiSCompanion.toc` : manifeste source **Retail** ; définit le chargement des modules Retail.
+- `BiSCompanion_Forever.toc` : manifeste source **Forever** ; devient `BiSCompanion.toc` lors du packaging Forever.
+- `Core/` : modules partagés (données, interface, personnage, infobulles, Guide de l'aventurier, talents Retail).
+- `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
+- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverBiS60.lua`, `ForeverTalentPlanner.lua` : données et planificateur Forever.
+- `compat/forever/Core/` : copies spécifiques Forever de deux modules Core ; le packaging les substitue **uniquement** dans l'archive Forever. Cela conserve exactement les comportements contenus dans les ZIP sources, sans imposer les modifications Retail à Forever.
+- `tools/` : validation, couverture, préparation des données et packaging.
+- `DATA_STATUS.md` : limites connues et provenance des jeux de données. À lire avant toute publication.
 
-## License
-For open source projects, say how it is licensed.
+## Contrôles
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+```bash
+python tools/validate_1215.py
+python tools/validate_forever.py
+python tools/audit_coverage.py
+python tools/package_addon.py --target all
+python tools/validate_packages.py
+```
+
+Ces contrôles vérifient les manifests et la structure des données, **pas** l'exécution de l'addon dans les deux clients. Un test dans Retail et dans Forever reste indispensable avant toute distribution.
+
+## Maintenance
+
+Les versions ont des jeux de données et des interfaces/API différents : ne copiez pas les données d'un client vers l'autre. Modifiez les fichiers partagés avec précaution, puis reconstituez et testez les **deux** ZIP.
+
+L'état des données du 9 novembre 2026 figure dans `DATA_STATUS.md` ; en particulier, les informations BiS ne sont pas toutes validées par simulation ou en jeu.
+
+## Licence
+
+Voir [LICENCE.txt](LICENCE.txt) (GNU GPL v3 ou ultérieure selon la déclaration du projet).
