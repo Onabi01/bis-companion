@@ -11,7 +11,7 @@ Version commune de l'addon : **2.5.4** (sets Pre-Raid BiS distincts par build Pv
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Pour la version 2.5.4, construisez `dist/BiSCompanion-Universal-2.5.4.zip` avec la commande ci-dessous, ou récupérez le ZIP dans les artefacts du [workflow de validation GitHub](https://github.com/Onabi01/bis-companion/actions/workflows/validate-addon.yml). L'archive [2.5.0](releases/BiSCompanion-Universal-2.5.0.zip) reste disponible pour revenir à la version précédente.
+1. Téléchargez [BiSCompanion-Universal-2.5.4.zip](releases/BiSCompanion-Universal-2.5.4.zip), ou construisez l'archive à partir des sources avec la commande ci-dessous. Les archives précédentes restent disponibles dans [releases/](releases/).
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
