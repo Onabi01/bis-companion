@@ -1,5 +1,18 @@
 # BiSCompanion - Changelog
 
+## 2.5.2 - Forever Pre-Raid sets par build
+
+- Paladin Retribution : deux sets intégrés dans le même menu d'équipement :
+  - **Pre-Raid BiS - Unsealed Wrath** : conserve le set hybride Retribution de 2.5.1.
+  - **Pre-Raid BiS - Shockadin** : 16 objets pour le build Holy Shock, avec IDs recoupés sur Wowhead Forever.
+- Sets intégrés protégés contre la modification et la suppression. Duplication en liste personnelle possible.
+- Le set Shockadin peut être défini comme BiS favori, enregistré dans SavedVariables et pris en compte dans les tooltips.
+- Structure extensible à d'autres variantes de builds sans modifier la liste des 28 spécialisations ou les 45 presets talents.
+- Module exclusivement Forever ; Retail et les données BiS existantes sont inchangés.
+- **Beta** : certains objets Shockadin sont propres à l'Alliance et quelques sources de butin ne sont pas confirmées dans Forever. Variantes Horde et autres spécialisations à auditer.
+
+**Validation :** contrôles automatiques d'intégrité, packaging et syntaxe Lua via GitHub Actions ; test en jeu requis.
+
 ## 2.5.1 - Sécurisation des listes personnelles Forever
 
 - Dupliquer une liste d'équipement conserve maintenant toutes les métadonnées des objets (notamment « Relic » et les icônes hors cache).

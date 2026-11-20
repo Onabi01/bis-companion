@@ -32,6 +32,7 @@ jobs:
           python3 tools/validate_1215.py
           python3 tools/validate_forever.py
           python3 tools/validate_forever_bis.py
+          python3 tools/validate_forever_variants.py
           python3 tools/validate_forever_talents.py
           python3 tools/validate_forever_comparison.py
           python3 tools/audit_coverage.py

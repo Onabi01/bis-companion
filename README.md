@@ -7,11 +7,11 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
 | **WoW Forever** | 1.60.1 | `16001` | **28 listes d'équipement Pre-Raid BiS**, 45 builds de talents Icy Veins, planificateur et mode comparaison |
 
-Version commune de l'addon : **2.5.1** (correctifs de duplication, protection des listes personnelles et affichage des icônes sur Forever ; 28 profils Pre-Raid BiS inchangés, Retail inchangé).
+Version commune de l'addon : **2.5.2** (ajout des sets Pre-Raid par build, en commençant par Paladin Retribution : Unsealed Wrath et Shockadin ; 28 profils de base inchangés, Retail inchangé).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Pour la version 2.5.1, construisez `dist/BiSCompanion-Universal-2.5.1.zip` avec la commande ci-dessous, ou récupérez le ZIP dans les artefacts du [workflow de validation GitHub](https://github.com/Onabi01/bis-companion/actions/workflows/validate-addon.yml). L'archive [2.5.0](releases/BiSCompanion-Universal-2.5.0.zip) reste disponible pour revenir à la version précédente.
+1. Pour la version 2.5.2, construisez `dist/BiSCompanion-Universal-2.5.2.zip` avec la commande ci-dessous, ou récupérez le ZIP dans les artefacts du [workflow de validation GitHub](https://github.com/Onabi01/bis-companion/actions/workflows/validate-addon.yml). L'archive [2.5.0](releases/BiSCompanion-Universal-2.5.0.zip) reste disponible pour revenir à la version précédente.
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -37,6 +37,7 @@ Python 3.9+ (bibliothèque standard uniquement) :
 python tools/validate_1215.py
 python tools/validate_forever.py
 python tools/validate_forever_bis.py
+python tools/validate_forever_variants.py
 python tools/validate_forever_talents.py
 python tools/validate_forever_comparison.py
 python tools/audit_coverage.py
@@ -44,7 +45,7 @@ python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.5.1.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.5.2.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
@@ -52,11 +53,11 @@ Le résultat est `dist/BiSCompanion-Universal-2.5.1.zip`. Le script ne produit *
 - `Core/UI.lua`, `Core/EncounterJournal.lua`, `Core/Talents.lua` : modules Retail.
 - `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua`, `ForeverIcyVeinsBuilds.lua`, `ForeverComparison.lua` : adaptations, planification, recommandations et comparaison des talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
 - `BisData.lua`, `ClassSpecMapping.lua`, `TalentData.lua`, `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
-- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverPreRaidGear.lua` : 28 profils d'équipement Pre-Raid BiS Forever et garde-fous de validation. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
+- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverPreRaidGear.lua`, `ForeverPreRaidVariants.lua` : 28 profils d'équipement Pre-Raid BiS Forever et garde-fous de validation. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
 - `tools/` : validations et générateur du ZIP unique.
 - `DATA_STATUS.md` : provenance et limites connues des données. À consulter avant distribution.
 
-## Équipement sur Forever : Pre-Raid BiS (2.5.1)
+## Équipement sur Forever : Pre-Raid BiS (2.5.2)
 
 La fonctionnalité d'équipement est **réactivée** avec **28 profils pré-raid** et **470 recommandations** d'objets dont les identifiants ont été vérifiés. Les neuf classes sont couvertes. La spécialisation **Feral** du druide dispose de deux variantes d'équipement **Feral DPS** et **Feral Tank**, sans ajouter de quatrième arbre au planificateur de talents.
 
@@ -68,6 +69,13 @@ La fonctionnalité d'équipement est **réactivée** avec **28 profils pré-raid
 - Les recommandations publiques peuvent encore évoluer avec les découvertes de nouveaux objets Forever. Elles n'ont pas été vérifiées par un test en jeu de chaque item.
 
 La provenance et les preuves d'identifiants figurent dans le dossier de développement `tools/data/forever_preraid_snapshot.json` et dans `DATA_STATUS.md`, pas dans l'interface de jeu.
+
+### Sets par build (2.5.2)
+
+- Pour **Paladin > Retribution**, le menu des listes affiche désormais **Pre-Raid BiS - Unsealed Wrath** (set existant de 2.5.1, hybride physique/sacré) et **Pre-Raid BiS - Shockadin** (nouveau set de 16 objets orienté Holy Shock).
+- Les deux sets intégrés sont en lecture seule. Pour les adapter, utilise **Duplicate**. Tu peux désigner Shockadin comme set favori via **Use as Default BiS** ; ce choix est mémorisé et utilisé pour les infobulles BiS.
+- Le set Shockadin est provisoire : source de référence [MythicSim](https://mythicsim.com/wow-forever/bis/shockadin-paladin), IDs recoupés avec Wowhead Forever. Plusieurs emplacements ou butins sont encore à vérifier en jeu. Certains objets sont réservés à l'Alliance ; la variante Horde et les autres builds spécifiques seront ajoutés après vérification des données.
+- Les 28 profils initiaux et leurs 470 objets restent inchangés. Cette version **n'implique pas** automatiquement un set distinct pour chacun des 45 presets de talents.
 
 ## Tests et limites
 
