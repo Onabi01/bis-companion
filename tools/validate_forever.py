@@ -24,7 +24,7 @@ initial = set(re.findall(r'BiSCompanionBisData\["([^"]+)"\] = \{\}', placeholder
 assert len(expected) == 28 and initial == expected
 assert "BiSCompanionForeverGearReady = false" in placeholders
 assert "BiSCompanionForeverGearReady = true" in new_data
-assert "total ~= 28 or valid ~= total" in new_data
+assert "if count ~= 28 then return end" in new_data
 assert "Druid_FeralTank" in expected
 
 ui = (ROOT / "compat/forever/Core/UI.lua").read_text(encoding="utf-8")
