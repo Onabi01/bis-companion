@@ -67,3 +67,14 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 - `ForeverPreRaidGear.lua` active les BiS seulement si les trois lots sont présents. Aucun chargement partiel.
 - `tools/data/forever_preraid_lot[1-3].json` enregistre les trois découpages pour l'audit.
 - Certains IDs sont confirmés par correspondance des noms Classic Era uniquement, faute de données Forever pour ces objets. Leur disponibilité reste à vérifier en jeu.
+ 
+## Forever : variantes d'equipement 2.5.4 (20 novembre 2026)
+
+- Base intacte : 28 profils / 470 selections. Un set Shockadin distinct deja livre (16 selections).
+- Cette version ajoute 10 sets de 16 ou 17 objets (164 selections) pour huit specialisations, soit 39 sets disponibles et 650 selections au total. Les memes objets peuvent se repeter entre sets.
+- Source de choix d'equipement : https://wowforeverbislist.com/preraid/ (builds actualises le 19 novembre 2026). Noms et IDs recoupes avec les bases d'objets WoW Forever et les trois lots de base.
+- Aucun nouveau set n'est ajoute quand seule la repartition de talents change ; les sets integres restent en lecture seule et les sauvegardes personnelles ne sont pas modifiees.
+- Holy-Prot Paladin : Songstone of Ironforge (Alliance) et Eye of Orgrimmar (Horde) comme recompenses de quete distinctes.
+- Fiabilite BETA : certains butins sont presents via des bases Classic ou n'ont pas encore ete observes dans Forever ; profession requise ou objet non decouvert pour certains choix (notamment Knowledge of the Timbermaw). Disponibilite effective, factions et optimisation a confirmer en jeu.
+- L'interface ne possede pas encore de slots munitions / carquois pour les sets Hunter.
+- Tests : tools/validate_forever_additional_builds.py (integrite statique) et tools/test_forever_additional_builds.lua (runtime, non-regression, conservation de Shockadin).

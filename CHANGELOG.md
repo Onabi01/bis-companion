@@ -1,5 +1,17 @@
 # BiSCompanion - Changelog
 
+## 2.5.4 - Sets Pre-Raid BiS distincts par build PvE Forever
+
+- Ajout de **10 sets** / **164 recommandations** supplémentaires pour huit spécialisations : Hunter Survival (Melee et Melee Weaving), Rogue Combat (Backstab Daggers), Mage Arcane (Arcane Fire), Mage Fire (Frostfire Bolt), Priest Discipline (Smite DPS), Warlock Demonology (Shadow Brand), Warlock Affliction (SM/Ruin), Paladin Protection (Holy-Prot Alliance / Horde).
+- Les listes sont proposées dans le troisième menu sans créer de nouvelles spécialisations de talents.
+- La séparation des factions Holy-Prot utilise Songstone of Ironforge (Alliance) et Eye of Orgrimmar (Horde).
+- 28 profils de base et 11 sets alternatifs (dont Shockadin) : **39 sets / 650 entrées** au total. Les profils de base sont inchangés.
+- Nouveaux sets en lecture seule mais duplicables, validés au chargement (16/17 emplacements, pas d'IDs ou slots dupliqués), sélectionnables comme BiS favoris.
+- Ajout de contrôles Python et Lua 5.1. Aucun changement fonctionnel Retail ni dans le planner de talents.
+- **Bêta** : certaines sources d'obtention ou disponibilités restent à vérifier, en particulier les objets de métiers ou non découverts. Munitions et carquois non représentés dans l'UI actuelle.
+
+**Source :** [wowforeverbislist.com/preraid](https://wowforeverbislist.com/preraid/) et bases WoW Forever. Validation en jeu nécessaire avant publication stable.
+
 ## 2.5.3 - Chargement automatique du set BiS Forever
 
 - Corrige une liste vide (« No BiS items loaded for Default ») après la sélection de la première spécialisation d'une classe, malgré l'affichage de « Pre-Raid BiS » dans le menu.
