@@ -129,12 +129,24 @@ nameSaveButton:SetPoint("BOTTOM", nameFrame, "BOTTOM", 0, 10)
 nameSaveButton:SetText("Save")
 nameSaveButton:SetScript("OnClick", function()
     local name = nameEditBox:GetText():trim()
-    if name == "" then
+    if name == "" then return end
+
+    -- Never overwrite a personal list or shadow the built-in Pre-Raid BiS.
+    if name == "Default" or name == "Pre-Raid BiS" then
+        print("BiSCompanion: This list name is reserved. Choose another name.")
         return
     end
+    local specKey = nameFrame.pendingSpecKey
+    local custom = addon.Core.Data and addon.Core.Data.customBisListsInMemory
+    if specKey and custom and custom[specKey] and custom[specKey][name] then
+        print("BiSCompanion: A list with this name already exists for this spec.")
+        return
+    end
+
     if nameFrame.importCallback then
         nameFrame.importCallback(name)
     end
+    nameFrame.pendingSpecKey = nil
     nameFrame:Hide()
 end)
 
@@ -207,8 +219,9 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
         texture:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
     else
         local _, _, _, _, _, _, _, _, _, itemTexture = addon.Core.Data.GetItemInfo(itemID)
+        local cachedIcon = GetItemIcon and GetItemIcon(itemID)
         local offlineIcon = item.icon and ("Interface\\Icons\\" .. item.icon)
-        texture:SetTexture(itemTexture or offlineIcon or "Interface\\Icons\\INV_Misc_QuestionMark")
+        texture:SetTexture(itemTexture or cachedIcon or offlineIcon or "Interface\\Icons\\INV_Misc_QuestionMark")
         if not itemTexture then
             C_Timer.After(0.5, function()
                 local _, _, _, _, _, _, _, _, _, newTexture = addon.Core.Data.GetItemInfo(itemID)
@@ -1033,6 +1046,16 @@ UIDropDownMenu_Initialize(listDropdown, function(self)
     end
 end)
 
+-- Copy all gear metadata, including the Relic label and offline icon.
+local function CopyBisItem(value)
+    if type(value) ~= "table" then return value end
+    local copy = {}
+    for key, child in pairs(value) do
+        copy[key] = CopyBisItem(child)
+    end
+    return copy
+end
+
 -- Logique pour le bouton "Duplicate"
 duplicateButton:SetScript("OnClick", function()
     local specKey = UIDropDownMenu_GetSelectedValue(specDropdown)
@@ -1055,6 +1078,7 @@ duplicateButton:SetScript("OnClick", function()
         return
     end
 
+    nameFrame.pendingSpecKey = specKey
     nameFrame:Show()
     nameEditBox:SetText("")
     nameFrame.importCallback = function(newListName)
@@ -1065,12 +1089,8 @@ duplicateButton:SetScript("OnClick", function()
             created = time()
         }
         for _, item in ipairs(items) do
-            table.insert(addon.Core.Data.customBisListsInMemory[specKey][newListName].items, {
-                slot = item.slot,
-                name = item.name,
-                source = item.source or "",
-                id = item.id
-            })
+            table.insert(addon.Core.Data.customBisListsInMemory[specKey][newListName].items,
+                CopyBisItem(item))
         end
         addon.Core.Data.BiSCompanionCustomData.customBisLists[specKey] = addon.Core.Data.customBisListsInMemory[specKey]
         BiSCompanionCustomData = addon.Core.Data.BiSCompanionCustomData
@@ -1088,6 +1108,7 @@ createButton:SetScript("OnClick", function()
         return
     end
 
+    nameFrame.pendingSpecKey = specKey
     nameFrame:Show()
     nameEditBox:SetText("")
     nameFrame.importCallback = function(listName)

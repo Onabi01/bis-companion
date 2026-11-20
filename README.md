@@ -7,11 +7,11 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
 | **WoW Forever** | 1.60.1 | `16001` | **28 listes d'équipement Pre-Raid BiS**, 45 builds de talents Icy Veins, planificateur et mode comparaison |
 
-Version commune de l'addon : **2.5.0** (réactivation du Pre-Raid BiS Forever, 28 profils incluant Druide Feral Tank ; fonctionnalités Retail inchangées).
+Version commune de l'addon : **2.5.1** (correctifs de duplication, protection des listes personnelles et affichage des icônes sur Forever ; 28 profils Pre-Raid BiS inchangés, Retail inchangé).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Téléchargez [BiSCompanion-Universal-2.5.0.zip](releases/BiSCompanion-Universal-2.5.0.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
+1. Pour la version 2.5.1, construisez `dist/BiSCompanion-Universal-2.5.1.zip` avec la commande ci-dessous, ou récupérez le ZIP dans les artefacts du [workflow de validation GitHub](https://github.com/Onabi01/bis-companion/actions/workflows/validate-addon.yml). L'archive [2.5.0](releases/BiSCompanion-Universal-2.5.0.zip) reste disponible pour revenir à la version précédente.
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -44,7 +44,7 @@ python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.5.0.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.5.1.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
@@ -56,7 +56,7 @@ Le résultat est `dist/BiSCompanion-Universal-2.5.0.zip`. Le script ne produit *
 - `tools/` : validations et générateur du ZIP unique.
 - `DATA_STATUS.md` : provenance et limites connues des données. À consulter avant distribution.
 
-## Équipement sur Forever : Pre-Raid BiS (2.5.0)
+## Équipement sur Forever : Pre-Raid BiS (2.5.1)
 
 La fonctionnalité d'équipement est **réactivée** avec **28 profils pré-raid** et **470 recommandations** d'objets dont les identifiants ont été vérifiés. Les neuf classes sont couvertes. La spécialisation **Feral** du druide dispose de deux variantes d'équipement **Feral DPS** et **Feral Tank**, sans ajouter de quatrième arbre au planificateur de talents.
 
@@ -99,7 +99,7 @@ Cette fonction ne change aucun talent en jeu, ne modifie pas les builds sauvegar
 
 Les détails par version sont dans [CHANGELOG.md](CHANGELOG.md).
 
-### Organisation du Pre-Raid BiS en trois lots (2.5.0)
+### Organisation du Pre-Raid BiS en trois lots (depuis la 2.5.0)
 
 Les 28 profils et 470 équipements sont répartis pour faciliter les relectures et les futures mises à jour :
 

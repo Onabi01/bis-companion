@@ -2,7 +2,7 @@
 ## Title: BiSCompanion
 ## Notes: Pre-Raid BiS gear, talent builds and comparison for WoW Forever
 ## Author: Onabi
-## Version: 2.5.0
+## Version: 2.5.1
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
 
 Libs\LibDeflate\LibDeflate.lua

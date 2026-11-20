@@ -21,6 +21,13 @@ assert "Druid_Feral" in expected and "Druid_FeralTank" in expected
 assert "BiSCompanionForeverGearReady = true" in gate
 assert "Pre-Raid BiS" in ui and "VisibleGearListName" in ui
 assert "wowtbc.gg" not in ui.lower()
+# Personal-list safeguards and complete metadata duplication (v2.5.1).
+assert 'if name == "Default" or name == "Pre-Raid BiS"' in ui
+assert "custom[specKey][name]" in ui
+assert ui.count("nameFrame.pendingSpecKey = specKey") == 2
+assert "local function CopyBisItem(value)" in ui
+assert "CopyBisItem(item)" in ui
+assert "local cachedIcon = GetItemIcon and GetItemIcon(itemID)" in ui
 assert "RememberForeverGearSpec" in ui and "foreverGearSpecByCharacter" in character
 assert "Druid_FeralTank" in character and "Feral DPS" in character
 assert not snapshot["unmatched"] and not snapshot["ambiguous"]

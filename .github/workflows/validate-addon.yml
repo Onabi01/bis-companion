@@ -40,3 +40,10 @@ jobs:
           lua5.1 tools/test_forever_gate.lua
           lua5.1 tools/test_forever_character.lua
           lua5.1 tools/test_forever_comparison.lua
+      - name: Upload universal ZIP build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: BiSCompanion-Universal-CI
+          path: dist/BiSCompanion-Universal-*.zip
+          if-no-files-found: error
+          retention-days: 30

@@ -1,5 +1,15 @@
 # BiSCompanion - Changelog
 
+## 2.5.1 - Sécurisation des listes personnelles Forever
+
+- Dupliquer une liste d'équipement conserve maintenant toutes les métadonnées des objets (notamment « Relic » et les icônes hors cache).
+- Impossible d'écraser silencieusement une liste personnelle existante lors de la création ou de la duplication pour la même spécialisation.
+- Les noms réservés « Default » et « Pre-Raid BiS » ne peuvent plus servir à créer une liste personnelle.
+- Affichage de l'icône via `GetItemIcon` si les informations complètes de l'objet sont encore en cours de chargement.
+- Toujours 28 listes Pre-Raid BiS, 470 équipements et 2 rôles Féral ; aucune modification des objets ou talents Forever et aucune modification fonctionnelle Retail.
+
+**Tests :** Structure de l'archive et données vérifiées ; validation Lua 5.1 et tests automatiques GitHub Actions. Tests dans le client WoW Forever encore nécessaires.
+
 ## 2.5.0 - WoW Forever Pre-Raid BiS gear
 
 - Enabled **Pre-Raid BiS** gear recommendations for WoW Forever 1.60.1.
