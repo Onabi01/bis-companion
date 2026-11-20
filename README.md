@@ -7,11 +7,11 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
 | **WoW Forever** | 1.60.1 | `16001` | **28 listes d'équipement Pre-Raid BiS**, 45 builds de talents Icy Veins, planificateur et mode comparaison |
 
-Version commune de l'addon : **2.5.2** (ajout des sets Pre-Raid par build, en commençant par Paladin Retribution : Unsealed Wrath et Shockadin ; 28 profils de base inchangés, Retail inchangé).
+Version commune de l'addon : **2.5.3** (correction du chargement immédiat des listes BiS lorsqu'on sélectionne une spécialisation sur Forever ; les deux sets Retribution, les 28 profils de base et Retail restent inchangés).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Pour la version 2.5.2, construisez `dist/BiSCompanion-Universal-2.5.2.zip` avec la commande ci-dessous, ou récupérez le ZIP dans les artefacts du [workflow de validation GitHub](https://github.com/Onabi01/bis-companion/actions/workflows/validate-addon.yml). L'archive [2.5.0](releases/BiSCompanion-Universal-2.5.0.zip) reste disponible pour revenir à la version précédente.
+1. Pour la version 2.5.3, construisez `dist/BiSCompanion-Universal-2.5.3.zip` avec la commande ci-dessous, ou récupérez le ZIP dans les artefacts du [workflow de validation GitHub](https://github.com/Onabi01/bis-companion/actions/workflows/validate-addon.yml). L'archive [2.5.0](releases/BiSCompanion-Universal-2.5.0.zip) reste disponible pour revenir à la version précédente.
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -43,9 +43,10 @@ python tools/validate_forever_comparison.py
 python tools/audit_coverage.py
 python tools/package_addon.py
 python tools/validate_packages.py
+lua5.1 tools/test_forever_ui_selection.lua
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.5.2.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.5.3.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
@@ -57,7 +58,7 @@ Le résultat est `dist/BiSCompanion-Universal-2.5.2.zip`. Le script ne produit *
 - `tools/` : validations et générateur du ZIP unique.
 - `DATA_STATUS.md` : provenance et limites connues des données. À consulter avant distribution.
 
-## Équipement sur Forever : Pre-Raid BiS (2.5.2)
+## Équipement sur Forever : Pre-Raid BiS (2.5.3)
 
 La fonctionnalité d'équipement est **réactivée** avec **28 profils pré-raid** et **470 recommandations** d'objets dont les identifiants ont été vérifiés. Les neuf classes sont couvertes. La spécialisation **Feral** du druide dispose de deux variantes d'équipement **Feral DPS** et **Feral Tank**, sans ajouter de quatrième arbre au planificateur de talents.
 
@@ -70,7 +71,10 @@ La fonctionnalité d'équipement est **réactivée** avec **28 profils pré-raid
 
 La provenance et les preuves d'identifiants figurent dans le dossier de développement `tools/data/forever_preraid_snapshot.json` et dans `DATA_STATUS.md`, pas dans l'interface de jeu.
 
-### Sets par build (2.5.2)
+### Sets par build (introduits en 2.5.2)
+
+En 2.5.3, la sélection d'une spécialisation affiche immédiatement son set préféré, sans devoir re-sélectionner « Pre-Raid BiS ». Le menu WoW réutilise ses boutons lors de l'initialisation : l'addon conserve désormais la clé de spécialisation avant de reconstruire le menu des sets. Un test de non-régression simule ce comportement pour les neuf classes.
+
 
 - Pour **Paladin > Retribution**, le menu des listes affiche désormais **Pre-Raid BiS - Unsealed Wrath** (set existant de 2.5.1, hybride physique/sacré) et **Pre-Raid BiS - Shockadin** (nouveau set de 16 objets orienté Holy Shock).
 - Les deux sets intégrés sont en lecture seule. Pour les adapter, utilise **Duplicate**. Tu peux désigner Shockadin comme set favori via **Use as Default BiS** ; ce choix est mémorisé et utilisé pour les infobulles BiS.

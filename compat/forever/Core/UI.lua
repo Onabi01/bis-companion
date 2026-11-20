@@ -960,16 +960,21 @@ UIDropDownMenu_Initialize(specDropdown, function(self)
         info.text = spec.text
         info.value = spec.value
         info.func = function(selfBtn)
-            UIDropDownMenu_SetSelectedValue(specDropdown, selfBtn.value)
-            UIDropDownMenu_SetText(specDropdown, selfBtn.text)
-            addon.Core.Character.RememberForeverGearSpec(selfBtn.value)
+            -- Blizzard reuses drop-down buttons when another menu is initialized.
+            -- Capture the chosen specialization BEFORE rebuilding the lists:
+            -- selfBtn.value may become "Default" during that operation.
+            local selectedSpecKey = selfBtn.value
+            local selectedSpecLabel = selfBtn.text
+            UIDropDownMenu_SetSelectedValue(specDropdown, selectedSpecKey)
+            UIDropDownMenu_SetText(specDropdown, selectedSpecLabel)
+            addon.Core.Character.RememberForeverGearSpec(selectedSpecKey)
             UIDropDownMenu_Refresh(specDropdown)
             UIDropDownMenu_EnableDropDown(listDropdown)
 
             -- (re)construire le menu des listes pour cette spé
             UIDropDownMenu_Initialize(listDropdown, listDropdown.initialize)
             -- Sélectionner et afficher la bonne liste (custom par défaut si définie)
-            SelectPreferredListForSpec(selfBtn.value)
+            SelectPreferredListForSpec(selectedSpecKey)
             -- Mettre à jour bisTable (tooltip)
             addon.Core.Data.UpdateBisTable()
         end

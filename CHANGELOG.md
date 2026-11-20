@@ -1,5 +1,14 @@
 # BiSCompanion - Changelog
 
+## 2.5.3 - Chargement automatique du set BiS Forever
+
+- Corrige une liste vide (« No BiS items loaded for Default ») après la sélection de la première spécialisation d'une classe, malgré l'affichage de « Pre-Raid BiS » dans le menu.
+- Capture la clé et le nom de spécialisation avant de reconstruire le menu déroulant WoW, qui peut réutiliser et modifier le bouton actuellement cliqué.
+- Nouveau test Lua simulant ce recyclage des boutons pour les neuf classes : échoue sur 2.5.2, passe sur 2.5.3.
+- Les 28 profils Forever, les 470 recommandations pré-raid, les deux sets Retribution et les fonctionnalités Retail sont inchangés.
+
+**Validation :** test de non-régression exécuté hors-jeu et dans GitHub Actions ; confirmation en jeu encore nécessaire.
+
 ## 2.5.2 - Forever Pre-Raid sets par build
 
 - Paladin Retribution : deux sets intégrés dans le même menu d'équipement :
