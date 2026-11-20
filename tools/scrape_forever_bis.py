@@ -152,7 +152,7 @@ def extract_page(markup, url):
     parser.feed(markup)
     gear = []
     for card in parser.entries:
-        slot = SLOTS.get(card["raw_slot"])
+        slot = SLOTS.get((card["raw_slot"] or "").replace("_", "").replace("-", ""))
         if slot is None:
             raise ValueError("Unknown equipment slot %r at %s" % (card["raw_slot"], url))
         valid_items = [i for i in card["items"] if i["name"]]
