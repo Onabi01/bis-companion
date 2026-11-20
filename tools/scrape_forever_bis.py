@@ -25,6 +25,23 @@ CACHE_BASE = "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Cac
 CACHE_URL = CACHE_BASE + "Forever%20Cache.json"
 ERA_CACHE_URL = CACHE_BASE + "Classic%20Era%20Cache.json"
 
+# Ten post-cache Forever items independently verified against their WoW Forever
+# item pages (wowhead.com/forever/item=<ID>) on 20 November 2026.
+# They were not in the pinned November snapshot because several drops were
+# initially hidden by the Forever client or introduced via patch 1.60.1.
+EXTRA_VERIFIED_IDS = {
+    "Horn of Ve'han": 275736,
+    "Behemoth Bones": 280065,
+    "Flamebreak Talisman": 280071,
+    "Tooth of the Matriarch": 280021,
+    "Robes of Dark Summons": 280057,
+    "Obsidian Bauble": 18316,
+    "Wit's Edge": 276632,
+    "Warpwood Bracers": 270124,
+    "High Clerist's Seal": 284079,
+    "Lucky Shovelnose Tuft": 280060,
+}
+
 SPECS = {
     "Warrior_Arms": "arms-warrior",
     "Warrior_Fury": "fury-warrior",
@@ -201,6 +218,9 @@ def resolve_id(name, source_kind, class_name, index):
         if len(class_matched) == 1:
             return class_matched[0]['itemId'], 'classic-era-class-locked', None
         return None, 'ambiguous-classic-era', [x['itemId'] for x in era]
+    extra = {normalized(k): v for k, v in EXTRA_VERIFIED_IDS.items()}
+    if key in extra:
+        return extra[key], 'verified-wowhead-forever', None
     return None, 'not-in-caches', None
 
 
