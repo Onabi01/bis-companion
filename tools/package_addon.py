@@ -73,7 +73,9 @@ def get_package_files():
         raise ValueError("Retail would load the Forever-specific UI modules")
     if {"ForeverData.lua", "ForeverBiS60.lua", "ForeverTalentPlanner.lua", "ForeverPreRaidGear.lua"} & retail_files:
         raise ValueError("Retail would load Forever data")
-    if "ForeverPreRaidGear.lua" not in forever_files or "ForeverData.lua" not in forever_files:\n        raise ValueError("Forever must ship validated pre-raid gear and its safety gate")\n    if {"ForeverBiS60.lua", "CommonItems.lua"} & forever_files:
+    if "ForeverPreRaidGear.lua" not in forever_files or "ForeverData.lua" not in forever_files:
+        raise ValueError("Forever must ship validated pre-raid gear and its safety gate")
+    if {"ForeverBiS60.lua", "CommonItems.lua"} & forever_files:
         raise ValueError("Forever must not load unverified BiS or Retail item catalogs")
     if {"BisData.lua", "Retail1215.lua", "TalentData.lua", "Core/Talents.lua"} & forever_files:
         raise ValueError("Forever would load Retail data")
