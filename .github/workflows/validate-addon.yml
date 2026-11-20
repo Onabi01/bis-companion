@@ -5,6 +5,8 @@ on:
   pull_request:
 jobs:
   validate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,6 +34,8 @@ jobs:
           python3 tools/validate_1215.py
           python3 tools/validate_forever.py
           python3 tools/validate_forever_bis.py
+          python3 tools/validate_forever_variants.py
+          python3 tools/validate_forever_additional_builds.py
           python3 tools/validate_forever_talents.py
           python3 tools/validate_forever_comparison.py
           python3 tools/audit_coverage.py
@@ -40,3 +44,31 @@ jobs:
           lua5.1 tools/test_forever_gate.lua
           lua5.1 tools/test_forever_character.lua
           lua5.1 tools/test_forever_comparison.lua
+          lua5.1 tools/test_forever_ui_selection.lua
+          lua5.1 tools/test_forever_additional_builds.lua
+      - name: Upload universal ZIP build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: BiSCompanion-Universal-CI
+          path: dist/BiSCompanion-Universal-*.zip
+          if-no-files-found: error
+          retention-days: 30
+      - name: Archive versioned ZIP in releases on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          version=$(sed -n 's/^## Version:[[:space:]]*//p' BiSCompanion_Forever.toc | head -n 1)
+          source="dist/BiSCompanion-Universal-${version}.zip"
+          target="releases/BiSCompanion-Universal-${version}.zip"
+          test -f "$source"
+          if test -f "$target"; then
+            echo "Version already archived: $target"
+            exit 0
+          fi
+          mkdir -p releases
+          cp "$source" "$target"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$target"
+          git commit -m "Archive universal ZIP for BiSCompanion ${version}"
+          git push origin HEAD:main

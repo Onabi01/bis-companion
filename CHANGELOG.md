@@ -1,5 +1,49 @@
 # BiSCompanion - Changelog
 
+## 2.5.4 - Sets Pre-Raid BiS distincts par build PvE Forever
+
+- Ajout de **10 sets** / **164 recommandations** supplémentaires pour huit spécialisations : Hunter Survival (Melee et Melee Weaving), Rogue Combat (Backstab Daggers), Mage Arcane (Arcane Fire), Mage Fire (Frostfire Bolt), Priest Discipline (Smite DPS), Warlock Demonology (Shadow Brand), Warlock Affliction (SM/Ruin), Paladin Protection (Holy-Prot Alliance / Horde).
+- Les listes sont proposées dans le troisième menu sans créer de nouvelles spécialisations de talents.
+- La séparation des factions Holy-Prot utilise Songstone of Ironforge (Alliance) et Eye of Orgrimmar (Horde).
+- 28 profils de base et 11 sets alternatifs (dont Shockadin) : **39 sets / 650 entrées** au total. Les profils de base sont inchangés.
+- Nouveaux sets en lecture seule mais duplicables, validés au chargement (16/17 emplacements, pas d'IDs ou slots dupliqués), sélectionnables comme BiS favoris.
+- Ajout de contrôles Python et Lua 5.1. Aucun changement fonctionnel Retail ni dans le planner de talents.
+- **Bêta** : certaines sources d'obtention ou disponibilités restent à vérifier, en particulier les objets de métiers ou non découverts. Munitions et carquois non représentés dans l'UI actuelle.
+
+**Source :** [wowforeverbislist.com/preraid](https://wowforeverbislist.com/preraid/) et bases WoW Forever. Validation en jeu nécessaire avant publication stable.
+
+## 2.5.3 - Chargement automatique du set BiS Forever
+
+- Corrige une liste vide (« No BiS items loaded for Default ») après la sélection de la première spécialisation d'une classe, malgré l'affichage de « Pre-Raid BiS » dans le menu.
+- Capture la clé et le nom de spécialisation avant de reconstruire le menu déroulant WoW, qui peut réutiliser et modifier le bouton actuellement cliqué.
+- Nouveau test Lua simulant ce recyclage des boutons pour les neuf classes : échoue sur 2.5.2, passe sur 2.5.3.
+- Les 28 profils Forever, les 470 recommandations pré-raid, les deux sets Retribution et les fonctionnalités Retail sont inchangés.
+
+**Validation :** test de non-régression exécuté hors-jeu et dans GitHub Actions ; confirmation en jeu encore nécessaire.
+
+## 2.5.2 - Forever Pre-Raid sets par build
+
+- Paladin Retribution : deux sets intégrés dans le même menu d'équipement :
+  - **Pre-Raid BiS - Unsealed Wrath** : conserve le set hybride Retribution de 2.5.1.
+  - **Pre-Raid BiS - Shockadin** : 16 objets pour le build Holy Shock, avec IDs recoupés sur Wowhead Forever.
+- Sets intégrés protégés contre la modification et la suppression. Duplication en liste personnelle possible.
+- Le set Shockadin peut être défini comme BiS favori, enregistré dans SavedVariables et pris en compte dans les tooltips.
+- Structure extensible à d'autres variantes de builds sans modifier la liste des 28 spécialisations ou les 45 presets talents.
+- Module exclusivement Forever ; Retail et les données BiS existantes sont inchangés.
+- **Beta** : certains objets Shockadin sont propres à l'Alliance et quelques sources de butin ne sont pas confirmées dans Forever. Variantes Horde et autres spécialisations à auditer.
+
+**Validation :** contrôles automatiques d'intégrité, packaging et syntaxe Lua via GitHub Actions ; test en jeu requis.
+
+## 2.5.1 - Sécurisation des listes personnelles Forever
+
+- Dupliquer une liste d'équipement conserve maintenant toutes les métadonnées des objets (notamment « Relic » et les icônes hors cache).
+- Impossible d'écraser silencieusement une liste personnelle existante lors de la création ou de la duplication pour la même spécialisation.
+- Les noms réservés « Default » et « Pre-Raid BiS » ne peuvent plus servir à créer une liste personnelle.
+- Affichage de l'icône via `GetItemIcon` si les informations complètes de l'objet sont encore en cours de chargement.
+- Toujours 28 listes Pre-Raid BiS, 470 équipements et 2 rôles Féral ; aucune modification des objets ou talents Forever et aucune modification fonctionnelle Retail.
+
+**Tests :** Structure de l'archive et données vérifiées ; validation Lua 5.1 et tests automatiques GitHub Actions. Tests dans le client WoW Forever encore nécessaires.
+
 ## 2.5.0 - WoW Forever Pre-Raid BiS gear
 
 - Enabled **Pre-Raid BiS** gear recommendations for WoW Forever 1.60.1.

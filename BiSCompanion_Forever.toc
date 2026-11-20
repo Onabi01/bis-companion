@@ -2,7 +2,7 @@
 ## Title: BiSCompanion
 ## Notes: Pre-Raid BiS gear, talent builds and comparison for WoW Forever
 ## Author: Onabi
-## Version: 2.5.0
+## Version: 2.5.4
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
 
 Libs\LibDeflate\LibDeflate.lua
@@ -12,6 +12,8 @@ ForeverPreRaidLot1.lua
 ForeverPreRaidLot2.lua
 ForeverPreRaidLot3.lua
 ForeverPreRaidGear.lua
+ForeverPreRaidVariants.lua
+ForeverPreRaidAdditionalBuilds.lua
 Core\Data.lua
 Core\Character.lua
 compat\forever\Core\UI.lua

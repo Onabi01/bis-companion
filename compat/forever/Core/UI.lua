@@ -42,7 +42,10 @@ addon.Core.UI.frame.title:SetText("BiS Equipment")
 
 -- On Forever, no gear data is yet trustworthy. The talent planner stays enabled.
 local foreverGearEnabled = BiSCompanionForeverGearReady == true
-local function VisibleGearListName(name)
+local function VisibleGearListName(name, specKey)
+    local labels = BiSCompanionForeverGearVariantLabels
+    local perSpec = labels and labels[specKey]
+    if perSpec and perSpec[name] then return perSpec[name] end
     return name == "Default" and "Pre-Raid BiS" or name
 end
 local gearNoticeTitle = addon.Core.UI.frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
@@ -129,12 +132,32 @@ nameSaveButton:SetPoint("BOTTOM", nameFrame, "BOTTOM", 0, 10)
 nameSaveButton:SetText("Save")
 nameSaveButton:SetScript("OnClick", function()
     local name = nameEditBox:GetText():trim()
-    if name == "" then
+    if name == "" then return end
+
+    -- Never overwrite a personal list or shadow the built-in Pre-Raid BiS.
+    local specKey = nameFrame.pendingSpecKey
+    local builtinNames = BiSCompanionForeverGearVariantLabels and BiSCompanionForeverGearVariantLabels[specKey]
+    local reserved = name == "Default" or name == "Pre-Raid BiS"
+        or (addon.Core.Data.IsBuiltInList and addon.Core.Data.IsBuiltInList(specKey, name))
+    if builtinNames then
+        for _, label in pairs(builtinNames) do
+            if name == label then reserved = true end
+        end
+    end
+    if reserved then
+        print("BiSCompanion: This list name is reserved. Choose another name.")
         return
     end
+    local custom = addon.Core.Data and addon.Core.Data.customBisListsInMemory
+    if specKey and custom and custom[specKey] and custom[specKey][name] then
+        print("BiSCompanion: A list with this name already exists for this spec.")
+        return
+    end
+
     if nameFrame.importCallback then
         nameFrame.importCallback(name)
     end
+    nameFrame.pendingSpecKey = nil
     nameFrame:Hide()
 end)
 
@@ -167,19 +190,8 @@ setAsDefaultCheckbox:Hide() -- Cacher par défaut, on l'affichera dans DisplayIt
 
 -- Helper: savoir quelle liste doit être affichée pour une spé
 local function GetPreferredListNameForSpec(specKey)
-    local preferred
-    if addon.Core.Data and addon.Core.Data.BiSCompanionCustomData
-       and addon.Core.Data.BiSCompanionCustomData.defaultBisList
-       and addon.Core.Data.BiSCompanionCustomData.defaultBisList[specKey] then
-        preferred = addon.Core.Data.BiSCompanionCustomData.defaultBisList[specKey]
-        -- Vérifier que la liste existe vraiment
-        if not (addon.Core.Data.customBisListsInMemory
-             and addon.Core.Data.customBisListsInMemory[specKey]
-             and addon.Core.Data.customBisListsInMemory[specKey][preferred]) then
-            preferred = nil
-        end
-    end
-    return preferred or "Default"
+    local names = addon.Core.Data.GetListNamesForSpec(specKey)
+    return addon.Core.Data.GetPreferredListName(specKey, names) or "Default"
 end
 
 -- Helper: appliquer la sélection correcte dans listDropdown et afficher
@@ -188,7 +200,7 @@ local function SelectPreferredListForSpec(specKey)
     local toSelect = GetPreferredListNameForSpec(specKey)
 
     UIDropDownMenu_SetSelectedValue(listDropdown, toSelect)
-    UIDropDownMenu_SetText(listDropdown, VisibleGearListName(toSelect))
+    UIDropDownMenu_SetText(listDropdown, VisibleGearListName(toSelect, specKey))
     addon.Core.UI.DisplayItems(specKey, toSelect)
 end
 
@@ -207,8 +219,9 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
         texture:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
     else
         local _, _, _, _, _, _, _, _, _, itemTexture = addon.Core.Data.GetItemInfo(itemID)
+        local cachedIcon = GetItemIcon and GetItemIcon(itemID)
         local offlineIcon = item.icon and ("Interface\\Icons\\" .. item.icon)
-        texture:SetTexture(itemTexture or offlineIcon or "Interface\\Icons\\INV_Misc_QuestionMark")
+        texture:SetTexture(itemTexture or cachedIcon or offlineIcon or "Interface\\Icons\\INV_Misc_QuestionMark")
         if not itemTexture then
             C_Timer.After(0.5, function()
                 local _, _, _, _, _, _, _, _, _, newTexture = addon.Core.Data.GetItemInfo(itemID)
@@ -309,7 +322,8 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
                 end
             end
             local listName = UIDropDownMenu_GetSelectedValue(listDropdown)
-            if listName and listName ~= "Default" then
+            local specKey = UIDropDownMenu_GetSelectedValue(specDropdown)
+            if listName and not addon.Core.Data.IsBuiltInList(specKey, listName) then
                 GameTooltip:AddLine("Left-click to edit this item", 0, 1, 0)
             end
         end
@@ -329,8 +343,8 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
                 print("BiSCompanion: Veuillez sélectionner une spécialisation et une liste.")
                 return
             end
-            if listName == "Default" then
-                print("BiSCompanion: The Default BiS set can't be modified, duplicate to build your own set.")
+            if addon.Core.Data.IsBuiltInList(specKey, listName) then
+                print("BiSCompanion: Built-in BiS sets cannot be edited; duplicate one to customize it.")
                 return
             end
 
@@ -712,27 +726,7 @@ local function RenderItems(specKey, listName)
         return
     end
 
-    local items
-    if listName == "Default" then
-        if BiSCompanionBisData and BiSCompanionBisData[specKey] then
-            items = BiSCompanionBisData[specKey]
-        else
-            setAsDefaultCheckbox:Hide()
-            -- Afficher un message dans l'interface
-            local errorText = scrollChild:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-            errorText:SetPoint("TOPLEFT", scrollChild, "TOPLEFT", 10, -20)
-            errorText:SetText("No default BiS data available for " .. tostring(specKey))
-            errorText:SetTextColor(1, 0, 0)
-            table.insert(scrollChild.itemButtons, errorText) -- Ajouter au tableau pour nettoyage futur
-            return
-        end
-    else
-        -- Utiliser customBisListsInMemory
-        if addon.Core.Data.customBisListsInMemory[specKey] and
-           addon.Core.Data.customBisListsInMemory[specKey][listName] then
-            items = addon.Core.Data.customBisListsInMemory[specKey][listName].items
-        end
-    end
+    local items = addon.Core.Data.GetItemsForList(specKey, listName)
 
     if not items or #items == 0 then
         setAsDefaultCheckbox:Hide()
@@ -966,16 +960,21 @@ UIDropDownMenu_Initialize(specDropdown, function(self)
         info.text = spec.text
         info.value = spec.value
         info.func = function(selfBtn)
-            UIDropDownMenu_SetSelectedValue(specDropdown, selfBtn.value)
-            UIDropDownMenu_SetText(specDropdown, selfBtn.text)
-            addon.Core.Character.RememberForeverGearSpec(selfBtn.value)
+            -- Blizzard reuses drop-down buttons when another menu is initialized.
+            -- Capture the chosen specialization BEFORE rebuilding the lists:
+            -- selfBtn.value may become "Default" during that operation.
+            local selectedSpecKey = selfBtn.value
+            local selectedSpecLabel = selfBtn.text
+            UIDropDownMenu_SetSelectedValue(specDropdown, selectedSpecKey)
+            UIDropDownMenu_SetText(specDropdown, selectedSpecLabel)
+            addon.Core.Character.RememberForeverGearSpec(selectedSpecKey)
             UIDropDownMenu_Refresh(specDropdown)
             UIDropDownMenu_EnableDropDown(listDropdown)
 
             -- (re)construire le menu des listes pour cette spé
             UIDropDownMenu_Initialize(listDropdown, listDropdown.initialize)
             -- Sélectionner et afficher la bonne liste (custom par défaut si définie)
-            SelectPreferredListForSpec(selfBtn.value)
+            SelectPreferredListForSpec(selectedSpecKey)
             -- Mettre à jour bisTable (tooltip)
             addon.Core.Data.UpdateBisTable()
         end
@@ -998,7 +997,7 @@ UIDropDownMenu_Initialize(listDropdown, function(self)
 
     local function addListEntry(name)
         local info = UIDropDownMenu_CreateInfo()
-        info.text = VisibleGearListName(name)
+        info.text = VisibleGearListName(name, specKey)
         info.value = name
         info.func = function(btn)
             UIDropDownMenu_SetSelectedValue(listDropdown, btn.value)
@@ -1018,7 +1017,20 @@ UIDropDownMenu_Initialize(listDropdown, function(self)
         addListEntry("Default")
     end
 
-    -- 3) autres customs
+    -- 3) autres variantes Pre-Raid integrees, en lecture seule.
+    local perSpecBuiltins = BiSCompanionForeverGearVariants and BiSCompanionForeverGearVariants[specKey]
+    if perSpecBuiltins then
+        local keys = {}
+        for name in pairs(perSpecBuiltins) do
+            if not added[name] then table.insert(keys, name) end
+        end
+        table.sort(keys, function(a, b)
+            return VisibleGearListName(a, specKey) < VisibleGearListName(b, specKey)
+        end)
+        for _, name in ipairs(keys) do addListEntry(name) end
+    end
+
+    -- 4) autres customs
     if addon.Core.Data.customBisListsInMemory and addon.Core.Data.customBisListsInMemory[specKey] then
         local names = {}
         for name, _ in pairs(addon.Core.Data.customBisListsInMemory[specKey]) do
@@ -1033,6 +1045,16 @@ UIDropDownMenu_Initialize(listDropdown, function(self)
     end
 end)
 
+-- Copy all gear metadata, including the Relic label and offline icon.
+local function CopyBisItem(value)
+    if type(value) ~= "table" then return value end
+    local copy = {}
+    for key, child in pairs(value) do
+        copy[key] = CopyBisItem(child)
+    end
+    return copy
+end
+
 -- Logique pour le bouton "Duplicate"
 duplicateButton:SetScript("OnClick", function()
     local specKey = UIDropDownMenu_GetSelectedValue(specDropdown)
@@ -1041,20 +1063,13 @@ duplicateButton:SetScript("OnClick", function()
         return
     end
 
-    local items
-    if listName == "Default" then
-        items = BiSCompanionBisData[specKey]
-    else
-        if addon.Core.Data.customBisListsInMemory[specKey] and
-           addon.Core.Data.customBisListsInMemory[specKey][listName] then
-            items = addon.Core.Data.customBisListsInMemory[specKey][listName].items
-        end
-    end
+    local items = addon.Core.Data.GetItemsForList(specKey, listName)
 
     if not items then
         return
     end
 
+    nameFrame.pendingSpecKey = specKey
     nameFrame:Show()
     nameEditBox:SetText("")
     nameFrame.importCallback = function(newListName)
@@ -1065,12 +1080,8 @@ duplicateButton:SetScript("OnClick", function()
             created = time()
         }
         for _, item in ipairs(items) do
-            table.insert(addon.Core.Data.customBisListsInMemory[specKey][newListName].items, {
-                slot = item.slot,
-                name = item.name,
-                source = item.source or "",
-                id = item.id
-            })
+            table.insert(addon.Core.Data.customBisListsInMemory[specKey][newListName].items,
+                CopyBisItem(item))
         end
         addon.Core.Data.BiSCompanionCustomData.customBisLists[specKey] = addon.Core.Data.customBisListsInMemory[specKey]
         BiSCompanionCustomData = addon.Core.Data.BiSCompanionCustomData
@@ -1088,6 +1099,7 @@ createButton:SetScript("OnClick", function()
         return
     end
 
+    nameFrame.pendingSpecKey = specKey
     nameFrame:Show()
     nameEditBox:SetText("")
     nameFrame.importCallback = function(listName)
@@ -1107,8 +1119,8 @@ deleteButton:SetScript("OnClick", function()
         return
     end
 
-    if listName == "Default" then
-        print("BiSCompanion: Default BiS Set can't be deleted")
+    if addon.Core.Data.IsBuiltInList(specKey, listName) then
+        print("BiSCompanion: Built-in BiS sets cannot be deleted")
         return
     end
 
