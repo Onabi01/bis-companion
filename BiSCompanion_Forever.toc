@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: BiSCompanion
-## Notes: Talent planner for WoW Forever; BiS gear is being prepared
+## Notes: Pre-Raid BiS gear, talent builds and comparison for WoW Forever
 ## Author: Onabi
 ## Version: 2.5.0
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
@@ -8,6 +8,9 @@
 Libs\LibDeflate\LibDeflate.lua
 ForeverMapping.lua
 ForeverData.lua
+ForeverPreRaidLot1.lua
+ForeverPreRaidLot2.lua
+ForeverPreRaidLot3.lua
 ForeverPreRaidGear.lua
 Core\Data.lua
 Core\Character.lua

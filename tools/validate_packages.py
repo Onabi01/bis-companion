@@ -36,6 +36,8 @@ def verify():
         assert "ForeverIcyVeinsBuilds.lua" not in retail_files
         assert "ForeverComparison.lua" not in retail_files
         assert "ForeverPreRaidGear.lua" not in retail_files
+        for lot in range(1, 4):
+            assert f"ForeverPreRaidLot{lot}.lua" not in retail_files
         assert "Core/Talents.lua" not in forever_files
         assert "compat/forever/Core/UI.lua" not in retail_files
         assert "Core/UI.lua" not in forever_files
@@ -47,6 +49,8 @@ def verify():
         assert "ForeverIcyVeinsBuilds.lua" in forever_files
         assert "ForeverComparison.lua" in forever_files
         assert "ForeverPreRaidGear.lua" in forever_files
+        for lot in range(1, 4):
+            assert f"ForeverPreRaidLot{lot}.lua" in forever_files
 
     print(f"Universal ZIP: OK ({len(files)} files, {path.stat().st_size} bytes)")
 

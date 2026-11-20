@@ -98,3 +98,15 @@ Dans le planificateur Forever, clique sur **Mode comparaison**. Le module ouvre 
 Cette fonction ne change aucun talent en jeu, ne modifie pas les builds sauvegardés et n'est pas chargée sur Retail. **À vérifier dans le client Forever 1.60.1**, notamment avec des addons modifiant la fenêtre de talents.
 
 Les détails par version sont dans [CHANGELOG.md](CHANGELOG.md).
+
+### Organisation du Pre-Raid BiS en trois lots (2.5.0)
+
+Les 28 profils et 470 équipements sont répartis pour faciliter les relectures et les futures mises à jour :
+
+- Lot 1 : Guerrier, Paladin, Chasseur — 9 profils, 150 équipements (`ForeverPreRaidLot1.lua`).
+- Lot 2 : Voleur, Prêtre, Chaman — 9 profils, 152 équipements (`ForeverPreRaidLot2.lua`).
+- Lot 3 : Mage, Démoniste, Druide (Féral DPS et Tank) — 10 profils, 168 équipements (`ForeverPreRaidLot3.lua`).
+
+`ForeverPreRaidGear.lua` ne réactive les listes que lorsque les 28 profils sont complets et que leurs IDs sont numériques. Les données du jeu ne sont pas modifiées.
+
+L'audit repose sur le snapshot `tools/data/forever_preraid_snapshot.json` et les trois fichiers `forever_preraid_lot1.json`, `lot2.json`, `lot3.json`. Les IDs disponibles uniquement dans les archives Classic devront être confirmés directement dans Forever ; la 2.5.0 est proposée en Beta.

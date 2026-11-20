@@ -58,3 +58,12 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 - Le module ne s'active que si les 28 profils sont présents et que chaque ID est valide. L'ancien fichier non vérifié `ForeverBiS60.lua` et le catalogue Retail `CommonItems.lua` restent exclus du TOC et du ZIP.
 - Sauvegardes personnelles conservées ; sélection de rôle par personnage stockée dans `BiSCompanionCustomData.foreverGearSpecByCharacter`. Les choix de sets et crafts spécifiques à Retail sont désactivés dans le sélecteur Forever.
 - **Limites :** listes pré-raid encore susceptibles d'évoluer avec les nouveaux drops de Forever ; IDs recoupés, mais chargement des 470 objets et fonctionnement des clics dans le client 1.60.1 à vérifier en jeu. Diffuser d'abord comme Beta.
+
+### Découpage en trois lots de données
+
+- Lot 1 : `ForeverPreRaidLot1.lua` (Guerrier, Paladin, Chasseur), 9 profils / 150 équipements.
+- Lot 2 : `ForeverPreRaidLot2.lua` (Voleur, Prêtre, Chaman), 9 profils / 152 équipements.
+- Lot 3 : `ForeverPreRaidLot3.lua` (Mage, Démoniste, Druide), 10 profils / 168 équipements dont Féral Tank.
+- `ForeverPreRaidGear.lua` active les BiS seulement si les trois lots sont présents. Aucun chargement partiel.
+- `tools/data/forever_preraid_lot[1-3].json` enregistre les trois découpages pour l'audit.
+- Certains IDs sont confirmés par correspondance des noms Classic Era uniquement, faute de données Forever pour ces objets. Leur disponibilité reste à vérifier en jeu.

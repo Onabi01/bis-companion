@@ -10,9 +10,10 @@ assert len(files) == len(set(files))
 assert all((ROOT / path).is_file() for path in files)
 assert "ForeverBiS60.lua" not in files, "Unverified historical gear must stay inactive"
 assert "CommonItems.lua" not in files, "Retail set/craft catalog must stay inactive"
-assert all(x in files for x in ("ForeverData.lua", "ForeverPreRaidGear.lua",
+assert all(x in files for x in ("ForeverData.lua", "ForeverPreRaidLot1.lua", "ForeverPreRaidLot2.lua",
+           "ForeverPreRaidLot3.lua", "ForeverPreRaidGear.lua",
            "ForeverTalentPlanner.lua", "ForeverIcyVeinsBuilds.lua", "ForeverComparison.lua"))
-assert files.index("ForeverData.lua") < files.index("ForeverPreRaidGear.lua") < files.index("Core/Data.lua")
+assert files.index("ForeverData.lua") < files.index("ForeverPreRaidLot1.lua") < files.index("ForeverPreRaidLot2.lua") < files.index("ForeverPreRaidLot3.lua") < files.index("ForeverPreRaidGear.lua") < files.index("Core/Data.lua")
 assert files.index("ForeverIcyVeinsBuilds.lua") < files.index("ForeverTalentPlanner.lua")
 
 mapping = (ROOT / "ForeverMapping.lua").read_text(encoding="utf-8")
