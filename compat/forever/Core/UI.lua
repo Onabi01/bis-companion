@@ -42,6 +42,9 @@ addon.Core.UI.frame.title:SetText("BiS Equipment")
 
 -- On Forever, no gear data is yet trustworthy. The talent planner stays enabled.
 local foreverGearEnabled = BiSCompanionForeverGearReady == true
+local function VisibleGearListName(name)
+    return name == "Default" and "Pre-Raid BiS" or name
+end
 local gearNoticeTitle = addon.Core.UI.frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 gearNoticeTitle:SetPoint("TOP", addon.Core.UI.frame, "TOP", 0, -144)
 gearNoticeTitle:SetWidth(225)
@@ -185,7 +188,7 @@ local function SelectPreferredListForSpec(specKey)
     local toSelect = GetPreferredListNameForSpec(specKey)
 
     UIDropDownMenu_SetSelectedValue(listDropdown, toSelect)
-    UIDropDownMenu_SetText(listDropdown, toSelect)
+    UIDropDownMenu_SetText(listDropdown, VisibleGearListName(toSelect))
     addon.Core.UI.DisplayItems(specKey, toSelect)
 end
 
@@ -204,7 +207,8 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
         texture:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
     else
         local _, _, _, _, _, _, _, _, _, itemTexture = addon.Core.Data.GetItemInfo(itemID)
-        texture:SetTexture(itemTexture or "Interface\\Icons\\INV_Misc_QuestionMark")
+        local offlineIcon = item.icon and ("Interface\\Icons\\" .. item.icon)
+        texture:SetTexture(itemTexture or offlineIcon or "Interface\\Icons\\INV_Misc_QuestionMark")
         if not itemTexture then
             C_Timer.After(0.5, function()
                 local _, _, _, _, _, _, _, _, _, newTexture = addon.Core.Data.GetItemInfo(itemID)
@@ -242,6 +246,8 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
         slotsToCheck = {INVSLOT_TRINKET1, INVSLOT_TRINKET2}
     elseif item.slot == "Weapon" or item.slot == "Off Hand" then
         slotsToCheck = {INVSLOT_MAINHAND, INVSLOT_OFFHAND}
+    elseif item.slot == "Ranged" then
+        slotsToCheck = {INVSLOT_RANGED}
     end
 
     local isEquipped = false
@@ -376,7 +382,8 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
             local setButton = CreateFrame("Button", nil, optionFrame, "UIPanelButtonTemplate")
             setButton:SetSize(160, 22)
             setButton:SetPoint("TOP", raidButton, "BOTTOM", 0, -5)
-            setButton:SetText("Set & Catalyst")
+            setButton:SetText("Sets (not available)")
+            setButton:Disable() -- Retail-only catalog is never loaded by Forever.
             setButton:SetScript("OnClick", function()
                 optionFrame:Hide()
                 addon.Core.UI.currentOptionFrame = nil -- Réinitialiser après fermeture
@@ -487,7 +494,8 @@ function addon.Core.UI.CreateItemButton(parent, item, x, y, index, section)
             local craftButton = CreateFrame("Button", nil, optionFrame, "UIPanelButtonTemplate")
             craftButton:SetSize(160, 22)
             craftButton:SetPoint("TOP", setButton, "BOTTOM", 0, -5)
-            craftButton:SetText("Crafted & Quest Items")
+            craftButton:SetText("Crafts (not available)")
+            craftButton:Disable() -- Avoid referencing the absent Retail CommonItems data.
             craftButton:SetScript("OnClick", function()
                 optionFrame:Hide()
                 addon.Core.UI.currentOptionFrame = nil -- Réinitialiser après fermeture
@@ -832,7 +840,7 @@ local function RenderItems(specKey, listName)
             end
             local slotText = button:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
             slotText:SetPoint("BOTTOM", button, "BOTTOM", 0, -12)
-            slotText:SetText(item.slot)
+            slotText:SetText(item.displaySlot or item.slot)
             slotText:SetTextColor(1, 1, 1)
         end
     end
@@ -960,6 +968,7 @@ UIDropDownMenu_Initialize(specDropdown, function(self)
         info.func = function(selfBtn)
             UIDropDownMenu_SetSelectedValue(specDropdown, selfBtn.value)
             UIDropDownMenu_SetText(specDropdown, selfBtn.text)
+            addon.Core.Character.RememberForeverGearSpec(selfBtn.value)
             UIDropDownMenu_Refresh(specDropdown)
             UIDropDownMenu_EnableDropDown(listDropdown)
 
@@ -989,7 +998,7 @@ UIDropDownMenu_Initialize(listDropdown, function(self)
 
     local function addListEntry(name)
         local info = UIDropDownMenu_CreateInfo()
-        info.text = name
+        info.text = VisibleGearListName(name)
         info.value = name
         info.func = function(btn)
             UIDropDownMenu_SetSelectedValue(listDropdown, btn.value)

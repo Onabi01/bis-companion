@@ -30,4 +30,5 @@ BiSCompanionBisData["Warlock_Demonology"] = {}
 BiSCompanionBisData["Warlock_Destruction"] = {}
 BiSCompanionBisData["Druid_Balance"] = {}
 BiSCompanionBisData["Druid_Feral"] = {}
+BiSCompanionBisData["Druid_FeralTank"] = {}
 BiSCompanionBisData["Druid_Restoration"] = {}

@@ -1,0 +1,41 @@
+name: Validate BiSCompanion Universal
+on:
+  push:
+    branches: [main, feature/forever-preraid-bis-2.5.0]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Lua 5.1
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y lua5.1
+      - name: Verify all shipped Lua modules compile
+        run: |
+          python3 - <<'PY'
+          import pathlib, subprocess, re
+          root=pathlib.Path('.')
+          refs=set()
+          for toc in root.glob('BiSCompanion*.toc'):
+              for text in toc.read_text(encoding='utf-8-sig').splitlines():
+                  value=text.strip().replace('\\','/')
+                  if value.lower().endswith('.lua'):
+                      refs.add(value)
+          for path in sorted(refs):
+              subprocess.run(['luac5.1','-p',path],check=True)
+          print('Lua 5.1 syntax OK:',len(refs),'files')
+          PY
+      - name: Validate Retail, Forever gear, talent data and package
+        run: |
+          python3 tools/validate_1215.py
+          python3 tools/validate_forever.py
+          python3 tools/validate_forever_bis.py
+          python3 tools/validate_forever_talents.py
+          python3 tools/validate_forever_comparison.py
+          python3 tools/audit_coverage.py
+          python3 tools/package_addon.py
+          python3 tools/validate_packages.py
+          lua5.1 tools/test_forever_character.lua
+          lua5.1 tools/test_forever_comparison.lua

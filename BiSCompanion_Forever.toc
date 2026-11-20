@@ -2,12 +2,13 @@
 ## Title: BiSCompanion
 ## Notes: Talent planner for WoW Forever; BiS gear is being prepared
 ## Author: Onabi
-## Version: 2.4.1
+## Version: 2.5.0
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
 
 Libs\LibDeflate\LibDeflate.lua
 ForeverMapping.lua
 ForeverData.lua
+ForeverPreRaidGear.lua
 Core\Data.lua
 Core\Character.lua
 compat\forever\Core\UI.lua

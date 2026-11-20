@@ -72,8 +72,38 @@ end
 
 -- Fonction pour obtenir le nom de la spécialisation sans la classe
 function addon.Core.Character.GetSpecName(specKey)
+    if BiSCompanionForever then
+        if specKey == "Druid_Feral" then return "Feral DPS" end
+        if specKey == "Druid_FeralTank" then return "Feral Tank" end
+    end
     local specPart = specKey:match("_(.+)$") or specKey
     return specPart:gsub("_", " ")
+end
+
+local function ForeverCharacterKey()
+    local name = UnitName and UnitName("player")
+    if not name or name == "" then return nil end
+    local realm = GetRealmName and GetRealmName() or ""
+    return name .. "@" .. realm
+end
+
+function addon.Core.Character.RememberForeverGearSpec(specKey)
+    if not BiSCompanionForever or not specKey then return end
+    local _, _, classID = UnitClass("player")
+    local recognized = false
+    for _, mapping in ipairs(BiSCompanionClassSpecMapping or {}) do
+        if mapping.classID == classID and mapping.specKey == specKey then
+            recognized = true
+            break
+        end
+    end
+    if not recognized then return end
+    local key = ForeverCharacterKey()
+    if not key or type(BiSCompanionCustomData) ~= "table" then return end
+    if type(BiSCompanionCustomData.foreverGearSpecByCharacter) ~= "table" then
+        BiSCompanionCustomData.foreverGearSpecByCharacter = {}
+    end
+    BiSCompanionCustomData.foreverGearSpecByCharacter[key] = specKey
 end
 
 function addon.Core.Character.GetPlayerClassAndSpec()
@@ -84,6 +114,19 @@ function addon.Core.Character.GetPlayerClassAndSpec()
         MAGE = "Mage", WARLOCK = "Warlock", DRUID = "Druid"
     })[classFile]
     if BiSCompanionForever then
+        -- Classic talent trees have no Retail-like active specialization ID.
+        -- Remember the gear role explicitly chosen by this character.
+        local key = ForeverCharacterKey()
+        local sv = type(BiSCompanionCustomData) == "table" and BiSCompanionCustomData
+        local saved = key and sv and type(sv.foreverGearSpecByCharacter) == "table"
+            and sv.foreverGearSpecByCharacter[key]
+        if saved then
+            for _, mapping in ipairs(BiSCompanionClassSpecMapping or {}) do
+                if mapping.classID == classID and mapping.specKey == saved then
+                    return foreverClass, saved
+                end
+            end
+        end
         return foreverClass, nil
     end
     local specIndex = GetSpecialization and GetSpecialization()
@@ -244,10 +287,16 @@ function addon.Core.Character.PreselectPlayerClassAndSpec()
             UIDropDownMenu_SetText(specDropdown, addon.Core.Character.GetSpecName(playerSpecKey))
             UIDropDownMenu_EnableDropDown(listDropdown)
             UIDropDownMenu_Initialize(listDropdown, listDropdown.initialize)
-            UIDropDownMenu_SetSelectedValue(listDropdown, "Default")
-            UIDropDownMenu_SetText(listDropdown, "Default")
+            local selectedList = "Default"
+            if BiSCompanionForever and addon.Core.Data then
+                selectedList = addon.Core.Data.GetPreferredListName(
+                    playerSpecKey, addon.Core.Data.GetListNamesForSpec(playerSpecKey)) or "Default"
+            end
+            UIDropDownMenu_SetSelectedValue(listDropdown, selectedList)
+            UIDropDownMenu_SetText(listDropdown,
+                BiSCompanionForever and selectedList == "Default" and "Pre-Raid BiS" or selectedList)
             if BiSCompanionBisData[playerSpecKey] then
-                addon.Core.UI.DisplayItems(playerSpecKey, "Default")
+                addon.Core.UI.DisplayItems(playerSpecKey, selectedList)
             end
 
             -- Mettre à jour bisTable en fonction de defaultBisList

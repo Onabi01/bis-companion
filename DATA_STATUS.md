@@ -1,4 +1,4 @@
-# État des données (9 novembre 2026)
+# État des données (20 novembre 2026)
 
 ## Retail Midnight 12.1.5
 
@@ -11,7 +11,7 @@
 
 Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-death-knight-pve-tank-gear-best-in-slot), [Method, exemple de talents](https://www.method.gg/guides/vengeance-demon-hunter/talents), [Wowhead](https://www.wowhead.com/).
 
-## Forever 1.60.1 — équipements suspendus (14 novembre 2026)
+## Historique Forever 1.60.1 — équipements suspendus en 2.3.1 (14 novembre 2026)
 
 - Le manifeste `BiSCompanion_Forever.toc` cible l'interface `16001` ; il charge désormais `ForeverData.lua` et **ne charge plus** `ForeverBiS60.lua` ni `CommonItems.lua`.
 - Les neuf classes et 27 spécialisations classiques restent sélectionnables, avec des listes BiS **intentionnellement vides**.
@@ -27,7 +27,7 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 
 ## Archive universelle (14 novembre 2026)
 
-- La version commune 2.4.1 est distribuée en **un seul ZIP**. Les manifests `_Standard.toc` et `_Forever.toc` sélectionnent des listes de fichiers distinctes ; un manifeste `.toc` sans suffixe sert de repli Retail.
+- La version commune 2.5.0 est distribuée en **un seul ZIP**. Les manifests `_Standard.toc` et `_Forever.toc` sélectionnent des listes de fichiers distinctes ; un manifeste `.toc` sans suffixe sert de repli Retail.
 - Les fichiers `compat/forever/Core/` sont désormais directement référencés dans le manifeste Forever, sans remplacement de fichiers lors du packaging.
 - `tools/validate_packages.py` contrôle que les deux manifests sont présents, que les chemins existent et que chaque client charge uniquement son jeu de données.
 - Les changements de la 2.3.1 désactivent uniquement l'édition et les données d'équipement Forever ; l'interface Retail n'est pas modifiée.
@@ -46,3 +46,15 @@ Sources : [Icy Veins, exemple de liste](https://www.icy-veins.com/wow/blood-deat
 - Le bouton **Mode comparaison** adapte les tailles et positions des fenêtres `PlayerSpellsFrame.TalentsFrame` (interface de jeu) et `BiSCompanionForeverTalentPlanner` (addon) pour les afficher côte à côte.
 - Les échelles et les points d'ancrage d'origine sont conservés uniquement en mémoire pendant le mode et restaurés lorsqu'il se termine, y compris en cas de fermeture des talents ou du planificateur. Pendant le combat, la restauration attend `PLAYER_REGEN_ENABLED`.
 - Des tests Lua simulés valident l'ouverture des talents, l'activation, la restauration et les protections en combat. La compatibilité avec le positionnement réel des panneaux Blizzard reste à valider en jeu.
+
+## Forever Pre-Raid BiS (20 novembre 2026, version 2.5.0)
+
+- Réactivation du mode équipement sur Forever (interface `16001`) par `ForeverPreRaidGear.lua`, après la validation des 28 profils et des 470 entrées par emplacement.
+- Profil supplémentaire `Druid_FeralTank` et conservation de `Druid_Feral` pour Feral DPS. Les trois arbres de talents classiques restent inchangés.
+- Nom **Pre-Raid BiS** uniquement pour le joueur. La provenance externe des classements n'apparaît pas dans le menu du jeu.
+- Snapshot d'audit `tools/data/forever_preraid_snapshot.json` issu des pages pré-raid **WoW Forever de wowtbc.gg**, consultées le 20 novembre 2026. Les données sont des faits d'items (noms, emplacements, sources) ; aucun article ni texte explicatif des guides n'est copié.
+- IDs recoupés avec le catalogue `Napalmsteak/WoW-Classic-Item-Caches` (`Forever Cache.json` et `Classic Era Cache.json`, commit épinglé `eff4560809de2e852e9164183e3edf5a795edd20`), puis les pages de vrais objets Wowhead Forever pour dix ajouts récents absents de ces snapshots.
+- 470 entrées disposant toutes d'un ID numérique non ambigu. 453 icônes de secours issues des caches ; les autres dépendent du cache d'objets du client WoW.
+- Le module ne s'active que si les 28 profils sont présents et que chaque ID est valide. L'ancien fichier non vérifié `ForeverBiS60.lua` et le catalogue Retail `CommonItems.lua` restent exclus du TOC et du ZIP.
+- Sauvegardes personnelles conservées ; sélection de rôle par personnage stockée dans `BiSCompanionCustomData.foreverGearSpecByCharacter`. Les choix de sets et crafts spécifiques à Retail sont désactivés dans le sélecteur Forever.
+- **Limites :** listes pré-raid encore susceptibles d'évoluer avec les nouveaux drops de Forever ; IDs recoupés, mais chargement des 470 objets et fonctionnement des clics dans le client 1.60.1 à vérifier en jeu. Diffuser d'abord comme Beta.
