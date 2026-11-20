@@ -6,20 +6,22 @@ jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch one public reference
+      - name: Fetch public reference HTML
         run: |
           python3 - <<'PY'
-          import urllib.request
-          from html.parser import HTMLParser
-          url="https://wowtbc.gg/warcraftforever/bis-list/fury-warrior/"
-          try:
-              request=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; data audit)"})
-              with urllib.request.urlopen(request, timeout=15) as r:
-                  data=r.read().decode("utf-8", "replace")
-                  print("HTTP",r.status,"BYTES",len(data))
-                  for term in ["Lionheart Helm","item=12640","wowhead","__NEXT_DATA__"]:
-                      idx=data.find(term)
-                      print(term,idx,repr(data[max(0,idx-160):idx+300]) if idx!=-1 else "")
-          except Exception as exc:
-              print("FETCH ERROR",repr(exc))
+          import urllib.request, re
+          for slug in ["fury-warrior","retribution-paladin","feral-tank-druid","feral-dps-druid"]:
+              url="https://wowtbc.gg/warcraftforever/bis-list/"+slug+"/"
+              try:
+                  request=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; gear source audit)"})
+                  with urllib.request.urlopen(request, timeout=15) as r:
+                      data=r.read().decode("utf-8","replace")
+                      print("PAGE",slug,"HTTP",r.status,"BYTES",len(data))
+                      for term in ["Lionheart Helm","Mark of Fordring","class=\"item__name","item=12640","itemId","itemID","12640","window.__","application/json","__NUXT","gear__row"]:
+                          idx=data.find(term)
+                          print("TERM",term,"AT",idx,repr(data[max(0,idx-550):idx+430]) if idx!=-1 else "")
+                      for match in list(re.finditer(r'<script[^>]*>',data))[:5]:
+                          print("SCRIPT",repr(data[match.start():match.start()+300]))
+              except Exception as exc:
+                  print("FETCH ERROR",slug,repr(exc))
           PY
