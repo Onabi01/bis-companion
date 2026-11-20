@@ -45,5 +45,7 @@ assert "local perSpecBuiltins" in ui
 assert "addon.Core.Data.IsBuiltInList(specKey, listName)" in ui
 assert "VisibleGearListName(toSelect, specKey)" in ui
 assert 'name == "Pre-Raid BiS"' in ui
-assert all("## Version: 2.5.2" in read(x) for x in ["BiSCompanion.toc", "BiSCompanion_Standard.toc", "BiSCompanion_Forever.toc"])
+manifests = ["BiSCompanion.toc", "BiSCompanion_Standard.toc", "BiSCompanion_Forever.toc"]
+versions = {re.search(r"(?m)^## Version: *(\S+)", read(x)).group(1) for x in manifests}
+assert len(versions) == 1, versions
 print("WoW Forever optional gear builds OK: 2 Retribution variants, 16 Shockadin gear slots, Retail isolated")
