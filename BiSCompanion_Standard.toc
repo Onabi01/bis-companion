@@ -2,7 +2,7 @@
 ## Title: BiSCompanion
 ## Notes: A companion addon for managing Best-in-Slot gear lists
 ## Author: Onabi
-## Version: 2.5.3
+## Version: 2.5.4
 ## SavedVariables: BiSCompanionCustomData, BiSCompanionConfig
 
 Libs\LibDeflate\LibDeflate.lua

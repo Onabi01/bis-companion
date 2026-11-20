@@ -33,6 +33,7 @@ jobs:
           python3 tools/validate_forever.py
           python3 tools/validate_forever_bis.py
           python3 tools/validate_forever_variants.py
+          python3 tools/validate_forever_additional_builds.py
           python3 tools/validate_forever_talents.py
           python3 tools/validate_forever_comparison.py
           python3 tools/audit_coverage.py
@@ -42,6 +43,7 @@ jobs:
           lua5.1 tools/test_forever_character.lua
           lua5.1 tools/test_forever_comparison.lua
           lua5.1 tools/test_forever_ui_selection.lua
+          lua5.1 tools/test_forever_additional_builds.lua
       - name: Upload universal ZIP build artifact
         uses: actions/upload-artifact@v4
         with:
