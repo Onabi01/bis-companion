@@ -22,7 +22,7 @@ assert "BiSCompanionForeverGearReady = true" in gate
 assert "Pre-Raid BiS" in ui and "VisibleGearListName" in ui
 assert "wowtbc.gg" not in ui.lower()
 # Personal-list safeguards and complete metadata duplication (v2.5.1).
-assert 'if name == "Default" or name == "Pre-Raid BiS"' in ui
+assert 'local reserved = name == "Default" or name == "Pre-Raid BiS"' in ui
 assert "custom[specKey][name]" in ui
 assert ui.count("nameFrame.pendingSpecKey = specKey") == 2
 assert "local function CopyBisItem(value)" in ui
