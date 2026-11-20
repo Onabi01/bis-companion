@@ -21,10 +21,9 @@ import unicodedata
 
 SOURCE = "https://wowtbc.gg/warcraftforever/bis-list/"
 CACHE_COMMIT = "eff4560809de2e852e9164183e3edf5a795edd20"
-CACHE_URL = (
-    "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/"
-    + CACHE_COMMIT + "/Forever%20Cache.json"
-)
+CACHE_BASE = "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/" + CACHE_COMMIT + "/"
+CACHE_URL = CACHE_BASE + "Forever%20Cache.json"
+ERA_CACHE_URL = CACHE_BASE + "Classic%20Era%20Cache.json"
 
 SPECS = {
     "Warrior_Arms": "arms-warrior",
@@ -135,14 +134,74 @@ def normalized(text):
 
 
 def get_item_ids():
-    data = json.loads(fetch(CACHE_URL))
-    result = {}
-    for item in data:
-        name, item_id = item.get("name"), item.get("itemId")
-        if not isinstance(item_id, int) or item_id < 1 or not isinstance(name, str):
-            continue
-        result.setdefault(normalized(name), set()).add(item_id)
-    return result, len(data)
+    indexes, counts = {}, {}
+    for label, url in (("forever", CACHE_URL), ("era", ERA_CACHE_URL)):
+        data = json.loads(fetch(url))
+        result = {}
+        for item in data:
+            name, item_id = item.get("name"), item.get("itemId")
+            if isinstance(item_id, int) and item_id > 0 and isinstance(name, str):
+                result.setdefault(normalized(name), []).append(item)
+        indexes[label] = result
+        counts[label] = len(data)
+    return indexes, counts
+
+
+def tooltip_text(item):
+    return html.unescape(re.sub(r"<[^>]+>", " ", item.get("tooltipHtml") or ""))
+
+
+def level(item):
+    match = re.search(r"Item Level\s+(\d+)", tooltip_text(item))
+    return int(match.group(1)) if match else 0
+
+
+def source_matches(item, source_kind):
+    types = [str(t).lower() for t in item.get("sourceTypes") or []]
+    k = source_kind.lower()
+    if 'quest' in k:
+        return 'quest' in types
+    if 'crafted' in k:
+        return 'craft' in types or 'profession' in types
+    if k == 'reputation':
+        return 'vendor' in types or 'reputation' in types
+    return 'drop' in types
+
+
+def resolve_id(name, source_kind, class_name, index):
+    key = normalized(name)
+    forever = index['forever'].get(key, [])
+    era = index['era'].get(key, [])
+    if len(forever) == 1:
+        return forever[0]['itemId'], 'forever-unique', None
+    if len(forever) > 1:
+        matched = [x for x in forever if source_matches(x, source_kind)]
+        if len(matched) == 1:
+            return matched[0]['itemId'], 'forever-source', None
+        if len(matched) > 1:
+            forever = matched
+        # Variants of the same reputation equipment at levels 30/40/50/60:
+        # the guide is for level 60, so use the highest known item level.
+        levels = [level(x) for x in forever]
+        if levels and max(levels) > 0 and levels.count(max(levels)) == 1:
+            x = forever[levels.index(max(levels))]
+            return x['itemId'], 'forever-highest-level', None
+        # If the Forever data is ambiguous but the Classic quest has an ID
+        # matching one variant and source is a quest, it is an exact crosscheck.
+        if len(era) == 1 and 'quest' in source_kind.lower():
+            if any(x['itemId'] == era[0]['itemId'] for x in forever):
+                return era[0]['itemId'], 'quest-era-confirmed', None
+        return None, 'ambiguous-forever', [x['itemId'] for x in forever]
+    if len(era) == 1:
+        return era[0]['itemId'], 'classic-era-unique', None
+    if len(era) > 1:
+        # Eldre'Thalas trinkets share one name but are class-locked.
+        class_matched = [x for x in era if re.search(
+            r'Classes:\s*' + re.escape(class_name) + r'(?:\s|$)', tooltip_text(x))]
+        if len(class_matched) == 1:
+            return class_matched[0]['itemId'], 'classic-era-class-locked', None
+        return None, 'ambiguous-classic-era', [x['itemId'] for x in era]
+    return None, 'not-in-caches', None
 
 
 def extract_page(markup, url):
@@ -180,18 +239,19 @@ def main():
     args = argparse.ArgumentParser()
     args.add_argument("--out", default="tools/data/forever_preraid_snapshot.json")
     opts = args.parse_args()
-    index, cache_count = get_item_ids()
+    index, cache_counts = get_item_ids()
     builds = {}
     unknown, ambiguous = [], []
     for key, slug in SPECS.items():
         url = SOURCE + slug + "/"
         gear = extract_page(fetch(url), url)
         for item in gear:
-            candidates = sorted(index.get(normalized(item["name"]), []))
-            item["id"] = candidates[0] if len(candidates) == 1 else None
-            if not candidates:
+            item_id, method, candidates = resolve_id(item['name'], item['source_kind'], key.split('_')[0], index)
+            item['id'] = item_id
+            item['id_evidence'] = method
+            if not item_id and not candidates:
                 unknown.append([key, item["slot"], item["name"]])
-            elif len(candidates) > 1:
+            elif not item_id:
                 ambiguous.append([key, item["slot"], item["name"], candidates])
         builds[key] = gear
         print("SCRAPED", key, len(gear), "matched", sum(i["id"] is not None for i in gear), file=sys.stderr)
@@ -200,7 +260,7 @@ def main():
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "source_site": SOURCE,
         "cache_commit": CACHE_COMMIT,
-        "cache_item_count": cache_count,
+        "cache_item_count": cache_counts,
         "builds": builds,
         "unmatched": unknown,
         "ambiguous": ambiguous,
