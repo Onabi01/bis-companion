@@ -1,0 +1,1231 @@
+{
+  "batch": 1,
+  "classes": [
+    "Warrior",
+    "Paladin",
+    "Hunter"
+  ],
+  "timestamp_utc": "2026-11-20T08:47:35.760774+00:00",
+  "source_site": "https://wowtbc.gg/warcraftforever/bis-list/",
+  "cache_commit": "eff4560809de2e852e9164183e3edf5a795edd20",
+  "builds": {
+    "Warrior_Arms": [
+      {
+        "slot": "Head",
+        "name": "Lionheart Helm",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 12640,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Mark of Fordring",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 15411,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Epaulets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271956,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Howler's Furs",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272414,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Timbermaw Tunic",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252484,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Battleborn Armbraces",
+        "source": "Warchief Rend Blackhand / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 12936,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Theramore Gauntlets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271940,
+        "id_evidence": "forever-highest-level"
+      },
+      {
+        "slot": "Waist",
+        "name": "Valiant's Waistguard",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272403,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Titanic Leggings",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 22385,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Battleboots of Heroism",
+        "source": "Anthion's Parting Words / Quest",
+        "source_kind": "Quest",
+        "id": 226857,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Engraved Band",
+        "source": "Blackmaw Reclamation / Quest",
+        "source_kind": "Quest",
+        "id": 260219,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Painweaver Band",
+        "source": "General Drakkisath / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 13098,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Heart of Wyrmthalak",
+        "source": "Overlord Wyrmthalak / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22321,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Counterattack Lodestone",
+        "source": "Mizzle the Crafty / Dire Maul",
+        "source_kind": "Dire Maul",
+        "id": 18537,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Arcanite Champion",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 12790,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ranged",
+        "name": "Satyr's Bow",
+        "source": "Zevrim Thornhoof / Dire Maul: East",
+        "source_kind": "Dire Maul: East",
+        "id": 18323,
+        "id_evidence": "classic-era-unique"
+      }
+    ],
+    "Warrior_Fury": [
+      {
+        "slot": "Head",
+        "name": "Lionheart Helm",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 12640,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Mark of Fordring",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 15411,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Epaulets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271956,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Cape of the Black Baron",
+        "source": "Baron Rivendare / Stratholme",
+        "source_kind": "Stratholme",
+        "id": 13340,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Timbermaw Tunic",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252484,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Battleborn Armbraces",
+        "source": "Warchief Rend Blackhand / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 12936,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Death Grips",
+        "source": "Magistrate Barthilas / Stratholme",
+        "source_kind": "Stratholme",
+        "id": 18722,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Waist",
+        "name": "Omokk's Girth Restrainer",
+        "source": "Warlord's Command / Maxwell's Mission / Quest",
+        "source_kind": "Quest",
+        "id": 13959,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Titanic Leggings",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 22385,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Battleboots of Heroism",
+        "source": "Anthion's Parting Words / Quest",
+        "source_kind": "Quest",
+        "id": 226857,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Cutthroat's Signet",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272408,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Engraved Band",
+        "source": "Blackmaw Reclamation / Quest",
+        "source_kind": "Quest",
+        "id": 260219,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Counterattack Lodestone",
+        "source": "Mizzle the Crafty / Dire Maul",
+        "source_kind": "Dire Maul",
+        "id": 18537,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Heart of Wyrmthalak",
+        "source": "Overlord Wyrmthalak / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22321,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Ironfoe",
+        "source": "Emperor Dagran Thaurissan / Blackrock Depths",
+        "source_kind": "Blackrock Depths",
+        "id": 11684,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Off Hand",
+        "name": "Dragon's Call",
+        "source": "Shade of Eranikus / The Temple of Atal'Hakkar",
+        "source_kind": "The Temple of Atal'Hakkar",
+        "id": 10847,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Ranged",
+        "name": "Blackcrow",
+        "source": "Shadow Hunter Vosh'gajin / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 12651,
+        "id_evidence": "forever-unique"
+      }
+    ],
+    "Warrior_Protection": [
+      {
+        "slot": "Head",
+        "name": "Faceguard of Heroism",
+        "source": "Saving the Best for Last / Quest",
+        "source_kind": "Quest",
+        "id": 226869,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Horn of Ve'han",
+        "source": "Work Well Done / Quest",
+        "source_kind": "Quest",
+        "id": 275736,
+        "id_evidence": "verified-wowhead-forever"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Spaulders",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271959,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Stalwart Cloak",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272415,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Chestguard of Heroism",
+        "source": "Saving the Best for Last / Quest",
+        "source_kind": "Quest",
+        "id": 226872,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Wristguards of Heroism",
+        "source": "An Earnest Proposition / Quest",
+        "source_kind": "Quest",
+        "id": 226865,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Theramore Gauntlets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271940,
+        "id_evidence": "forever-highest-level"
+      },
+      {
+        "slot": "Waist",
+        "name": "Waistguard of Heroism",
+        "source": "Just Compensation / Quest",
+        "source_kind": "Quest",
+        "id": 226866,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Legguards of Heroism",
+        "source": "Anthion's Parting Words / Quest",
+        "source_kind": "Quest",
+        "id": 226868,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Sabatons of Heroism",
+        "source": "Anthion's Parting Words / Quest",
+        "source_kind": "Quest",
+        "id": 226871,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Ring of Awareness",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272409,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Band of the Steadfast Hero",
+        "source": "Kormok / Scholomance",
+        "source_kind": "Scholomance",
+        "id": 22331,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Mark of the Chosen",
+        "source": "The Pariah's Instructions / Quest",
+        "source_kind": "Quest",
+        "id": 17774,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Adaptive Combat Assistant",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272437,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Felstriker",
+        "source": "Warchief Rend Blackhand / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 12590,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Off Hand",
+        "name": "Draconian Deflector",
+        "source": "General Drakkisath / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 12602,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ranged",
+        "name": "Gorewood Bow",
+        "source": "The Scarlet Oracle, Demetria / Order Must Be Restored / Quest",
+        "source_kind": "Quest",
+        "id": 16996,
+        "id_evidence": "forever-unique"
+      }
+    ],
+    "Paladin_Holy": [
+      {
+        "slot": "Head",
+        "name": "Living Crown",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252561,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Tooth of Gnarr",
+        "source": "General Drakkisath / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 13141,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Shoulderguards",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 272957,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Hide of the Wild",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 18510,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Breastplate of Salvation",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 250601,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Soulforge Bindings",
+        "source": "An Earnest Proposition / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226977,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Theramore Handwraps",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271945,
+        "id_evidence": "forever-highest-level"
+      },
+      {
+        "slot": "Waist",
+        "name": "Soulforge Cord",
+        "source": "Just Compensation / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226978,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Martyr's Legplates",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 250600,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Soulforge Treads",
+        "source": "Anthion's Parting Words / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226983,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Fordring's Seal",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 16058,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Band of Mending",
+        "source": "Grand Crusader Dathrohan / Stratholme",
+        "source_kind": "Stratholme",
+        "id": 22334,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Serenity Field",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272439,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Royal Seal of Eldre'Thalas",
+        "source": "The Light and How To Swing It / Quest",
+        "source_kind": "Quest",
+        "id": 18472,
+        "id_evidence": "classic-era-class-locked"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Hammer of Revitalization",
+        "source": "Isalien / Dire Maul: East",
+        "source_kind": "Dire Maul: East",
+        "id": 22315,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Off Hand",
+        "name": "Penelope's Rose",
+        "source": "Kirtonos the Herald / Quest",
+        "source_kind": "Quest",
+        "id": 15805,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Relic",
+        "name": "Libram of Economy",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272436,
+        "id_evidence": "forever-unique"
+      }
+    ],
+    "Paladin_Protection": [
+      {
+        "slot": "Head",
+        "name": "Soulforge Faceguard",
+        "source": "Saving the Best for Last / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226989,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Museum Keeper's Chain",
+        "source": "Greater Friend of the Library / Quest",
+        "source_kind": "Quest",
+        "id": 281636,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Mantle",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271957,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Redoubt Cloak",
+        "source": "Mizzle the Crafty / Dire Maul",
+        "source_kind": "Dire Maul",
+        "id": 18495,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Soulforge Chestguards",
+        "source": "Saving the Best for Last / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226992,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Soulforge Wristguards",
+        "source": "An Earnest Proposition / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226985,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Soulforge Handguards",
+        "source": "Just Compensation / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226990,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Waist",
+        "name": "Warder's Waistguard",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 250573,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Soulforge Legguards",
+        "source": "Anthion's Parting Words / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226988,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Soulforge Sabatons",
+        "source": "Anthion's Parting Words / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226991,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Ring of Awareness",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272409,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Blood of the Martyr",
+        "source": "Aurius' Reckoning / Quest",
+        "source_kind": "Quest",
+        "id": 17045,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Mark of the Chosen",
+        "source": "The Pariah's Instructions / Quest",
+        "source_kind": "Quest",
+        "id": 17774,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Adaptive Combat Assistant",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272437,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Mastersmith's Hammer",
+        "source": "Goraluk Anvilcrack / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 18048,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Off Hand",
+        "name": "Draconian Aegis of the Legion",
+        "source": "Lord Valthalak / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 22336,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Relic",
+        "name": "Libram of Law",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272435,
+        "id_evidence": "forever-unique"
+      }
+    ],
+    "Paladin_Retribution": [
+      {
+        "slot": "Head",
+        "name": "Soulforge Greathelm",
+        "source": "Saving the Best for Last / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226976,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Mark of Fordring",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 15411,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Soulforge Spaulders",
+        "source": "Anthion's Parting Words / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 22093,
+        "id_evidence": "forever-source"
+      },
+      {
+        "slot": "Back",
+        "name": "Arcanoweave Cloak",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272411,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Soulforge Breastplate",
+        "source": "Saving the Best for Last / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 22089,
+        "id_evidence": "forever-source"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Soulforge Bracers",
+        "source": "An Earnest Proposition / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 22088,
+        "id_evidence": "forever-source"
+      },
+      {
+        "slot": "Hands",
+        "name": "Storm Gauntlets",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 12632,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Waist",
+        "name": "Soulforge Belt",
+        "source": "Just Compensation / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 22086,
+        "id_evidence": "forever-source"
+      },
+      {
+        "slot": "Legs",
+        "name": "Champion's Legplates",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 250598,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Soulforge Warboots",
+        "source": "Anthion's Parting Words / Quest (Alliance)",
+        "source_kind": "Quest (Alliance)",
+        "id": 226974,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Channeler's Ring",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272406,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Don Mauricio's Band of Domination",
+        "source": "Darkmaster Gandling / Scholomance",
+        "source_kind": "Scholomance",
+        "id": 22433,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Heart of Wyrmthalak",
+        "source": "Overlord Wyrmthalak / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22321,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Smolderweb's Eye",
+        "source": "Mother Smolderweb / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 13213,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Blackblade of Shahram",
+        "source": "General Drakkisath / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 12592,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Relic",
+        "name": "Libram of Law",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272435,
+        "id_evidence": "forever-unique"
+      }
+    ],
+    "Hunter_BeastMastery": [
+      {
+        "slot": "Head",
+        "name": "Black Dragonscale Helm",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252605,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Mark of Fordring",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 15411,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Epaulets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271956,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Howler's Furs",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272414,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Dawn Armor",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252483,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Slashclaw Bracers",
+        "source": "Halycon / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 13211,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Devilsaur Gauntlets",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 15063,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Waist",
+        "name": "Marksman's Girdle",
+        "source": "Urok Doomhowl / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22232,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Devilsaur Leggings",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 15062,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Beastmaster's Treads",
+        "source": "Anthion's Parting Words / Quest",
+        "source_kind": "Quest",
+        "id": 226881,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Cutthroat's Signet",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272408,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Tarnished Elven Ring",
+        "source": "Mizzle the Crafty / Dire Maul",
+        "source_kind": "Dire Maul",
+        "id": 18500,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Heart of Wyrmthalak",
+        "source": "Overlord Wyrmthalak / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22321,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Behemoth Bones",
+        "source": "Blackmaw Behemoth / Blackmaw Hold",
+        "source_kind": "Blackmaw Hold",
+        "id": 280065,
+        "id_evidence": "verified-wowhead-forever"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Bear Poking Stick",
+        "source": "Dala Fairmaw / Mount Hyjal",
+        "source_kind": "Mount Hyjal",
+        "id": 274419,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ranged",
+        "name": "Riphook",
+        "source": "Shadow Hunter Vosh'gajin / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 12653,
+        "id_evidence": "classic-era-unique"
+      }
+    ],
+    "Hunter_Marksmanship": [
+      {
+        "slot": "Head",
+        "name": "Black Dragonscale Helm",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252605,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Mark of Fordring",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 15411,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Epaulets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271956,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Howler's Furs",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272414,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Dawn Armor",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252483,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Bracers of the Eclipse",
+        "source": "Prince Tortheldrin / Dire Maul: West",
+        "source_kind": "Dire Maul: West",
+        "id": 18375,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Devilsaur Gauntlets",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 15063,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Waist",
+        "name": "Marksman's Girdle",
+        "source": "Urok Doomhowl / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22232,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Devilsaur Leggings",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 15062,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Windreaver Greaves",
+        "source": "Kirtonos the Herald / Scholomance",
+        "source_kind": "Scholomance",
+        "id": 13967,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Cutthroat's Signet",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272408,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Tarnished Elven Ring",
+        "source": "Mizzle the Crafty / Dire Maul",
+        "source_kind": "Dire Maul",
+        "id": 18500,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Blackhand's Breadth",
+        "source": "For The Horde! / General Drakkisath's Demise / Quest",
+        "source_kind": "Quest",
+        "id": 13965,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Flamebreak Talisman",
+        "source": "Unbound Spirit / Blackmaw Hold",
+        "source_kind": "Blackmaw Hold",
+        "id": 280071,
+        "id_evidence": "verified-wowhead-forever"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Tooth of the Matriarch",
+        "source": "Direhorn Matriarch / Shaper's Terrace",
+        "source_kind": "Shaper's Terrace",
+        "id": 280021,
+        "id_evidence": "verified-wowhead-forever"
+      },
+      {
+        "slot": "Off Hand",
+        "name": "Heartseeker",
+        "source": "Blacksmithing / Crafted",
+        "source_kind": "Crafted",
+        "id": 12783,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ranged",
+        "name": "Ancient Bone Bow",
+        "source": "Trash drop / Scholomance",
+        "source_kind": "Scholomance",
+        "id": 18680,
+        "id_evidence": "classic-era-unique"
+      }
+    ],
+    "Hunter_Survival": [
+      {
+        "slot": "Head",
+        "name": "Black Dragonscale Helm",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252605,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Neck",
+        "name": "Mark of Fordring",
+        "source": "In Dreams / Quest",
+        "source_kind": "Quest",
+        "id": 15411,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Shoulders",
+        "name": "Theramore Epaulets",
+        "source": "Theramore Expeditionary Force - Exalted / Reputation",
+        "source_kind": "Reputation",
+        "id": 271956,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Back",
+        "name": "Howler's Furs",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272414,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Chest",
+        "name": "Dawn Armor",
+        "source": "Leatherworking / Crafted",
+        "source_kind": "Crafted",
+        "id": 252483,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Wrists",
+        "name": "Bracers of the Eclipse",
+        "source": "Prince Tortheldrin / Dire Maul: West",
+        "source_kind": "Dire Maul: West",
+        "id": 18375,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Hands",
+        "name": "Trueaim Gauntlets",
+        "source": "Shadow Hunter Vosh'gajin / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 13255,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Waist",
+        "name": "Sash of the Grand Hunt",
+        "source": "Emperor Dagran Thaurissan / Blackrock Depths",
+        "source_kind": "Blackrock Depths",
+        "id": 22207,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Legs",
+        "name": "Infernal Trickster Leggings",
+        "source": "Lord Vyletongue / Maraudon",
+        "source_kind": "Maraudon",
+        "id": 17754,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Feet",
+        "name": "Windreaver Greaves",
+        "source": "Kirtonos the Herald / Scholomance",
+        "source_kind": "Scholomance",
+        "id": 13967,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Ring 1",
+        "name": "Cutthroat's Signet",
+        "source": "Pix Xizzix / Stranglethorn Vale",
+        "source_kind": "Stranglethorn Vale",
+        "id": 272408,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Ring 2",
+        "name": "Tarnished Elven Ring",
+        "source": "Mizzle the Crafty / Dire Maul",
+        "source_kind": "Dire Maul",
+        "id": 18500,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 1",
+        "name": "Heart of Wyrmthalak",
+        "source": "Overlord Wyrmthalak / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 22321,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Trinket 2",
+        "name": "Blackhand's Breadth",
+        "source": "For The Horde! / General Drakkisath's Demise / Quest",
+        "source_kind": "Quest",
+        "id": 13965,
+        "id_evidence": "forever-unique"
+      },
+      {
+        "slot": "Weapon",
+        "name": "Dal'Rend's Sacred Charge",
+        "source": "Warchief Rend Blackhand / Blackrock Spire: Upper",
+        "source_kind": "Blackrock Spire: Upper",
+        "id": 12940,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Off Hand",
+        "name": "Distracting Dagger",
+        "source": "Prince Tortheldrin / Dire Maul: West",
+        "source_kind": "Dire Maul: West",
+        "id": 18392,
+        "id_evidence": "classic-era-unique"
+      },
+      {
+        "slot": "Ranged",
+        "name": "Riphook",
+        "source": "Shadow Hunter Vosh'gajin / Blackrock Spire: Lower",
+        "source_kind": "Blackrock Spire: Lower",
+        "id": 12653,
+        "id_evidence": "classic-era-unique"
+      }
+    ]
+  }
+}

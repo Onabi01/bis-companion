@@ -5,13 +5,13 @@ Addon World of Warcraft : équipement Best-in-Slot (BiS), listes personnalisées
 | Client | Version du jeu testée dans les données | Interface | Fonctionnalités |
 | --- | --- | --- | --- |
 | **Retail / Midnight** | 12.1.5 | `120105` | Listes BiS, builds et codes d'import de talents |
-| **WoW Forever** | 1.60.1 | `16001` | **BiS en préparation** ; planificateur de talents avec liens/prérequis, 51 points, 45 builds Icy Veins et sauvegardes personnelles |
+| **WoW Forever** | 1.60.1 | `16001` | **28 listes d'équipement Pre-Raid BiS**, 45 builds de talents Icy Veins, planificateur et mode comparaison |
 
-Version commune de l'addon : **2.4.1** (mode comparaison côte à côte pour les talents Forever ; Retail inchangé hors numéro de version).
+Version commune de l'addon : **2.5.0** (réactivation du Pre-Raid BiS Forever, 28 profils incluant Druide Feral Tank ; fonctionnalités Retail inchangées).
 
 ## Installation — le même ZIP dans les deux clients
 
-1. Téléchargez [BiSCompanion-Universal-2.4.1.zip](releases/BiSCompanion-Universal-2.4.1.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
+1. Téléchargez [BiSCompanion-Universal-2.5.0.zip](releases/BiSCompanion-Universal-2.5.0.zip) (ou construisez-le à partir des sources avec la commande ci-dessous).
 2. Extrayez **le dossier `BiSCompanion`** à la racine de `Interface/AddOns` de **Retail** ou de **Forever**. Si les deux jeux sont installés, utilisez exactement la **même archive** dans chacun des deux répertoires.
 3. Redémarrez le client et activez BiSCompanion dans le menu « AddOns ».
 
@@ -36,6 +36,7 @@ Python 3.9+ (bibliothèque standard uniquement) :
 ```bash
 python tools/validate_1215.py
 python tools/validate_forever.py
+python tools/validate_forever_bis.py
 python tools/validate_forever_talents.py
 python tools/validate_forever_comparison.py
 python tools/audit_coverage.py
@@ -43,7 +44,7 @@ python tools/package_addon.py
 python tools/validate_packages.py
 ```
 
-Le résultat est `dist/BiSCompanion-Universal-2.4.1.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
+Le résultat est `dist/BiSCompanion-Universal-2.5.0.zip`. Le script ne produit **qu'une seule archive** contenant le dossier installable. Il refuse de créer un ZIP incomplet ou de mélanger les modules d'exécution Retail et Forever.
 
 ## Organisation des sources
 
@@ -51,19 +52,26 @@ Le résultat est `dist/BiSCompanion-Universal-2.4.1.zip`. Le script ne produit *
 - `Core/UI.lua`, `Core/EncounterJournal.lua`, `Core/Talents.lua` : modules Retail.
 - `compat/forever/Core/UI.lua`, `compat/forever/Core/EncounterJournal.lua`, `ForeverTalentPlanner.lua`, `ForeverIcyVeinsBuilds.lua`, `ForeverComparison.lua` : adaptations, planification, recommandations et comparaison des talents Forever ; les deux premiers sont **référencés directement par le TOC Forever**.
 - `BisData.lua`, `ClassSpecMapping.lua`, `TalentData.lua`, `Retail1215*.lua`, `RetailTalent1215*.lua`, `RetailCommon1215.lua` : données Retail.
-- `ForeverMapping.lua`, `ForeverData.lua` : correspondances de classe et 27 listes vides Forever. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
+- `ForeverMapping.lua`, `ForeverData.lua`, `ForeverPreRaidGear.lua` : 28 profils d'équipement Pre-Raid BiS Forever et garde-fous de validation. `ForeverBiS60.lua` (ancien classement non validé) et `CommonItems.lua` (catalogue Retail) **ne sont pas chargés ni inclus dans le ZIP**.
 - `tools/` : validations et générateur du ZIP unique.
 - `DATA_STATUS.md` : provenance et limites connues des données. À consulter avant distribution.
 
-## Équipement sur Forever : fonctionnalité suspendue
+## Équipement sur Forever : Pre-Raid BiS (2.5.0)
 
-Les anciens classements Forever contenaient des objets incorrects pour ce client. Tant que les équipements, les sets et leurs sources ne sont pas vérifiés, **aucune liste BiS par défaut n'est chargée et l'édition d'équipement est désactivée**. Un message explicatif apparaît à la place des icônes BiS, du sélecteur d'objets et des boutons Créer/Dupliquer/Supprimer. Les classes et spécialisations restent reconnues et **le planificateur de talents fonctionne toujours**.
+La fonctionnalité d'équipement est **réactivée** avec **28 profils pré-raid** et **470 recommandations** d'objets dont les identifiants ont été vérifiés. Les neuf classes sont couvertes. La spécialisation **Feral** du druide dispose de deux variantes d'équipement **Feral DPS** et **Feral Tank**, sans ajouter de quatrième arbre au planificateur de talents.
 
-Les listes personnalisées enregistrées dans `WTF/SavedVariables` **ne sont ni supprimées ni écrasées**. Elles sont simplement masquées et ignorées pour la détection BiS/les infobulles pendant cette suspension. Les anciennes données Forever restent dans les sources GitHub, hors du ZIP.
+- Dans le menu de listes, la recommandation principale est appelée **Pre-Raid BiS** ; aucun nom de site de données n'apparaît dans l'interface.
+- Chaque objet affiche son nom, son emplacement et son mode d'obtention ; les icônes fonctionnent aussi hors du cache WoW pour la majorité des objets.
+- Les listes personnalisées, les préférences et les anciens brouillons restent conservés dans `WTF/SavedVariables`. Le choix de spécialisation d'équipement Forever est mémorisé pour chaque personnage.
+- Les anciens classements `ForeverBiS60.lua` sont toujours exclus : il ne faut **pas** confondre ces recommandations pré-raid avec un BiS toutes phases.
+- Les raccourcis de sélection de sets/crafts Retail sont désactivés sur Forever ; les listes personnelles restent modifiables par ID manuel.
+- Les recommandations publiques peuvent encore évoluer avec les découvertes de nouveaux objets Forever. Elles n'ont pas été vérifiées par un test en jeu de chaque item.
+
+La provenance et les preuves d'identifiants figurent dans le dossier de développement `tools/data/forever_preraid_snapshot.json` et dans `DATA_STATUS.md`, pas dans l'interface de jeu.
 
 ## Tests et limites
 
-Les vérifications ci-dessus valident la présence des fichiers, les interfaces, la sélection logique des modules et le format des données ; **elles ne remplacent pas des tests dans les clients WoW**. Il reste à vérifier en jeu le chargement automatique, l'interface, la détection BiS et le planificateur Forever. Les données BiS ne sont pas toutes validées par simulation ou tests en jeu (voir `DATA_STATUS.md`).
+Les vérifications ci-dessus valident la présence des fichiers, les interfaces, la sélection logique des modules et le format des données ; **elles ne remplacent pas des tests dans les clients WoW**. Il reste à vérifier en jeu le chargement automatique, les 28 listes Pre-Raid BiS et leurs icônes/infobulles ; les fonctions de talents et de comparaison sont conservées. Les données BiS ne sont pas toutes validées par simulation ou tests en jeu (voir `DATA_STATUS.md`).
 
 ## Licence
 
@@ -90,3 +98,15 @@ Dans le planificateur Forever, clique sur **Mode comparaison**. Le module ouvre 
 Cette fonction ne change aucun talent en jeu, ne modifie pas les builds sauvegardés et n'est pas chargée sur Retail. **À vérifier dans le client Forever 1.60.1**, notamment avec des addons modifiant la fenêtre de talents.
 
 Les détails par version sont dans [CHANGELOG.md](CHANGELOG.md).
+
+### Organisation du Pre-Raid BiS en trois lots (2.5.0)
+
+Les 28 profils et 470 équipements sont répartis pour faciliter les relectures et les futures mises à jour :
+
+- Lot 1 : Guerrier, Paladin, Chasseur — 9 profils, 150 équipements (`ForeverPreRaidLot1.lua`).
+- Lot 2 : Voleur, Prêtre, Chaman — 9 profils, 152 équipements (`ForeverPreRaidLot2.lua`).
+- Lot 3 : Mage, Démoniste, Druide (Féral DPS et Tank) — 10 profils, 168 équipements (`ForeverPreRaidLot3.lua`).
+
+`ForeverPreRaidGear.lua` ne réactive les listes que lorsque les 28 profils sont complets et que leurs IDs sont numériques. Les données du jeu ne sont pas modifiées.
+
+L'audit repose sur le snapshot `tools/data/forever_preraid_snapshot.json` et les trois fichiers `forever_preraid_lot1.json`, `lot2.json`, `lot3.json`. Les IDs disponibles uniquement dans les archives Classic devront être confirmés directement dans Forever ; la 2.5.0 est proposée en Beta.

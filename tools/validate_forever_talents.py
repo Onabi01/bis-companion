@@ -35,7 +35,8 @@ assert all(entry[5].startswith('https://') is False for entry in parsed), 'Guide
 
 class_specs = {name.upper(): set() for name in re.findall(r'className = "([^"]+)"', MAPPING)}
 for name, spec in re.findall(r'className = "([^"]+)", specID = 0, specName = "([^"]+)"', MAPPING):
-    class_specs[name.upper()].add(spec)
+    if spec != "Feral Tank":  # additional gear role, not a fourth talent tree
+        class_specs[name.upper()].add(spec)
 
 layouts = {}
 current_class, current_tree = None, None

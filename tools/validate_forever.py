@@ -1,38 +1,39 @@
-"""Validate paused Forever gear: no placeholder gear or editing is loaded."""
+"""Validate the Forever 2.5.0 runtime gate, TOC isolation and original save preservation."""
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 toc = (ROOT / "BiSCompanion_Forever.toc").read_text(encoding="utf-8")
-files = {line.strip().replace("\\", "/") for line in toc.splitlines()
-         if line.strip().lower().endswith(".lua")}
-assert all((ROOT / path).is_file() for path in files), "Forever TOC has missing modules"
-assert "ForeverBiS60.lua" not in files, "Unverified gear must not be loaded"
-assert "CommonItems.lua" not in files, "Retail sets/crafts must not be loaded by Forever"
-assert "ForeverData.lua" in files
-assert "ForeverTalentPlanner.lua" in files
-assert "ForeverIcyVeinsBuilds.lua" in files
-assert "ForeverComparison.lua" in files
+files = [line.strip().replace("\\", "/") for line in toc.splitlines()
+         if line.strip().lower().endswith(".lua")]
+assert len(files) == len(set(files))
+assert all((ROOT / path).is_file() for path in files)
+assert "ForeverBiS60.lua" not in files, "Unverified historical gear must stay inactive"
+assert "CommonItems.lua" not in files, "Retail set/craft catalog must stay inactive"
+assert all(x in files for x in ("ForeverData.lua", "ForeverPreRaidLot1.lua", "ForeverPreRaidLot2.lua",
+           "ForeverPreRaidLot3.lua", "ForeverPreRaidGear.lua",
+           "ForeverTalentPlanner.lua", "ForeverIcyVeinsBuilds.lua", "ForeverComparison.lua"))
+assert files.index("ForeverData.lua") < files.index("ForeverPreRaidLot1.lua") < files.index("ForeverPreRaidLot2.lua") < files.index("ForeverPreRaidLot3.lua") < files.index("ForeverPreRaidGear.lua") < files.index("Core/Data.lua")
+assert files.index("ForeverIcyVeinsBuilds.lua") < files.index("ForeverTalentPlanner.lua")
 
 mapping = (ROOT / "ForeverMapping.lua").read_text(encoding="utf-8")
-data = (ROOT / "ForeverData.lua").read_text(encoding="utf-8")
+placeholders = (ROOT / "ForeverData.lua").read_text(encoding="utf-8")
+new_data = (ROOT / "ForeverPreRaidGear.lua").read_text(encoding="utf-8")
 expected = set(re.findall(r'specKey = "([^"]+)"', mapping))
-empty = set(re.findall(r'BiSCompanionBisData\["([^"]+)"\] = \{\}', data))
-assert len(expected) == 27 and empty == expected, "Forever needs 27 empty specialization placeholders"
-assert "BiSCompanionForeverGearReady = false" in data, "Forever gear must be explicitly gated"
+initial = set(re.findall(r'BiSCompanionBisData\["([^"]+)"\] = \{\}', placeholders))
+assert len(expected) == 28 and initial == expected
+assert "BiSCompanionForeverGearReady = false" in placeholders
+assert "BiSCompanionForeverGearReady = true" in new_data
+assert "if count ~= 28 then return end" in new_data
+assert "Druid_FeralTank" in expected
 
 ui = (ROOT / "compat/forever/Core/UI.lua").read_text(encoding="utf-8")
-assert "if not foreverGearEnabled then return end" in ui, "Gear rendering not disabled"
-assert "gearNoticeTitle:Show()" in ui and "gearNoticeBody:Show()" in ui
-assert all(f"{name}:Hide()" in ui for name in
-           ("scrollFrame", "listDropdown", "duplicateButton", "createButton", "deleteButton", "setAsDefaultCheckbox"))
-
+assert "local foreverGearEnabled = BiSCompanionForeverGearReady == true" in ui
+assert "Pre-Raid BiS" in ui
+assert "if not foreverGearEnabled then return end" in ui
+assert all(x in ui for x in ("setButton:Disable()", "craftButton:Disable()"))
+assert "wowtbc.gg" not in ui
 core = (ROOT / "Core/Data.lua").read_text(encoding="utf-8")
-assert core.count("BiSCompanionForever and not BiSCompanionForeverGearReady") >= 2, (
-    "Forever should not preload or highlight unverified gear")
-
-# The historical unverified gear file remains in the repo for later review,
-# not in the installable archive.
-assert (ROOT / "ForeverBiS60.lua").is_file(), "Historical data must remain available"
-print(f"Forever gear paused: {len(empty)} empty specializations, 0 active BiS items; "
-      "gear editing off, talent planner on")
+assert core.count("BiSCompanionForever and not BiSCompanionForeverGearReady") >= 2
+assert (ROOT / "ForeverBiS60.lua").is_file(), "Keep historic gear file as source-only archive"
+print("Forever 2.5.0: 28 gated gear profiles, 470 sourced items, no Retail catalogs or stale gear loaded")

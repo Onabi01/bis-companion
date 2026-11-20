@@ -1,5 +1,19 @@
 # BiSCompanion - Changelog
 
+## 2.5.0 - WoW Forever Pre-Raid BiS gear
+
+- Enabled **Pre-Raid BiS** gear recommendations for WoW Forever 1.60.1.
+- Added **28 equipment profiles** across 9 classes with **470 cross-referenced item IDs**.
+- Added separate **Feral DPS** and **Feral Tank** equipment profiles for Druids, without changing the three classic talent trees.
+- Shows item icons and acquisition information (quest, dungeon, boss, crafting, reputation) in the gear interface.
+- Re-enabled custom gear lists and their selection on Forever; previously saved lists remain preserved.
+- Remembers the selected Forever equipment role per character.
+- Added three separately audited gear-data modules (9 + 9 + 10 profiles), with an all-or-nothing activation check.
+- Added offline integrity checks and kept unverified historical rankings excluded from the installed addon.
+- Retail gear and talent features remain unchanged; one universal ZIP still supports both game clients.
+
+**Testing:** All 28 lists and 470 item IDs checked statically against a dated offline snapshot; some IDs are cross-referenced from Classic and still need in-game confirmation. WoW Forever client testing is still required, particularly for icon loading and equipment UI. **Beta recommended.**
+
 ## 2.4.1 - Forever side-by-side talent comparison
 
 - Added a **Compare side by side** / **Mode comparaison** button to the WoW Forever talent planner.

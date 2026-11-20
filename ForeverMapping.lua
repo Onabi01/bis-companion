@@ -28,4 +28,6 @@ BiSCompanionClassSpecMapping = {
     { classID = 11, className = "Druid", specID = 0, specName = "Balance", heroName = "", heroID = 0, specKey = "Druid_Balance" },
     { classID = 11, className = "Druid", specID = 0, specName = "Feral", heroName = "", heroID = 0, specKey = "Druid_Feral" },
     { classID = 11, className = "Druid", specID = 0, specName = "Restoration", heroName = "", heroID = 0, specKey = "Druid_Restoration" },
+    -- Equipment-only role: the talent planner retains the classic three trees.
+    { classID = 11, className = "Druid", specID = 0, specName = "Feral Tank", heroName = "", heroID = 0, specKey = "Druid_FeralTank" },
 }
