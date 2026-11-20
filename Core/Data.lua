@@ -36,6 +36,14 @@ function addon.Core.Data.GetListNamesForSpec(specKey)
     if specKey and BiSCompanionBisData and BiSCompanionBisData[specKey] then
         table.insert(names, "Default")
     end
+    if BiSCompanionForever and type(BiSCompanionForeverGearVariants) == "table" then
+        local builtins = BiSCompanionForeverGearVariants[specKey]
+        if type(builtins) == "table" then
+            for listName in pairs(builtins) do
+                table.insert(names, listName)
+            end
+        end
+    end
     local mem = addon.Core.Data.customBisListsInMemory[specKey]
     if type(mem) == "table" then
         for listName, _ in pairs(mem) do
@@ -44,6 +52,28 @@ function addon.Core.Data.GetListNamesForSpec(specKey)
     end
     table.sort(names, function(a,b) return tostring(a) < tostring(b) end)
     return names
+end
+
+-- Resolve built-in gear builds independently of personal copies and SavedVariables.
+-- Retail does not load the Forever variant global and keeps its original behavior.
+function addon.Core.Data.IsBuiltInList(specKey, listName)
+    if listName == "Default" then
+        return BiSCompanionBisData and BiSCompanionBisData[specKey] ~= nil
+    end
+    local variants = BiSCompanionForever and BiSCompanionForeverGearVariants
+    return variants and variants[specKey] and variants[specKey][listName] ~= nil or false
+end
+
+function addon.Core.Data.GetItemsForList(specKey, listName)
+    if listName == "Default" then
+        return BiSCompanionBisData and BiSCompanionBisData[specKey]
+    end
+    local variants = BiSCompanionForever and BiSCompanionForeverGearVariants
+    if variants and variants[specKey] and variants[specKey][listName] then
+        return variants[specKey][listName]
+    end
+    local custom = addon.Core.Data.customBisListsInMemory[specKey]
+    return custom and custom[listName] and custom[listName].items or nil
 end
 
 function addon.Core.Data.GetDefaultList(specKey)
@@ -110,16 +140,9 @@ function addon.Core.Data.UpdateBisTable()
     local listNames = addon.Core.Data.GetListNamesForSpec(specKey)
     local bisListName = addon.Core.Data.GetPreferredListName(specKey, listNames)
 
-    local bisItems
-    if bisListName == "Default" then
-        bisItems = BiSCompanionBisData and BiSCompanionBisData[specKey]
-    else
-        local mem = addon.Core.Data.customBisListsInMemory[specKey]
-        if mem and mem[bisListName] then
-            bisItems = mem[bisListName].items
-        else
-            bisItems = BiSCompanionBisData and BiSCompanionBisData[specKey]
-        end
+    local bisItems = addon.Core.Data.GetItemsForList(specKey, bisListName)
+    if not bisItems then
+        bisItems = addon.Core.Data.GetItemsForList(specKey, "Default")
     end
     if not bisItems then return end
 
